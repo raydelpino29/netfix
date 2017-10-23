@@ -1,0 +1,50 @@
+// Do I need a users slice of state?
+// Do I need errors for signUp or is that already taken care of by @user.errors.full_messages?
+
+const sampleState = {
+  entities: {
+    videos: {
+      1: {
+        id: 1,
+        title: "How to Fix a Drawer Knob"
+      }
+    },
+    categories: {
+      1: {
+        id: 1,
+        name: "Music",
+        videoIds: [2,5,12]
+      }
+    },
+    reviews: {
+      1: {
+        id: 1,
+        user_id: 12,
+        video_id: 3,
+        title: "Great for Tuning Your Guitar!",
+        body: "For learning how to tune your guitar in Standard E or Drop D, this video is great for guitarists of all skill levels!",
+        rating: 5
+      }
+    },
+    my_list: {
+      video_ids: [2, 3, 6, 9, 12]
+    },
+    likesAndDislikes: {
+      likesIds: [2, 3, 6, 9, 12],
+      dislikesIds: [4,5,7]
+    }
+  },
+  ui: {
+    dropdown: ['currentDropdown']
+  },
+  session: {
+    currentUser: {
+      id: 1,
+      username: 'coolDude'
+    }
+  },
+  errors: {
+    login: ["Invalid Username/Password Combination"],
+    signUp: ["Username Already Taken"]
+  }
+};

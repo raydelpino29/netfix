@@ -1,0 +1,51 @@
+Component Hierarchy:
+
+- App Component
+
+  -Header Component
+    -Browse Component
+      -Category Index
+        -Category Index Item
+    - Search Videos Component
+    - Profile Component
+      - Profile Item Index
+        - Profile Item
+
+  - Pre-Session Component
+    - App Info Component
+      - App Info Index
+        - App Info Item
+        - App Info Content
+
+  - Sign Up Component
+    - Sign Up Form
+
+  - Log In Component
+    - Log In Form
+
+  -Browse Videos Component
+    - Video Banner Component
+      - Video Info Component
+      - Video Index Item
+    -Categories Index
+      -Category Videos Index
+        -Category Videos Index Item
+
+  - Category Videos List Component
+    - Sort Items Component
+      - Sort Items Index
+        - Sort Item
+    - Category Videos Index
+      - Category Videos Index Item
+
+  - Video Player Component
+    - Current Video Item
+
+  - Video Show Component
+    - Review Component
+      - Review Form
+      - Review Index
+        - Review Index Item
+    - Video Banner Component
+      - Video Info Component
+      - Video Index Item

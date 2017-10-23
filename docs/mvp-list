@@ -1,0 +1,21 @@
+Summary of NetFix:
+
+NetFix is a clone of the entertainment web application, NetFlix, which will host several categories of
+DIY videos that users can view, like, dislike, review, rate, and add to their list. They can also
+search through the categories utilizing a search bar
+
+NetFix MVP's:
+
+1.) New account creation, login, and guest/demo login
+
+2.) A production README
+
+3.) Hosting on Heroku
+
+4.) Like, Dislike videos
+
+5.) Comment/Review/Rate Videos
+
+6.) Search Bar for videos
+
+7.) Add, delete videos to/from MyList
