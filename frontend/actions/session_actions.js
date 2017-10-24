@@ -27,3 +27,25 @@ export const login = (user) => {
     });
   };
 };
+
+export const logout = () => {
+  return (dispatch) => {
+    return SessionApiUtil.logout().then(() => {
+      dispatch(receiveCurrentUser(null));
+    },
+    (errors) => {
+      dispatch(receiveErrors(errors));
+    });
+  };
+};
+
+export const signup = (user) => {
+  return (dispatch) => {
+    return SessionApiUtil.signup(user).then((user) => {
+      dispatch(receiveCurrentUser(user));
+    },
+    (errors) => {
+      dispatch(receiveErrors(errors));
+    });
+  };
+};
