@@ -7,6 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails_12factor'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'annotate'
