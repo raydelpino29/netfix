@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { username: '', password: '' };
+    this.state = { email: '', password: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -17,7 +17,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
-    this.setState({ username: '', password: '' });
+    this.setState({ email: '', password: '' });
   }
 
   render () {
@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
         </ul>
         <h1>{header}</h1>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.username} onChange={this.handleChange('username')} />
+          <input type="text" value={this.state.email} onChange={this.handleChange('email')} />
           <input type="password" value={this.state.password} onChange={this.handleChange('password')} />
           <button>{this.props.formType}</button>
         </form>
