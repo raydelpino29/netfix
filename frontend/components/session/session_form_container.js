@@ -31,7 +31,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     processForm = signup;
   }
   return {
-    processForm,
+    processForm: (user) => dispatch(processForm(user))
   };
 };
 

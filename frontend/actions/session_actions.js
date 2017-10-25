@@ -40,12 +40,15 @@ export const logout = () => {
 };
 
 export const signup = (user) => {
+  debugger
   return (dispatch) => {
-    return SessionApiUtil.signup(user).then((user) => {
-      return dispatch(receiveCurrentUser(user));
-    },
-    (errors) => {
-      return dispatch(receiveErrors(errors));
-    });
+    return SessionApiUtil.signup(user).then(
+      (user) => {
+        return dispatch(receiveCurrentUser(user));
+      },
+      (errors) => {
+        return dispatch(receiveErrors(errors));
+      }
+    );
   };
 };
