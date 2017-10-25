@@ -9,11 +9,8 @@ class SessionForm extends React.Component {
     this.handleDemo = this.handleDemo.bind(this);
   }
 
-  componentWillReceiveProps (newProps) {
-    debugger
-    if (newProps.location.pathname !== this.props.location.pathname) {
-      this.props.clearErrors();
-    }
+  componentWillUnmount() {
+    this.props.clearErrors();
   }
 
   handleChange(field) {
