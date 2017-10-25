@@ -9,6 +9,13 @@ class SessionForm extends React.Component {
     this.handleDemo = this.handleDemo.bind(this);
   }
 
+  componentWillReceiveProps (newProps) {
+    debugger
+    if (newProps.location.pathname !== this.props.location.pathname) {
+      this.props.clearErrors();
+    }
+  }
+
   handleChange(field) {
     return (e) => {
       this.setState({ [field]: e.target.value} );
@@ -17,8 +24,7 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    this.setState({ email: 'coolDude@gmail.com', password: 'starwars'});
-    this.props.processForm(this.state);
+    this.props.processForm({ email: 'coolDude@gmail.com', password: 'starwars'});
   }
 
   handleSubmit(e) {
