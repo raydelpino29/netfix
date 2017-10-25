@@ -17,6 +17,7 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.processForm(this.state);
+    debugger
   }
 
   render () {
@@ -32,7 +33,7 @@ class SessionForm extends React.Component {
     } else {
       linker = <Link to='/signup'>Sign Up</Link>;
     }
-    errorList = this.props.errors.map((error) => {
+    const errorList = this.props.errors.map((error) => {
       return (
         <li>{error}</li>
       );
@@ -40,6 +41,7 @@ class SessionForm extends React.Component {
 
     return (
       <div>
+        {linker}
         <ul>
           {errorList}
         </ul>

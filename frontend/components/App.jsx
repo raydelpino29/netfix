@@ -6,6 +6,8 @@ import SessionFormContainer from './session/session_form_container';
 const App = () => (
   <div>
     <h1>Netfix</h1>
+    <Route path='/login' component={SessionFormContainer} />
+    <Route path='/signup' component={SessionFormContainer} />
   </div>
 );
 

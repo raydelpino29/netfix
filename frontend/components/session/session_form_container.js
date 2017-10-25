@@ -34,3 +34,5 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     processForm,
   };
 };
+
+export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
