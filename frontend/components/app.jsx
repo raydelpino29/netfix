@@ -6,7 +6,7 @@ import HeaderContainer from './header/header_container';
 
 const App = () => (
   <div>
-    <h1>Netfix</h1>
+    <h1 className='temp-logo'>Netfix</h1>
     <Route exact path='/' component={HeaderContainer} />
     <AuthRoute path='/login' component={SessionFormContainer} />
     <AuthRoute path='/signup' component={SessionFormContainer} />

@@ -1,0 +1,53 @@
+// Place all the styles related to the api/users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pre-login-background {
+  background-image: image-url("prelogin.jpg");
+  height: 100vh;
+}
+
+.temp-logo {
+  font-size: 40px;
+  color: #e50914;
+  position: absolute;
+  left: 40px;
+  top: 15px;
+}
+
+.join-button, .sign-in-button {
+  background-color: #e50914;
+}
+
+.sign-in-button {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  padding: 8px 2em;
+  color: white;
+  border-radius: 3px;
+
+}
+
+.join-button {
+  padding: 12px 2em;
+  color: white;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+
+.join-info {
+  position: absolute;
+  top: 200px;
+  left: 40px;
+}
+
+.whats-next {
+  font-size: 60px;
+  color: white;
+}
+
+.anytime {
+  font-size: 25px;
+  color: white;
+}

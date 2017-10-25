@@ -11,9 +11,13 @@ const Header = ({currentUser, logout}) => {
     );
   } else {
     return (
-      <div>
-        <button><Link to='/signup'>Join Free For a Month</Link></button>
-        <button><Link to='/login'>Sign In</Link></button>
+      <div className='pre-login-background'>
+        <div className='join-info'>
+          <p className='whats-next'>See what's next.</p>
+          <p className='anytime'>Watch Anywhere. Cancel Anytime.</p>
+          <button className='join-button' ><Link to='/signup'>Join Free For a Month</Link></button>
+        </div>
+        <button className='sign-in-button'><Link to='/login'>Sign In</Link></button>
       </div>
     )
   }
