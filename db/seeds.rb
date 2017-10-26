@@ -7,4 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-User.create!({email: "coolDude@gmail.com", password: "starwars"})
+demo_user = User.create!({ email: "coolDude@gmail.com", password: "starwars" })
+
+Category.destroy_all
+category1 = Category.create!({ name: "Food", description: "Check out these videos to learn some awesome LifeProTips for cooking and preparing food!" })
+
+Video.destroy_all
+video1 = Video.create!({ title: "How to Chop Vegetables", category_id: category1.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
