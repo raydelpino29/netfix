@@ -11,6 +11,8 @@ demo_user = User.create!({ email: "coolDude@gmail.com", password: "starwars" })
 
 Category.destroy_all
 category1 = Category.create!({ name: "Food", description: "Check out these videos to learn some awesome LifeProTips for cooking and preparing food!" })
+category2 = Category.create!({ name: "Housework", description: "Check out these videos to learn some awesome LifeProTips for cooking and preparing food!" })
 
 Video.destroy_all
 video1 = Video.create!({ title: "How to Chop Vegetables", category_id: category1.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
+video2 = Video.create!({ title: "How to do some housework", category_id: category2.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
