@@ -55,6 +55,7 @@ class SessionForm extends React.Component {
 
     return (
       <div className='session-form-container'>
+        <h1 className='temp-logo'>Netfix</h1>
         <form className='session-form' onSubmit={this.handleSubmit}>
           <div className='form-content'>
             <h1 className='form-title'>{header}</h1>

@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025214011) do
+ActiveRecord::Schema.define(version: 20171026133411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "password_digest", null: false
@@ -21,6 +26,20 @@ ActiveRecord::Schema.define(version: 20171025214011) do
     t.string "email", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "category_id", null: false
+    t.text "description", null: false
+    t.string "video_file_name"
+    t.string "video_content_type"
+    t.integer "video_file_size"
+    t.datetime "video_updated_at"
+    t.string "thumbnail_file_name"
+    t.string "thumbnail_content_type"
+    t.integer "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
 end
