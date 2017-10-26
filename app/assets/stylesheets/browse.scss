@@ -12,17 +12,36 @@
   position: relative;
   margin-right: 5px;
 }
-//
-// .video-item button{
-//   position: relative;
-//   left: 5px;
-//   font-size: 10px;
-// }
-//
-.video-fxns {
 
+.header {
+  display: flex;
+  box-sizing: border-box;
+  background-color: rgba(0,0,0,0.7);
+  min-height: 70px;
+  position: fixed;
+  width: 100%;
 }
 
-// .like, .dislike, .add {
-//   padding: 5px;
-// }
+.header li {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: inline;
+}
+
+.logo {
+  padding-left: 40px;
+}
+
+.browse {
+  color: #e50914;
+  font-weight: 700;
+  margin-left: 200px;
+}
+
+.search {
+  margin-left: 600px;
+}
+
+.profile {
+  margin-left: 150px;
+}
