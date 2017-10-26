@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CategoryIndexContainer from '../videos/category_index_container';
 
 const Landing = ({currentUser, logout}) => {
   if (currentUser) {
@@ -7,6 +8,7 @@ const Landing = ({currentUser, logout}) => {
       <div>
         <h1>Hi There, {currentUser.email}!</h1>
         <button onClick={logout}>Logout</button>
+        <CategoryIndexContainer />
       </div>
     );
   } else {
