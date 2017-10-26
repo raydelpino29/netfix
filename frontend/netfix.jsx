@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
+import { fetchAllVideos, fetchAllCategories } from './actions/video_actions';
+
+window.fetchAllVideos = fetchAllVideos;
+window.fetchAllCategories = fetchAllCategories;
+
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -12,5 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   }
+  window.dispatch = store.dispatch;
   ReactDOM.render(<Root store={store} />, document.getElementById("root"));
 });
