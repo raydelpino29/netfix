@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = ({currentUser, logout}) => {
+const Landing = ({currentUser, logout}) => {
   if (currentUser) {
     return (
       <div>
@@ -23,4 +23,4 @@ const Header = ({currentUser, logout}) => {
   }
 };
 
-export default Header;
+export default Landing;
