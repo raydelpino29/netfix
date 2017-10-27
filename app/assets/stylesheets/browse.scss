@@ -102,6 +102,14 @@ body {
   position: relative;
 }
 
+.fa-plus-circle {
+  position: absolute;
+  right: 50px;
+  bottom: 17px;
+  cursor: pointer;
+  z-index: 1;
+}
+
 .video-item-container:hover {
   transform: scale(1.3);
   transition-duration: 400ms;
@@ -110,9 +118,13 @@ body {
 }
 
 .fa-thumbs-o-down:hover {
-  color: #e50914;
+  color: rgb(165,0,0);
 }
 
 .fa-thumbs-o-up:hover {
+  color: #e5e5e5;
+}
+
+.fa-plus-circle:hover {
   color: #e5e5e5;
 }
