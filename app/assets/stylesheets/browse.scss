@@ -19,13 +19,11 @@ body {
   z-index: 1;
   padding-left: 4px;
   padding-right: 4px;
+  cursor: pointer;
 }
 
 .video-item:hover{
-  transform: scale(1.3);
-  transition-duration: 400ms;
-  padding-left: 35px;
-  padding-right: 35px;
+
 }
 
 .single-category {
@@ -82,16 +80,18 @@ body {
 
 .fa-thumbs-o-up {
   position: absolute;
-  right: 15px;
-  bottom: 80px;
+  right: 50px;
+  bottom: 60px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .fa-thumbs-o-down {
   position: absolute;
-  right: 15px;
-  bottom: 60px;
+  right: 50px;
+  bottom: 40px;
   z-index: 1;
+  cursor: pointer;
 }
 
 .video-row {
@@ -100,4 +100,11 @@ body {
 
 .video-item-container {
   position: relative;
+}
+
+.video-item-container:hover {
+  transform: scale(1.3);
+  transition-duration: 400ms;
+  padding-left: 35px;
+  padding-right: 34px;
 }
