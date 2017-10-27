@@ -1,6 +1,11 @@
+.landing {
+  background-image: image-url("bob-vila.jpg");
+  height: 500px;
+}
+
 .video-item {
-  height: 100px;
-  width: 75px;
+  height: 230px;
+  width: 130px;
 }
 
 .single-category {
@@ -44,4 +49,15 @@
 
 .profile {
   margin-left: 100px;
+}
+
+.category-index {
+  position: absolute;
+  margin-top: 500px;
+}
+
+.temp-welcome {
+  position: absolute;
+  margin-left: 350px;;
+  z-index: 1;
 }

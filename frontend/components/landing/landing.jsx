@@ -6,10 +6,12 @@ import Header from '../header/header';
 const Landing = ({currentUser, logout}) => {
   if (currentUser) {
     return (
-      <div>
+      <div className='landing'>
         <Header />
-        <h1>Hi There, {currentUser.email}!</h1>
-        <button onClick={logout}>Logout</button>
+        <div className='temp-welcome'>
+          <h1>Hi There, {currentUser.email}!</h1>
+          <button onClick={logout}>Logout</button>
+        </div>
         <CategoryIndexContainer />
       </div>
     );

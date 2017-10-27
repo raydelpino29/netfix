@@ -17,7 +17,7 @@ category4 = Category.create!({ name: "Automobiles", description: "Check out thes
 category5 = Category.create!({ name: "Fashion", description: "Check out these videos to learn some awesome LifeProTips for Fashion!" })
 
 Video.destroy_all
-video1 = Video.create!({ title: "How to Chop Vegetables", category_id: category1.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food.", thumbnail: "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"})
+video1 = Video.create!({ title: "How to Chop Vegetables", category_id: category1.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food."})
 video2 = Video.create!({ title: "How to do some housework", category_id: category2.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
 video3 = Video.create!({ title: "How to do some music stuff", category_id: category3.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
 video4 = Video.create!({ title: "How to do some cars stuff", category_id: category4.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
@@ -26,6 +26,7 @@ video6 = Video.create!({ title: "How to do some stylish things", category_id: ca
 video7 = Video.create!({ title: "How to do some stylish things", category_id: category5.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
 video8 = Video.create!({ title: "How to do some stylish things", category_id: category2.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
 video9 = Video.create!({ title: "How to do some stylish things", category_id: category2.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
+video1.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
 video2.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
 video3.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
 video4.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
