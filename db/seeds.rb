@@ -26,15 +26,25 @@ video6 = Video.create!({ title: "How to do some stylish things", category_id: ca
 video7 = Video.create!({ title: "How to do some stylish things", category_id: category5.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
 video8 = Video.create!({ title: "How to do some stylish things", category_id: category2.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
 video9 = Video.create!({ title: "How to do some stylish things", category_id: category2.id, description: "This video demonstrates how to make a tasty vegetable mixture, which will add flavor to your food." })
-video1.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
-video2.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
-video3.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
-video4.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
-video5.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
-video6.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
-video7.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
-video8.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
-video9.thumbnail = "http://s3-us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/017/original/placeholder-thumb.png?1509048926"
+video1.thumbnail = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/placeholder-thumb.png"
+video2.thumbnail = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/placeholder-thumb.png"
+video3.thumbnail = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/placeholder-thumb.png"
+video4.thumbnail = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/placeholder-thumb.png"
+video5.thumbnail = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/placeholder-thumb.png"
+video6.thumbnail = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/placeholder-thumb.png"
+video7.thumbnail = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/placeholder-thumb.png"
+video8.thumbnail = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/placeholder-thumb.png"
+video9.thumbnail = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/placeholder-thumb.png"
+
+video1.video = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/videos/000/000/126/placeholder.mp4"
+video2.video = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/videos/000/000/126/placeholder.mp4"
+video3.video = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/videos/000/000/126/placeholder.mp4"
+video4.video = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/videos/000/000/126/placeholder.mp4"
+video5.video = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/videos/000/000/126/placeholder.mp4"
+video6.video = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/videos/000/000/126/placeholder.mp4"
+video7.video = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/videos/000/000/126/placeholder.mp4"
+video8.video = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/videos/000/000/126/placeholder.mp4"
+video9.video = "https://s3.us-east-2.amazonaws.com/netfix-dev/videos/videos/000/000/126/placeholder.mp4"
 
 video1.save!
 video2.save!
