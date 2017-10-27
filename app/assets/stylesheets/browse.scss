@@ -1,21 +1,20 @@
 .landing {
   background-image: image-url("bob-vila.jpg");
   height: 500px;
+  position: relative;
+  top: 70px;
 }
 
 .video-item {
-  height: 230px;
-  width: 130px;
+  width: 230px;
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+  margin-bottom: 10px;
 }
 
 .single-category {
   position: relative;
-}
-
-.video-item {
-  display: inline-block;
-  position: relative;
-  margin-right: 5px;
 }
 
 .header {
@@ -25,6 +24,7 @@
   min-height: 70px;
   position: fixed;
   width: 100%;
+  margin-top: -70px;
 }
 
 .header li {
@@ -53,11 +53,20 @@
 
 .category-index {
   position: absolute;
-  margin-top: 500px;
+  margin-top: 450px;
+  margin-left: 50px;
 }
 
 .temp-welcome {
   position: absolute;
-  margin-left: 350px;;
+  right: 20px;
   z-index: 1;
+}
+
+.category-index h1 {
+  color: #e5e5e5;
+  font-weight: 700;
+}
+
+.landing-background {
 }
