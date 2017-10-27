@@ -1,3 +1,7 @@
+body {
+  background: #141414;
+}
+
 .landing {
   background-image: image-url("bob-vila.jpg");
   height: 90vh;
@@ -46,7 +50,7 @@
 
 .category-index {
   position: absolute;
-  margin-top: 450px;
+  margin-top: 82vh;
   margin-left: 50px;
 }
 
@@ -63,8 +67,4 @@
 
 .header-left li, .header-right li {
   padding: 25px;
-}
-
-.landing-background {
-  // background-color: #141414;
 }
