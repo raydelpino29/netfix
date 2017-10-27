@@ -1,9 +1,19 @@
 import React from 'react';
 
-const VideoItem = ({ video }) => {
-  return (
-    <video className='video-item' src={video.video_url} poster={video.thumbnail_url}></video>
-  )
-};
+class VideoItem extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render () {
+    return (
+      <li className='video-item-container'>
+        <img className='video-item' src={this.props.video.thumbnail_url} />
+        <i className="icon fa fa-thumbs-o-up"></i>
+        <i className="icon fa fa-thumbs-o-down"></i>
+      </li>
+    )
+  }
+}
 
 export default VideoItem;

@@ -17,6 +17,7 @@ gem 'rails', '~> 5.1.4'
 gem "paperclip", '~> 5.0.0'
 gem 'figaro'
 gem 'aws-sdk', '< 3.0'
+gem 'font-awesome-sass'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server

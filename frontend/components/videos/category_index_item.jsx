@@ -4,14 +4,14 @@ import VideoItem from './video_item';
 const CategoryIndexItem = ({ category, videos }) => {
   const videoItems = videos.map((video) => {
     return (
-      <li className="video-item"><VideoItem video={video} /></li>
+      <VideoItem video={video} />
     );
   });
 
   return (
-    <div>
+    <div className="single-category">
       <h1>{category.name}</h1>
-      <ul className="single-category">
+      <ul className='video-row'>
         {videoItems}
       </ul>
     </div>
