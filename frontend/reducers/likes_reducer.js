@@ -17,6 +17,8 @@ const LikesReducer = (state = {}, action) => {
     return newState;
 
     default:
-      return state;
+    return state;
   }
 };
+
+export default LikesReducer;
