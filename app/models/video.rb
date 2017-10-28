@@ -11,4 +11,9 @@ belongs_to :category,
   foreign_key: :category_id,
   primary_key: :id
 
+has_many :likes,
+  class_name: 'Like',
+  foreign_key: :video_id,
+  primary_key: :id
+
 end
