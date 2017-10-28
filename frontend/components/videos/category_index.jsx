@@ -19,7 +19,7 @@ class CategoryIndex extends React.Component {
         }
       });
       return (
-        <ul><CategoryIndexItem category={category} videos={videos} /></ul>
+        <ul key={category.id}><CategoryIndexItem  category={category} videos={videos} /></ul>
       );
     });
 

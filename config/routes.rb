@@ -6,10 +6,10 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :videos, only: [:index, :show]
     resources :categories, only: [:index]
-    post '/videos/:video_id/like', :to => 'likes#like'
-    post '/videos/:video_id/dislike', :to => 'likes#dislike'
-    delete '/videos/:video_id/like', :to => 'likes#remove_dislike'
-    delete '/videos/:video_id/dislike', :to => 'likes#remove_like'
+    get '/likes', :to => 'likes#index'
+    post '/like', :to => 'likes#like'
+    post '/dislike', :to => 'likes#dislike'
+    delete '/like/:id', :to => 'likes#remove_like'
   end
 
 end

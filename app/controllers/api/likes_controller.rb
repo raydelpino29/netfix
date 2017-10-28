@@ -1,4 +1,4 @@
-class LikesController < ApplicationController
+class Api::LikesController < ApplicationController
 
   def index
     render :index
@@ -11,20 +11,8 @@ class LikesController < ApplicationController
   end
 
   def remove_like
-    @like = Like.find_by_credentials(params[:user_id], params[:video_id])
+    @like = Like.find(params[:id])
     @like.destroy
-    render :show
-  end
-
-  def dislike
-    @dislike = Like.new(like_params)
-    @dislike.save
-    render :show
-  end
-
-  def remove_dislike
-    @dislike = Like.find_by_credentials(params[:user_id], params[:video_id])
-    @dislike.destroy
     render :show
   end
 
