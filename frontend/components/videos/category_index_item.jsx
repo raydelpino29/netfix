@@ -11,7 +11,7 @@ const CategoryIndexItem = ({ category, videos }) => {
   return (
     <div className="single-category">
       <h1>{category.name}</h1>
-      <ul className='video-row'>
+      <ul className="video-row">
         {videoItems}
       </ul>
     </div>

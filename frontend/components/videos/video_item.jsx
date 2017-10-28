@@ -14,8 +14,8 @@ class VideoItem extends React.Component {
 
   render () {
     return (
-      <li className='video-item-container'>
-        <img className='video-item' src={this.props.video.thumbnail_url} />
+      <li className="video-item-container">
+        <img className="video-item" src={this.props.video.thumbnail_url} />
         <i onClick={this.handleClick('like')} className={this.state.class.like}></i>
         <i onClick={this.handleClick('dislike')} className={this.state.class.dislike}></i>
         <i onClick={this.handleClick('myList')} className={this.state.class.myList}></i>

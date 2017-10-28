@@ -54,28 +54,28 @@ class SessionForm extends React.Component {
     }
 
     return (
-      <div className='session-form-container'>
-        <h1 className='temp-logo'>Netfix</h1>
-        <form className='session-form' onSubmit={this.handleSubmit}>
-          <div className='form-content'>
-            <h1 className='form-title'>{header}</h1>
+      <div className="session-form-container">
+        <h1 className="temp-logo">Netfix</h1>
+        <form className="session-form" onSubmit={this.handleSubmit}>
+          <div className="form-content">
+            <h1 className="form-title">{header}</h1>
             <ul>
               {errorList}
             </ul>
-            <div className='form-inputs'>
-              <label for='email'>Email</label>
+            <div className="form-inputs">
+              <label for="email">Email</label>
               <br />
-                <input id='email' type="text" value={this.state.email} onChange={this.handleChange('email')} />
+                <input id="email" type="text" value={this.state.email} onChange={this.handleChange("email")} />
               <br />
-              <label for='password'>Password</label>
+              <label for="password">Password</label>
               <br />
-                <input id='password' type="password" value={this.state.password} onChange={this.handleChange('password')} />
+                <input id="password" type="password" value={this.state.password} onChange={this.handleChange("password")} />
               <br />
-              <button className='form-submit'>{this.props.formType}</button>
+              <button className="form-submit">{this.props.formType}</button>
               <br />
                 {demoLogin}
               <br />
-              <button className='linker'>{linker}</button>
+              <button className="linker">{linker}</button>
             </div>
           </div>
         </form>

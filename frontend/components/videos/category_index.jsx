@@ -24,7 +24,7 @@ class CategoryIndex extends React.Component {
     });
 
     return (
-      <ul className='category-index'>
+      <ul className="category-index">
         {categoryIndexItems}
       </ul>
     );

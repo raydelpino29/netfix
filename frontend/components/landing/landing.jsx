@@ -11,10 +11,10 @@ class Landing extends React.Component {
   render () {
     if (this.props.currentUser) {
       return (
-        <div className='landing-background'>
-          <div className='landing'>
+        <div className="landing-background">
+          <div className="landing">
             <Header />
-            <div className='temp-welcome'>
+            <div className="temp-welcome">
               <h1>Hi There, {this.props.currentUser.email}!</h1>
               <button onClick={this.props.logout}>Logout</button>
             </div>
@@ -24,14 +24,14 @@ class Landing extends React.Component {
       );
     } else {
       return (
-        <div className='pre-login-background'>
-          <h1 className='temp-logo'>Netfix</h1>
-          <div className='join-info'>
-            <p className='whats-next'>See what's next.</p>
-            <p className='anytime'>Watch Anywhere. Cancel Anytime.</p>
-            <button className='join-button' ><Link to='/signup'>Join Free For a Month</Link></button>
+        <div className="pre-login-background">
+          <h1 className="temp-logo">Netfix</h1>
+          <div className="join-info">
+            <p className="whats-next">See what's next.</p>
+            <p className="anytime">Watch Anywhere. Cancel Anytime.</p>
+            <button className="join-button" ><Link to="/signup">Join Free For a Month</Link></button>
           </div>
-          <button className='sign-in-button'><Link to='/login'>Sign In</Link></button>
+          <button className="sign-in-button"><Link to="/login">Sign In</Link></button>
         </div>
         )
       }
