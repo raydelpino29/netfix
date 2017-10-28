@@ -7,7 +7,7 @@ class Like < ApplicationRecord
     foreign_key: :user_id,
     primary_key: :id
 
-  belongs_to :video,
+  belongs_to :videos,
     class_name: 'Video',
     foreign_key: :video_id,
     primary_key: :id
