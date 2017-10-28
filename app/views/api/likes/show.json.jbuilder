@@ -4,5 +4,5 @@ else
   type = "dislike"
 end
 
+json.partial! 'api/likes/like', like: @like
 json.like_type type
-json.videoId @like.video.id

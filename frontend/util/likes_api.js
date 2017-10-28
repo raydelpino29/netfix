@@ -9,7 +9,7 @@ export const fetchAllLikes = () => {
 export const createLike = (like) => {
   return $.ajax({
     method: 'POST',
-    url: `/api/like`,
+    url: '/api/like',
     data: { like }
   });
 };

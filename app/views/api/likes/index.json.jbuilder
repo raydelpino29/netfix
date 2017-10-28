@@ -3,11 +3,12 @@ dislikeIds = []
 
 current_user.likes.each do |like|
   if like.like_status === 1
-    likeIds.push(like.video_id)
+    type = "like"
   else
-    dislikeIds.push(like.video_id)
+    type = "dislike"
+  end
+  json.set! like.id do
+    json.partial! 'api/likes/like', like: like
+    json.like_type type
   end
 end
-
-json.videosLikedIds likeIds
-json.videosDislikedIds dislikeIds
