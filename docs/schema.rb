@@ -28,8 +28,8 @@ create_table "categories" do |t|
 end
 
 create_table "likes" do |t|
-  t.text "user_id", null: false
-  t.string "video_id", null: false
+  t.integer "user_id", null: false
+  t.integer "video_id", null: false
   t.integer "like_status"
   t.timestamps
 end
