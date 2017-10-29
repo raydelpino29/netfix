@@ -15,16 +15,17 @@ class VideoItem extends React.Component {
       class: { like: "icon fa fa-thumbs-o-up", dislike: "icon fa fa-thumbs-o-down",
       myList: "icon fa fa-plus-circle" } };
       this.handleClick = this.handleClick.bind(this);
-      this.processLike = this.processLike.bind(this);
-      this.processDislike = this.processDislike.bind(this);
+      this.processCreate = this.processCreate.bind(this);
+      this.processDelete = this.processDelete.bind(this);
   }
 
-  processLike (field, like) {
+  processDelete (field, like) {
     this.setState({ value: { [field]: false } });
-    this.props.deleteLike(like.id);
+    debugger
+    this.props.deleteLike(like[0].id);
   }
 
-  processDislike (field) {
+  processCreate (field) {
     let like_status;
     like_status = field === 'like' ? 1 : 0;
     this.setState({ value: { [field]: true } });
@@ -40,11 +41,11 @@ class VideoItem extends React.Component {
         }
       });
       return (e) => {
-        this.processLike(field, like);
+        this.processDelete(field, like);
       };
     } else {
       return (e) => {
-      this.processDislike(field);
+      this.processCreate(field);
     };
       //in this fxn, create a like if the vid is not already liked, and do the same for
       //disliked videos. Also add or remove the class "like-active" if the button
