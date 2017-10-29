@@ -6,6 +6,7 @@ import CategoryIndex from './category_index';
 const mapStateToProps = (state) => {
   return {
     videos: Object.values(state.entities.videos),
+    currentUser: state.session.currentUser, 
     categories: Object.values(state.entities.categories),
     likes: Object.values(state.entities.likes),
   };

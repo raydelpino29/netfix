@@ -20,8 +20,9 @@ class CategoryIndex extends React.Component {
         }
       });
       return (
-        <ul key={category.id}><CategoryIndexItem likes={this.props.likes} category={category} videos={videos}
-          createLike={this.props.createLike} deleteLike={this.props.deleteLike}/></ul>
+        <ul key={category.id}><CategoryIndexItem likes={this.props.likes} category={category}
+          videos={videos} createLike={this.props.createLike} deleteLike={this.props.deleteLike}
+          currentUser={this.props.currentUser} /></ul>
       );
     });
 
