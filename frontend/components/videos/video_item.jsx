@@ -34,6 +34,8 @@ class VideoItem extends React.Component {
   }
 
   handleClick(field) {
+    let other;
+    other = field === 'like' ? 'dislike' : 'like';
     if (this.state.value[field]) { //if there is already a like or dislike, delete it on click
       const like = Object.values(this.props.likes).filter((like) => {
         if (like.video_id === this.props.video.id) {

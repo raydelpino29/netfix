@@ -4,7 +4,7 @@ body {
 
 .landing {
   background-image: image-url("bob-vila.jpg");
-  height: 90vh;
+  height: 100vh;
   position: relative;
   top: 70px;
   background-size: cover;
@@ -86,12 +86,17 @@ body {
   cursor: pointer;
 }
 
+
 .fa-thumbs-o-down {
   position: absolute;
   right: 50px;
   bottom: 40px;
   z-index: 1;
   cursor: pointer;
+}
+
+.active-like {
+  bottom: 40px;
 }
 
 .video-row {
