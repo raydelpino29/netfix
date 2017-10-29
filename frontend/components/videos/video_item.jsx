@@ -7,9 +7,22 @@ class VideoItem extends React.Component {
   }
 
   handleClick(field) {
-    return (e) => {
-      this.setState({ [field]: !this.state.field });
-    };
+    let videos = this.props.likedVideos;
+    if (field === 'like') {
+      videos = this.props.likedVideos;
+    } else {
+      videos = this.props.dislikedVideos;
+    }
+    if (videos.includes(this.props.video.id)) {
+      return;
+    } else {
+      return (e) => {
+        this.setState({ [field]: !this.state.field });
+        //in this fxn, create a like if the vid is not already liked, and do the same for
+        //disliked videos. Also add or remove the class "like-active" if the button
+        //is already/not yet clicked. In the css, let this class maintain its active color
+      };
+    }
   }
 
   render () {

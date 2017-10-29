@@ -1,16 +1,17 @@
 import React from 'react';
 import VideoItem from './video_item';
 
-const CategoryIndexItem = ({ category, videos }) => {
-  const videoItems = videos.map((video) => {
+const CategoryIndexItem = (props) => {
+  const videoItems = props.videos.map((video) => {
     return (
-      <VideoItem key={video.id} video={video} />
+      <VideoItem key={video.id} video={video} likedVideos={props.likedVideos}
+        dislikedVideos={props.dislikedVideos}/>
     );
   });
 
   return (
     <div className="single-category">
-      <h1>{category.name}</h1>
+      <h1>{props.category.name}</h1>
       <ul className="video-row">
         {videoItems}
       </ul>
