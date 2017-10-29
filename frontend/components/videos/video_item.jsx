@@ -3,21 +3,37 @@ import React from 'react';
 class VideoItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: { like: false, dislike: false, myList: false }, class: { like: "icon fa fa-thumbs-o-up", dislike: "icon fa fa-thumbs-o-down", myList: "icon fa fa-plus-circle" } };
+    let likedVids = [];
+    let dislikedVids = [];
+    Object.values(this.props.likes).map((like) => {
+      if (like.like_type === "like") {
+        likedVids.push(like.video_id);
+      }
+    });
+    this.state = { value: { like: Boolean(likedVids.includes(this.props.video.id)),
+      dislike: Boolean(dislikedVids.includes(this.props.video.id)) },
+      class: { like: "icon fa fa-thumbs-o-up", dislike: "icon fa fa-thumbs-o-down",
+      myList: "icon fa fa-plus-circle" } };
+      this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(field) {
-    let videos = this.props.likedVideos;
-    if (field === 'like') {
-      videos = this.props.likedVideos;
-    } else {
-      videos = this.props.dislikedVideos;
-    }
-    if (videos.includes(this.props.video.id)) {
-      return;
+    if (this.state.value.field) { //if there is already a like or dislike, delete it on click
+      like = Object.values(this.props.likes).filter((like) => {
+        if (like.video_id === this.props.video.id) {
+          return like;
+        }
+      });
+      return (e) => {
+        this.setState({ value: { [field]: false } });
+        this.props.deleteLike(like.id);
+      };
     } else {
       return (e) => {
-        this.setState({ [field]: !this.state.field });
+        let like_status;
+        like_status = field === 'like' ? 1 : 0;
+        this.setState({ value: { [field]: true } });
+        this.props.createLike({ video_id: this.props.video.id, like_status });
         //in this fxn, create a like if the vid is not already liked, and do the same for
         //disliked videos. Also add or remove the class "like-active" if the button
         //is already/not yet clicked. In the css, let this class maintain its active color

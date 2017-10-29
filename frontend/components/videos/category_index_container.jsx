@@ -4,20 +4,10 @@ import { fetchAllLikes, createLike, deleteLike } from '../../actions/like_action
 import CategoryIndex from './category_index';
 
 const mapStateToProps = (state) => {
-  let likedVideos = [];
-  let dislikedVideos = [];
-  Object.values(state.entities.likes).map((like) => {
-    if (like.like_type === "like") {
-      likedVideos.push(like.video_id);
-    } else {
-      dislikedVideos.push(like.video_id);
-    }
-  });
   return {
     videos: Object.values(state.entities.videos),
     categories: Object.values(state.entities.categories),
-    likedVideos,
-    dislikedVideos,
+    likes: Object.values(state.entities.likes),
   };
 };
 

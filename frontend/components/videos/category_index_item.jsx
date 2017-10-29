@@ -4,8 +4,8 @@ import VideoItem from './video_item';
 const CategoryIndexItem = (props) => {
   const videoItems = props.videos.map((video) => {
     return (
-      <VideoItem key={video.id} video={video} likedVideos={props.likedVideos}
-        dislikedVideos={props.dislikedVideos}/>
+      <VideoItem key={video.id} video={video} likes={props.likes} createLike={props.createLike}
+        deleteLike={props.deleteLike}/>
     );
   });
 
