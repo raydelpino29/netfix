@@ -22,7 +22,7 @@ class VideoItem extends React.Component {
       classLike = "";
     } else {
       classLike = "icon fa fa-thumbs-o-up";
-      classDislike = "icon fa fa-thumbs-o-down"
+      classDislike = "icon fa fa-thumbs-o-down";
     }
 
     //make these classes to dynamically set the class state and
@@ -34,6 +34,35 @@ class VideoItem extends React.Component {
       this.handleClick = this.handleClick.bind(this);
       this.processCreate = this.processCreate.bind(this);
       this.processDelete = this.processDelete.bind(this);
+  }
+
+  componentWillReceiveProps (newProps) { // todo: refactor
+    if (Object.keys(this.props.likes).length !== Object.keys(newProps.likes).length) {
+      let likedVids = [];
+      let dislikedVids = [];
+      Object.values(newProps.likes).map((like) => {
+        if (like.like_type === "like") {
+          likedVids.push(like.video_id);
+        } else {
+          dislikedVids.push(like.video_id);
+        }
+      });
+      let classLike;
+      let classDislike;
+      if (likedVids.includes(this.props.video.id)) {
+        classLike = "icon fa fa-thumbs-o-up active-like";
+        classDislike = "";
+        this.setState({ class: { like: classLike, dislike: classDislike, myList: this.state.class.myList } });
+      } else if (dislikedVids.includes(this.props.video.id)) {
+        classDislike = "icon fa fa-thumbs-o-down active-dislike";
+        classLike = "";
+        this.setState({ class: { like: classLike, dislike: classDislike, myList: this.state.class.myList } });
+      } else {
+        classLike = "icon fa fa-thumbs-o-up";
+        classDislike = "icon fa fa-thumbs-o-down";
+        this.setState({ class: { like: classLike, dislike: classDislike, myList: this.state.class.myList } });
+      }
+    }
   }
 
   processDelete (field, like) {
@@ -60,7 +89,7 @@ class VideoItem extends React.Component {
       });
       return (e) => {
         this.state.class.like = "icon fa fa-thumbs-o-up";
-        this.state.class.dislike = "icon fa fa-thumbs-o-down"
+        this.state.class.dislike = "icon fa fa-thumbs-o-down";
         this.processDelete(field, like);
       };
     } else {
