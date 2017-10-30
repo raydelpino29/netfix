@@ -10,6 +10,11 @@ class VideoItem extends React.Component {
         likedVids.push(like.video_id);
       }
     });
+    let activeLiked;
+    let activeDisliked;
+    let standardLiked;
+    let standardDisliked; //make these classes to dynamically set the class state and
+    //give proper classes to buttons depending on their like status
     this.state = { value: { like: Boolean(likedVids.includes(this.props.video.id)),
       dislike: Boolean(dislikedVids.includes(this.props.video.id)) },
       class: { like: "icon fa fa-thumbs-o-up", dislike: "icon fa fa-thumbs-o-down",
@@ -21,7 +26,6 @@ class VideoItem extends React.Component {
 
   processDelete (field, like) {
     this.setState({ value: { [field]: false } });
-    debugger
     this.props.deleteLike(like[0].id);
   }
 
@@ -47,6 +51,8 @@ class VideoItem extends React.Component {
       };
     } else {
       return (e) => {
+      this.state.class[field] += ` active-${field}`;
+      this.state.class[other] = "";
       this.processCreate(field);
     };
       //in this fxn, create a like if the vid is not already liked, and do the same for
