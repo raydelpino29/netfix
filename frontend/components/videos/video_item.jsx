@@ -8,16 +8,28 @@ class VideoItem extends React.Component {
     Object.values(this.props.likes).map((like) => {
       if (like.like_type === "like") {
         likedVids.push(like.video_id);
+      } else {
+        dislikedVids.push(like.video_id);
       }
     });
-    let activeLiked;
-    let activeDisliked;
-    let standardLiked;
-    let standardDisliked; //make these classes to dynamically set the class state and
+    let classLike;
+    let classDislike;
+    if (likedVids.includes(this.props.video.id)) {
+      classLike = "icon fa fa-thumbs-o-up active-like";
+      classDislike = "";
+    } else if (dislikedVids.includes(this.props.video.id)) {
+      classDislike = "icon fa fa-thumbs-o-down active-dislike";
+      classLike = "";
+    } else {
+      classLike = "icon fa fa-thumbs-o-up";
+      classDislike = "icon fa fa-thumbs-o-down"
+    }
+
+    //make these classes to dynamically set the class state and
     //give proper classes to buttons depending on their like status
     this.state = { value: { like: Boolean(likedVids.includes(this.props.video.id)),
       dislike: Boolean(dislikedVids.includes(this.props.video.id)) },
-      class: { like: "icon fa fa-thumbs-o-up", dislike: "icon fa fa-thumbs-o-down",
+      class: { like: classLike, dislike: classDislike,
       myList: "icon fa fa-plus-circle" } };
       this.handleClick = this.handleClick.bind(this);
       this.processCreate = this.processCreate.bind(this);
@@ -47,6 +59,8 @@ class VideoItem extends React.Component {
         }
       });
       return (e) => {
+        this.state.class.like = "icon fa fa-thumbs-o-up";
+        this.state.class.dislike = "icon fa fa-thumbs-o-down"
         this.processDelete(field, like);
       };
     } else {
