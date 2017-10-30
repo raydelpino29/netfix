@@ -5,12 +5,16 @@ import { fetchAllListItems, createListItem, deleteListItem } from '../../actions
 import CategoryIndex from './category_index';
 
 const mapStateToProps = (state) => {
+  let listItems = Object.values(state.entities.myList).map((item) => {
+    return item.video_id;
+  });
   return {
     videos: Object.values(state.entities.videos),
     currentUser: state.session.currentUser,
     categories: Object.values(state.entities.categories),
     likes: Object.values(state.entities.likes),
     myList: Object.values(state.entities.myList),
+    listItems,
   };
 };
 
