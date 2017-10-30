@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     post '/like', :to => 'likes#like'
     post '/dislike', :to => 'likes#dislike'
     delete '/like/:id', :to => 'likes#remove_like'
+    resources :my_lists, only: [:create, :destroy, :index]
   end
 
 end
