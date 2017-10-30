@@ -1,7 +1,6 @@
 class Api::MyListsController < ApplicationController
 
   def index
-    debugger
     render :index
   end
 

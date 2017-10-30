@@ -5,7 +5,8 @@ const CategoryIndexItem = (props) => {
   const videoItems = props.videos.map((video) => {
     return (
       <VideoItem key={video.id} video={video} likes={props.likes} createLike={props.createLike}
-        deleteLike={props.deleteLike} currentUser={props.currentUser}/>
+        deleteLike={props.deleteLike} currentUser={props.currentUser}
+        createListItem={this.props.createListItem} deleteListItem={this.props.deleteListItem}/>
     );
   });
 

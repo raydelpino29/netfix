@@ -5,7 +5,6 @@ import { fetchAllListItems, createListItem, deleteListItem } from '../../actions
 import CategoryIndex from './category_index';
 
 const mapStateToProps = (state) => {
-  debugger
   return {
     videos: Object.values(state.entities.videos),
     currentUser: state.session.currentUser,

@@ -10,6 +10,7 @@ class CategoryIndex extends React.Component {
     this.props.fetchAllCategories();
     this.props.fetchAllVideos();
     this.props.fetchAllLikes();
+    this.props.fetchAllListItems();
   }
 
   render () {
@@ -22,7 +23,8 @@ class CategoryIndex extends React.Component {
       return (
         <ul key={category.id}><CategoryIndexItem likes={this.props.likes} category={category}
           videos={videos} createLike={this.props.createLike} deleteLike={this.props.deleteLike}
-          currentUser={this.props.currentUser} /></ul>
+          currentUser={this.props.currentUser} createListItem={this.props.createListItem}
+          deleteListItem={this.props.deleteListItem} /></ul>
       );
     });
 
