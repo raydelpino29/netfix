@@ -40,11 +40,11 @@ class VideoItem extends React.Component {
       let classLike;
       let classDislike;
       let classMyList;
-      if (this.props.likedVids.includes(this.props.video.id)) {
+      if (newProps.likedVids.includes(this.props.video.id)) {
         classLike = "icon fa fa-thumbs-o-up active-like";
         classDislike = "";
         this.setState({ class: { like: classLike, dislike: classDislike, myList: this.state.class.myList } });
-      } else if (this.props.dislikedVids.includes(this.props.video.id)) {
+      } else if (newProps.dislikedVids.includes(this.props.video.id)) {
         classDislike = "icon fa fa-thumbs-o-down active-dislike";
         classLike = "";
         this.setState({ class: { like: classLike, dislike: classDislike, myList: this.state.class.myList } });
@@ -56,22 +56,22 @@ class VideoItem extends React.Component {
     }
   }
 
-  processDelete (field, like) {
+  processDelete (field, currentLike) {
+    this.props.deleteLike(currentLike.id);
     this.setState({ value: { [field]: false } });
-    this.props.deleteLike(like[0].id);
   }
 
   processCreate (field) {
     let like_status;
     like_status = field === 'like' ? 1 : 0;
-    this.setState({ value: { [field]: true } });
     this.props.createLike({ user_id: this.props.currentUser.id,
       video_id: this.props.video.id, like_status });
+    this.setState({ value: { [field]: true } });
   }
 
   handleAdd (e) {
     if (this.state.value.myList) {
-      
+
     }
   }
 
@@ -79,15 +79,16 @@ class VideoItem extends React.Component {
     let other;
     other = field === 'like' ? 'dislike' : 'like';
     if (this.state.value[field]) { //if there is already a like or dislike, delete it on click
-      const like = Object.values(this.props.likes).filter((like) => {
+      let currentLike;
+      const like = Object.values(this.props.likes).forEach((like) => {
         if (like.video_id === this.props.video.id) {
-          return like;
+          currentLike = like;
         }
       });
       return (e) => {
         this.state.class.like = "icon fa fa-thumbs-o-up";
         this.state.class.dislike = "icon fa fa-thumbs-o-down";
-        this.processDelete(field, like);
+        this.processDelete(field, currentLike);
       };
     } else {
       return (e) => {
