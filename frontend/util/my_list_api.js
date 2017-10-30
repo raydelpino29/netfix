@@ -5,10 +5,11 @@ export const fetchAllListItems = () => {
   });
 };
 
-export const createListItem = (item) => {
+export const createListItem = (my_list) => {
   return $.ajax({
     method: 'POST',
-    url: '/api/my_lists'
+    url: '/api/my_lists',
+    data: { my_list }
   });
 };
 
