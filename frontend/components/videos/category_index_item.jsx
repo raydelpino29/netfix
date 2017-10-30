@@ -7,7 +7,8 @@ const CategoryIndexItem = (props) => {
       <VideoItem key={video.id} video={video} likes={props.likes} createLike={props.createLike}
         deleteLike={props.deleteLike} currentUser={props.currentUser}
         createListItem={props.createListItem} deleteListItem={props.deleteListItem}
-        listItems={props.listItems} />
+        listItems={props.listItems} likedVids={props.likedVids}
+        dislikedVids={props.dislikedVids} />
     );
   });
 

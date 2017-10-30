@@ -3,22 +3,13 @@ import React from 'react';
 class VideoItem extends React.Component {
   constructor(props) {
     super(props);
-    let likedVids = [];
-    let dislikedVids = [];
-    Object.values(this.props.likes).map((like) => {
-      if (like.like_type === "like") {
-        likedVids.push(like.video_id);
-      } else {
-        dislikedVids.push(like.video_id);
-      }
-    });
     let classLike;
     let classDislike;
     let classMyList;
-    if (likedVids.includes(this.props.video.id)) {
+    if (this.props.likedVids.includes(this.props.video.id)) {
       classLike = "icon fa fa-thumbs-o-up active-like";
       classDislike = "";
-    } else if (dislikedVids.includes(this.props.video.id)) {
+    } else if (this.props.dislikedVids.includes(this.props.video.id)) {
       classDislike = "icon fa fa-thumbs-o-down active-dislike";
       classLike = "";
     } else {
@@ -32,8 +23,8 @@ class VideoItem extends React.Component {
     }
     //make these classes to dynamically set the class state and
     //give proper classes to buttons depending on their like status
-    this.state = { value: { like: Boolean(likedVids.includes(this.props.video.id)),
-      dislike: Boolean(dislikedVids.includes(this.props.video.id)),
+    this.state = { value: { like: Boolean(this.props.likedVids.includes(this.props.video.id)),
+      dislike: Boolean(this.props.dislikedVids.includes(this.props.video.id)),
       myList: Boolean(this.props.listItems.includes(this.props.video.id)) },
       class: { like: classLike, dislike: classDislike,
       myList: classMyList } };
@@ -46,23 +37,14 @@ class VideoItem extends React.Component {
 
   componentWillReceiveProps (newProps) { // todo: refactor
     if (Object.keys(this.props.likes).length !== Object.keys(newProps.likes).length) {
-      let likedVids = [];
-      let dislikedVids = [];
-      Object.values(newProps.likes).map((like) => {
-        if (like.like_type === "like") {
-          likedVids.push(like.video_id);
-        } else {
-          dislikedVids.push(like.video_id);
-        }
-      });
       let classLike;
       let classDislike;
       let classMyList;
-      if (likedVids.includes(this.props.video.id)) {
+      if (this.props.likedVids.includes(this.props.video.id)) {
         classLike = "icon fa fa-thumbs-o-up active-like";
         classDislike = "";
         this.setState({ class: { like: classLike, dislike: classDislike, myList: this.state.class.myList } });
-      } else if (dislikedVids.includes(this.props.video.id)) {
+      } else if (this.props.dislikedVids.includes(this.props.video.id)) {
         classDislike = "icon fa fa-thumbs-o-down active-dislike";
         classLike = "";
         this.setState({ class: { like: classLike, dislike: classDislike, myList: this.state.class.myList } });
@@ -89,7 +71,7 @@ class VideoItem extends React.Component {
 
   handleAdd (e) {
     if (this.state.value.myList) {
-
+      
     }
   }
 

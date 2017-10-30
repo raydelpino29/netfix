@@ -8,6 +8,15 @@ const mapStateToProps = (state) => {
   let listItems = Object.values(state.entities.myList).map((item) => {
     return item.video_id;
   });
+  let likedVids = [];
+  let dislikedVids = [];
+  Object.values(state.entities.likes).forEach((like) => {
+    if (like.like_type === "like") {
+      likedVids.push(like.video_id);
+    } else {
+      dislikedVids.push(like.video_id);
+    }
+  });
   return {
     videos: Object.values(state.entities.videos),
     currentUser: state.session.currentUser,
@@ -15,6 +24,8 @@ const mapStateToProps = (state) => {
     likes: Object.values(state.entities.likes),
     myList: Object.values(state.entities.myList),
     listItems,
+    likedVids,
+    dislikedVids,
   };
 };
 

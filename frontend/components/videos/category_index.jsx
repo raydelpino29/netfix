@@ -24,7 +24,8 @@ class CategoryIndex extends React.Component {
         <ul key={category.id}><CategoryIndexItem likes={this.props.likes} category={category}
           videos={videos} createLike={this.props.createLike} deleteLike={this.props.deleteLike}
           currentUser={this.props.currentUser} createListItem={this.props.createListItem}
-          deleteListItem={this.props.deleteListItem} listItems={this.props.listItems}/></ul>
+          deleteListItem={this.props.deleteListItem} listItems={this.props.listItems}
+          likedVids={this.props.likedVids} dislikedVids={this.props.dislikedVids} /></ul>
       );
     });
 
