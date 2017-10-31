@@ -4,6 +4,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SessionFormContainer from './session/session_form_container';
 import LandingContainer from './landing/landing_container';
 import VideoPlayerContainer from './videos/video_player_container';
+import CategoryShowContainer from './videos/category_show_container';
 
 const App = () => (
   <div>
@@ -11,6 +12,7 @@ const App = () => (
     <AuthRoute path='/login' component={SessionFormContainer} />
     <AuthRoute path='/signup' component={SessionFormContainer} />
     <ProtectedRoute exact path='/video/:videoId' component={VideoPlayerContainer} />
+    <ProtectedRoute exact path='/category/:categoryId' component={CategoryShowContainer} />
   </div>
 );
 

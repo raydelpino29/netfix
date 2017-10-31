@@ -7,19 +7,23 @@ class CategoryShow extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchAllVideos();
     this.props.fetchCategory(this.props.catId);
   }
 
   componentWillReceiveProps(newProps) {
+    debugger
     if (newProps.match.params.categoryId !== this.props.match.params.categoryId) {
       this.props.fetchCategory(newProps.catId);
     }
   }
 
   render () {
-    if (!this.props.video) {
+    if (this.props.videos.length === 0) {
       return <h1>Loading</h1>
     }
-    <CategoryIndexItem videos={this.props.videos} category={this.props.category} />
+    return <CategoryIndexItem videos={this.props.videos} category={this.props.category} />
   }
 }
+
+export default CategoryShow;

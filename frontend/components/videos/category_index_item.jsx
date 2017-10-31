@@ -2,6 +2,7 @@ import React from 'react';
 import VideoItemContainer from './video_item_container';
 
 const CategoryIndexItem = (props) => {
+  debugger
   const videoItems = props.videos.map((video) => {
     return (
       <VideoItemContainer key={video.id} video={video} />
