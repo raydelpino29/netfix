@@ -12,7 +12,7 @@ class VideoPlayer extends React.Component {
 
   componentWillReceiveProps(newProps) {
     if (newProps.match.params.videoId !== this.props.match.params.videoId) {
-      this.props.fetchVideo(this.props.vidId);
+      this.props.fetchVideo(newProps.vidId);
     }
   }
 
