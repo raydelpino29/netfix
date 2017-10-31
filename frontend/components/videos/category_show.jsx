@@ -12,7 +12,6 @@ class CategoryShow extends React.Component {
   }
 
   componentWillReceiveProps(newProps) {
-    debugger
     if (newProps.match.params.categoryId !== this.props.match.params.categoryId) {
       this.props.fetchCategory(newProps.catId);
     }
@@ -22,7 +21,7 @@ class CategoryShow extends React.Component {
     if (this.props.videos.length === 0) {
       return <h1>Loading</h1>
     }
-    return <CategoryIndexItem videos={this.props.videos} category={this.props.category} />
+    return <CategoryIndexItem classTitle="category-show-title" videos={this.props.videos} category={this.props.category} />
   }
 }
 

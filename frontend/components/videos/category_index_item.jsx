@@ -11,7 +11,7 @@ const CategoryIndexItem = (props) => {
 
   return (
     <div className="single-category">
-      <h1>{props.category.name}</h1>
+      <h1 className={props.classTitle}>{props.category.name}</h1>
       <ul className="video-row">
         {videoItems}
       </ul>
