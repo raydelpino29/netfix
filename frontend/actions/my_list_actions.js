@@ -14,14 +14,14 @@ export const receiveAllListItems = (items) => {
 export const receiveListItem = (item) => {
   return {
     type: RECEIVE_LIST_ITEM,
-    items,
+    item,
   };
 };
 
 export const removeListItem = (item) => {
   return {
     type: REMOVE_LIST_ITEM,
-    items,
+    item,
   };
 };
 

@@ -4,9 +4,6 @@ import { fetchAllListItems, createListItem, deleteListItem } from '../../actions
 import VideoItem from './video_item';
 
 const mapStateToProps = (state, ownProps) => {
-  let listItems = Object.values(state.entities.myList).map((item) => {
-    return item.video_id;
-  });
   let likedVids = [];
   let dislikedVids = [];
   Object.values(state.entities.likes).forEach((like) => {
@@ -22,8 +19,11 @@ const mapStateToProps = (state, ownProps) => {
   } else if (dislikedVids.includes(ownProps.video.id)) {
     likeStatus = "dislike";
   }
+  let myListVids = Object.values(state.entities.myList).map((item) => {
+    return item.video_id;
+  });
   let myListStatus;
-  if (Object.values(state.entities.myList).includes(ownProps.video.id)) {
+  if (myListVids.includes(ownProps.video.id)) {
     myListStatus = "added";
   }
   return {
@@ -32,7 +32,7 @@ const mapStateToProps = (state, ownProps) => {
     categories: Object.values(state.entities.categories),
     likes: Object.values(state.entities.likes),
     myList: Object.values(state.entities.myList),
-    listItems,
+    myListVids,
     likeStatus,
     myListStatus,
   };
