@@ -3,7 +3,7 @@ body {
 }
 
 .landing {
-  background-image: image-url("bob-vila.jpg");
+  background-image: image-url("vila.jpg");
   height: 100vh;
   position: relative;
   top: 70px;
@@ -17,17 +17,12 @@ body {
   margin-right: 5px;
   margin-bottom: 10px;
   z-index: 1;
-  padding-left: 4px;
-  padding-right: 4px;
   cursor: pointer;
-}
-
-.video-item:hover{
-
 }
 
 .single-category {
   position: relative;
+  padding-bottom: 20px;
 }
 
 .header {
@@ -81,23 +76,40 @@ body {
 .fa-thumbs-o-up {
   position: absolute;
   right: 50px;
-  bottom: 60px;
+  bottom: 50px;
   z-index: 1;
   cursor: pointer;
+  visibility: hidden;
+  color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  padding: 3px;
+  background: rgba(0,0,0,0.3);
+  text-shadow: 0 0 3px #000;
+  margin-bottom: 10px;
+  transform: scale(0.8)
 }
 
 
 .fa-thumbs-o-down {
   position: absolute;
   right: 50px;
-  bottom: 40px;
+  bottom: 37px;
   z-index: 1;
   cursor: pointer;
+  visibility: hidden;
+  color: #e5e5e5;
+  text-shadow: 0 0 3px #000;
+  border: 1px solid #e5e5e5;
+  padding: 3px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  transform: scale(0.8)
 }
 
 .active-like {
-  bottom: 40px;
-  color: #e5e5e5;
+  bottom: 26px;
+  color: #FFE303;
 }
 
 .active-dislike {
@@ -115,9 +127,13 @@ body {
 .fa-plus-circle {
   position: absolute;
   right: 50px;
-  bottom: 17px;
+  bottom: 16px;
   cursor: pointer;
   z-index: 1;
+  visibility: hidden;
+  color: #e5e5e5;
+  text-shadow: 0 0 3px #000;
+  padding: 4px;
 }
 
 .video-item-container:hover {
@@ -125,6 +141,9 @@ body {
   transition-duration: 400ms;
   padding-left: 35px;
   padding-right: 34px;
+    i, p {
+      visibility: visible;
+    }
 }
 
 .fa-thumbs-o-down:hover {
@@ -132,7 +151,7 @@ body {
 }
 
 .fa-thumbs-o-up:hover {
-  color: #e5e5e5;
+  color: #FFE303;
 }
 
 .fa-plus-circle:hover {
@@ -141,4 +160,26 @@ body {
 
 .active-add {
   color: #FFD700;
+}
+
+.video-title {
+  visibility: hidden;
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  z-index: 1;
+  color: #e5e5e5;
+  text-shadow: 0 0 3px #000;
+}
+
+.playing-video {
+  height: 100vh;
+}
+
+.fa-chevron-circle-left {
+  position: absolute;
+  transform: scale(1.8);
+  top: 10px;
+  left: 10px;
+  z-index: 2;
 }

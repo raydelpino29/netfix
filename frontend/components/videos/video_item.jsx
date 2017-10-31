@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class VideoItem extends React.Component {
   constructor(props) {
@@ -75,11 +76,12 @@ class VideoItem extends React.Component {
       classMyList = "icon fa fa-plus-circle";
     }
     return (
-      <li className="video-item-container">
-        <img className="video-item" src={this.props.video.thumbnail_url} />
+      <li onClick={this.handleVideoClick} className="video-item-container">
+        <Link to={`/video/${this.props.video.id}`}><img className="video-item" src={this.props.video.thumbnail_url} /></Link>
         <i onClick={this.handleLike('like')} className={classLike}></i>
         <i onClick={this.handleLike('dislike')} className={classDislike}></i>
         <i onClick={this.handleAdd} className={classMyList}></i>
+        <p className="video-title">{this.props.video.title}</p>
       </li>
     )
   }

@@ -5,9 +5,23 @@ export const fetchAllVideos = () => {
   });
 };
 
+export const fetchVideo = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/videos/${id}`
+  });
+};
+
 export const fetchAllCategories = () => {
   return $.ajax({
     method: 'GET',
     url: '/api/categories'
+  });
+};
+
+export const fetchCategory = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/categories/${id}`
   });
 };

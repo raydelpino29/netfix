@@ -2,13 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchAllLikes, createLike, deleteLike } from './actions/like_actions';
+import { fetchVideo } from './actions/video_actions';
 
-window.fetchAllLikes = fetchAllLikes;
-window.createLike = createLike;
-window.deleteLike = deleteLike;
-
-
+window.fetchVideo = fetchVideo;
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
