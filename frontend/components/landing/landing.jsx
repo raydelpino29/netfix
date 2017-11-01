@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CategoryIndexContainer from '../videos/category_index_container';
-import Header from '../header/header';
+import HeaderContainer from '../header/header_container';
 
 class Landing extends React.Component {
   constructor(props){
@@ -13,7 +13,7 @@ class Landing extends React.Component {
       return (
         <div className="landing-background">
           <div className="landing">
-            <Header />
+            <HeaderContainer />
             <div className="temp-welcome">
               <h1>Hi There, {this.props.currentUser.email}!</h1>
               <button onClick={this.props.logout}>Logout</button>

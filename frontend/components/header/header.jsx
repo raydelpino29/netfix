@@ -7,11 +7,24 @@ class Header extends React.Component {
   }
 
   render() {
-    let foodPath;
-    let houseworkPath;
-    let musicPath;
-    let autoPath;
-    let fashionPath;
+    let foodId;
+    let houseworkId;
+    let musicId;
+    let autoId;
+    let fashionId;
+    Object.values(this.props.categories).forEach((category) => {
+      if (category.name === "Food" ) {
+        foodId = category.id;
+      } else if (category.name === "Housework" ) {
+        houseworkId = category.id;
+      } else if (category.name === "Music") {
+        musicId = category.id;
+      } else if (category.name === "Automobiles") {
+        autoId = category.id;
+      } else if (category.name === "Fashion") {
+        fashionId = category.id;
+      }
+    });
     return (
       <nav>
         <ul className="header">
@@ -20,12 +33,12 @@ class Header extends React.Component {
               <li className="logo">Netfix</li>
               <ul className='browse'>Browse
                 <div className="browse-list">
-                  <Link to='/'>My List</Link>
-                  <Link to='/'>Food</Link>
-                  <Link to='/'>Housework</Link>
-                  <Link to='/'>Music</Link>
-                  <Link to='/'>Automobiles</Link>
-                  <Link to='/'>Fashion</Link>
+                  <Link to="/category/myList">My List</Link>
+                  <Link to={`/category/${foodId}`}>Food</Link>
+                  <Link to={`/category/${houseworkId}`}>Housework</Link>
+                  <Link to={`/category/${musicId}`}>Music</Link>
+                  <Link to={`/category/${autoId}`}>Automobiles</Link>
+                  <Link to={`/category/${fashionId}`}>Fashion</Link>
                 </div>
               </ul>
             </ul>
