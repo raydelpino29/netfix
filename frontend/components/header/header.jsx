@@ -23,7 +23,7 @@ class Header extends React.Component {
           <li>
             <ul className="header-left">
               <li className="logo">Netfix</li>
-              <ul className='browse'>Browse
+              <ul className='browse'>Browse <i class="fa fa-caret-down" aria-hidden="true"></i>
                 <div className="browse-list">
                   <Link to="/myList">My List</Link>
                   {links}

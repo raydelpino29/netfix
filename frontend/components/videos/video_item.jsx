@@ -56,6 +56,10 @@ class VideoItem extends React.Component {
     }
   }
 
+  handleDropdown() {
+
+  }
+
   render () {
     let classLike;
     let classDislike;
@@ -87,7 +91,7 @@ class VideoItem extends React.Component {
         <i onClick={this.handleAdd} className={classMyList}></i>
         <p className="video-title">{this.props.video.title}</p>
         <i className="fa fa-angle-down" aria-hidden="true"></i>
-        <div className="video-dropdown">
+        <div onClick={this.handleDropdown} className="video-dropdown">
           <h1 className="video-title">{this.props.video.title}</h1>
           <img className="video-show-image" src={this.props.video.thumbnail_url} />
           <p className="video-description">{this.props.video.description}</p>
