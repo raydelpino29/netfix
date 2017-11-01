@@ -37,7 +37,7 @@ body {
   z-index: 2;
 }
 
-.header li {
+.header li, .header ul {
   margin-top: auto;
   margin-bottom: auto;
   display: inline;
@@ -69,7 +69,7 @@ body {
   font-weight: 700;
 }
 
-.header-left li, .header-right li {
+.header-left li, .header-left ul, .header-right li{
   padding: 25px;
 }
 
