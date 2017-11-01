@@ -4,8 +4,8 @@
   z-index: 1;
   border-top: 1px solid #e5e5e5;
   background-color: rgba(0,0,0,0.7);
-  left: 115px;
-  top: 70px;
+  left: 25px;
+  top: 60px;
 }
 
 .browse {
@@ -15,5 +15,13 @@
 
 .browse-list a {
   display: block;
-  color: #fff;
+  position: relative;
+  margin: 2px 10px;
+}
+
+.browse:hover {
+  .browse-list {
+    display: block;
+    color: #fff;
+  }
 }

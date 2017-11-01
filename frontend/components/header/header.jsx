@@ -6,26 +6,28 @@ class Header extends React.Component {
     super(props);
   }
 
-  dropdown() {
-    document.getElementsByClassName("browse-items").classList.toggle("reveal");
-  }
-
   render() {
+    let foodPath;
+    let houseworkPath;
+    let musicPath;
+    let autoPath;
+    let fashionPath;
     return (
       <nav>
         <ul className="header">
           <li>
             <ul className="header-left">
               <li className="logo">Netfix</li>
-              <ul onMouseEnter={this.dropdown} className='browse'>Browse</ul>
-              <div className="browse-list">
-                <Link to='/'>My List</Link>
-                <Link to='/'>Food</Link>
-                <Link to='/'>Housework</Link>
-                <Link to='/'>Music</Link>
-                <Link to='/'>Automobiles</Link>
-                <Link to='/'>Fashion</Link>
-              </div>
+              <ul className='browse'>Browse
+                <div className="browse-list">
+                  <Link to='/'>My List</Link>
+                  <Link to='/'>Food</Link>
+                  <Link to='/'>Housework</Link>
+                  <Link to='/'>Music</Link>
+                  <Link to='/'>Automobiles</Link>
+                  <Link to='/'>Fashion</Link>
+                </div>
+              </ul>
             </ul>
           </li>
           <li>
