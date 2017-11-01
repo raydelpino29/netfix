@@ -1,0 +1,19 @@
+.browse-list {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border-top: 1px solid #e5e5e5;
+  background-color: rgba(0,0,0,0.7);
+  left: 115px;
+  top: 70px;
+}
+
+.browse {
+  display: inline-block;
+  position: relative;
+}
+
+.browse-list a {
+  display: block;
+  color: #fff;
+}

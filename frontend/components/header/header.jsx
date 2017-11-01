@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
   constructor(props) {
@@ -17,6 +18,14 @@ class Header extends React.Component {
             <ul className="header-left">
               <li className="logo">Netfix</li>
               <ul onMouseEnter={this.dropdown} className='browse'>Browse</ul>
+              <div className="browse-list">
+                <Link to='/'>My List</Link>
+                <Link to='/'>Food</Link>
+                <Link to='/'>Housework</Link>
+                <Link to='/'>Music</Link>
+                <Link to='/'>Automobiles</Link>
+                <Link to='/'>Fashion</Link>
+              </div>
             </ul>
           </li>
           <li>

@@ -13,15 +13,18 @@ const CategoryIndexItem = (props) => {
 
     categoryClass = "single-category show"
   }
-
-  return (
-    <div className={categoryClass}>
-      <h1 className={props.classTitle}>{props.category.name}</h1>
-      <ul className="video-row">
-        {videoItems}
-      </ul>
-    </div>
-  );
+  if (!props.category) {
+    return <h1>Loading</h1>
+  } else {
+    return (
+      <div className={categoryClass}>
+        <h1 className={props.classTitle}>{props.category.name}</h1>
+        <ul className="video-row">
+          {videoItems}
+        </ul>
+      </div>
+    );
+  }
 };
 
 export default CategoryIndexItem;
