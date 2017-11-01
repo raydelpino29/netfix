@@ -2,6 +2,8 @@
   color: #fff;
   font-size: 36px;
   margin-bottom: 70px;
+  display: inline-table;
+  position: absolute;
 }
 
 
@@ -11,7 +13,12 @@
 }
 
 .video-row-show {
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   max-width: 96%;
+}
+
+.video-show{
+  margin-bottom: 10px;
 }

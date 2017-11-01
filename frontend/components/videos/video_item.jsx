@@ -60,6 +60,10 @@ class VideoItem extends React.Component {
     let classLike;
     let classDislike;
     let classMyList;
+    let containerClass = "video-item-container";
+    if (this.props.classTitle) {
+      containerClass += " video-show";
+    }
     if (this.props.likeStatus === "like") {
       classLike = "icon fa fa-thumbs-o-up active-like";
       classDislike = "";
@@ -76,7 +80,7 @@ class VideoItem extends React.Component {
       classMyList = "icon fa fa-plus-circle";
     }
     return (
-      <li onClick={this.handleVideoClick} className="video-item-container">
+      <li onClick={this.handleVideoClick} className={containerClass}>
         <Link to={`/video/${this.props.video.id}`}><img className="video-item" src={this.props.video.thumbnail_url} /></Link>
         <i onClick={this.handleLike('like')} className={classLike}></i>
         <i onClick={this.handleLike('dislike')} className={classDislike}></i>
