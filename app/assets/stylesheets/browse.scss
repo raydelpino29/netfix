@@ -198,5 +198,19 @@ body {
 }
 
 .video-dropdown {
-  display: none;
+  position: absolute;
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.visible {
+  height: 300px;
+  width: 100%;
+}
+
+.video-show-image {
+  height: 40px;
+  width: 50px;
 }
