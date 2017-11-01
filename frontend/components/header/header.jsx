@@ -6,26 +6,18 @@ class Header extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    this.props.fetchAllCategories();
+  }
+
   render() {
-    let foodId;
-    let houseworkId;
-    let musicId;
-    let autoId;
-    let fashionId;
-    Object.values(this.props.categories).forEach((category) => {
-      if (category.name === "Food" ) {
-        foodId = category.id;
-      } else if (category.name === "Housework" ) {
-        houseworkId = category.id;
-      } else if (category.name === "Music") {
-        musicId = category.id;
-      } else if (category.name === "Automobiles") {
-        autoId = category.id;
-      } else if (category.name === "Fashion") {
-        fashionId = category.id;
-      }
+
+    const links = Object.values(this.props.categories).map((category) => {
+      return <Link to={`/category/${category.id}`}>{category.name}</Link>
     });
+
     return (
+
       <nav>
         <ul className="header">
           <li>
@@ -34,11 +26,7 @@ class Header extends React.Component {
               <ul className='browse'>Browse
                 <div className="browse-list">
                   <Link to="/myList">My List</Link>
-                  <Link to={`/category/${foodId}`}>Food</Link>
-                  <Link to={`/category/${houseworkId}`}>Housework</Link>
-                  <Link to={`/category/${musicId}`}>Music</Link>
-                  <Link to={`/category/${autoId}`}>Automobiles</Link>
-                  <Link to={`/category/${fashionId}`}>Fashion</Link>
+                  {links}
                 </div>
               </ul>
             </ul>

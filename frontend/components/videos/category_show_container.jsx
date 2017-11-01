@@ -25,6 +25,7 @@ const mapStateToProps = (state, ownProps) => {
     });
   }
   return {
+    categories: state.entities.categories,
     category,
     videos,
     catId,

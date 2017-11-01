@@ -184,3 +184,18 @@ body {
   left: 10px;
   z-index: 2;
 }
+
+.fa-angle-down {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+  bottom: 14px;
+  left: 147px;
+  transform: scale(1.7);
+  color: white;
+  cursor: pointer;
+}
+
+.video-dropdown {
+  display: none;
+}
