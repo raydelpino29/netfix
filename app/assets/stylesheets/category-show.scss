@@ -7,4 +7,11 @@
 
 .show {
   margin: 70px 4%;
+  display: flex;
+}
+
+.video-row-show {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 96%;
 }

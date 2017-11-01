@@ -33,7 +33,7 @@ class Header extends React.Component {
               <li className="logo">Netfix</li>
               <ul className='browse'>Browse
                 <div className="browse-list">
-                  <Link to="/category/myList">My List</Link>
+                  <Link to="/myList">My List</Link>
                   <Link to={`/category/${foodId}`}>Food</Link>
                   <Link to={`/category/${houseworkId}`}>Housework</Link>
                   <Link to={`/category/${musicId}`}>Music</Link>
