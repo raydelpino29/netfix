@@ -3,7 +3,6 @@ import { RECEIVE_ALL_CATEGORIES, RECEIVE_CATEGORY } from '../actions/video_actio
 const CategoriesReducer = (state = {}, action) => {
   Object.freeze(state);
   let newState;
-  debugger
   switch(action.type) {
     case RECEIVE_ALL_CATEGORIES:
       return action.categories;

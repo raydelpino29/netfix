@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoItemContainer from './video_item_container';
+import Header from '../header/header';
 
 const CategoryIndexItem = (props) => {
   const videoItems = props.videos.map((video) => {
@@ -8,9 +9,9 @@ const CategoryIndexItem = (props) => {
     );
   });
   let categoryClass = "single-category"
-
+  let headerClass;
   if (props.classTitle) {
-
+    headerClass = "header-show"
     categoryClass = "single-category show"
   }
   if (!props.category) {

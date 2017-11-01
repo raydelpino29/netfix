@@ -4,7 +4,6 @@ import { fetchCategory, fetchAllVideos } from '../../actions/video_actions';
 import CategoryShow from './category_show';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   let catId = ownProps.match.params.categoryId;
   let category = state.entities.categories[ownProps.match.params.categoryId];
   let videos = Object.values(state.entities.videos).filter((video) => {
