@@ -56,7 +56,7 @@ body {
 
 .category-index {
   position: absolute;
-  margin-top: 82vh;
+  margin-top: 69vh;
   margin-left: 50px;
 }
 
@@ -213,4 +213,65 @@ body {
 .video-show-image {
   height: 40px;
   width: 50px;
+}
+
+.blurb {
+  position: absolute;
+  top: 300px;
+  left: 55px;
+}
+
+.synopsis {
+  width: 500px;
+  margin-bottom: 15px;
+  font-weight: 400px;
+}
+
+.blurb-title {
+  font-size: 40px;
+  font-weight: 40px;
+}
+
+blurb-title > p {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.blurb-buttons {
+  margin-top: 10px;
+}
+
+.subtitle {
+  margin-bottom: 10px;
+}
+
+.blurb-buttons button {
+  margin-right: 5px;
+  padding: 5px 12px;
+  color: #e5e5e5;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.fa-plus, .fa-play {
+  margin-right: 6px;
+  color: #e5e5e5;
+}
+
+.play-button {
+  background: #e50914;
+  color: #e5e5e5;
+  border: 1px solid #ff0a16;
+}
+
+.list-button {
+  border: 1px solid rgba(255,255,255,.4);
+  background-color: rgba(0,0,0,.4)
+}
+
+.list-button:hover {
+  background-color: rgba(51,51,51,.4);
+}
+
+.play-button:hover {
+  background-color: #ff0a16;
 }
