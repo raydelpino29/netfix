@@ -2,46 +2,67 @@ import React from 'react';
 import VideoItemContainer from './video_item_container';
 import Header from '../header/header';
 
-const CategoryIndexItem = (props) => {
-  let videoItems;
-  if (props.myListVids) {
-    videoItems = props.myListVids.map((video) => {
+class CategoryIndexItem extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = { display: false, video: null };
+    this.handleDropdown = this.handleDropdown.bind(this);
+  }
+
+  handleDropdown (vid) {
+    this.setState({ display: !this.state.display, video: vid });
+  }
+
+  render () {
+    let videoItems;
+    if (this.props.myListVids) {
+      videoItems = this.props.myListVids.map((video) => {
+        return (
+          <VideoItemContainer key={video.id} video={video} handleDropdown={this.handleDropdown} />
+        );
+      });
+    } else {
+      videoItems = this.props.videos.map((video) => {
+        return (
+          <VideoItemContainer key={video.id} video={video} category={this.props.category}
+            classTitle={this.props.classTitle} />
+        );
+      });
+    }
+    let categoryClass = "single-category";
+    let rowClass = "video-row";
+    let headerClass;
+    let dropDownInfo = { title: "", description: "", thumbnail_url: "" };
+    let title = this.props.category.name;
+    if (this.props.classTitle) {
+      headerClass = "header-show"
+      categoryClass = "single-category show"
+      rowClass = "video-row-show"
+    }
+    if (this.props.category === "myList") {
+      title = "My List";
+    }
+    if (!this.props.category) {
+      return <h1>There are no videos here.</h1>
+    } else {
+      if (this.state.video) {
+        dropDownInfo = this.state.video
+      }
       return (
-        <VideoItemContainer key={video.id} video={video} />
+        <div className={categoryClass}>
+          <h1 className={this.props.classTitle}>{title}</h1>
+          <ul className={rowClass}>
+            {videoItems}
+          </ul>
+          <div className="video-dropdown">
+            <h1 className="video-title">{dropDownInfo.title}</h1>
+            <img className="video-show-image" src={dropDownInfo.thumbnail_url} />
+            <p className="video-description">{dropDownInfo.description}</p>
+          </div>
+        </div>
       );
-    });
-  } else {
-    videoItems = props.videos.map((video) => {
-      return (
-        <VideoItemContainer key={video.id} video={video} category={props.category}
-          classTitle={props.classTitle} />
-      );
-    });
+    }
   }
-  let categoryClass = "single-category";
-  let rowClass = "video-row";
-  let headerClass;
-  let title = props.category.name;
-  if (props.classTitle) {
-    headerClass = "header-show"
-    categoryClass = "single-category show"
-    rowClass = "video-row-show"
-  }
-  if (props.category === "myList") {
-    title = "My List";
-  }
-  if (!props.category) {
-    return <h1>There are no videos here.</h1>
-  } else {
-    return (
-      <div className={categoryClass}>
-        <h1 className={props.classTitle}>{title}</h1>
-        <ul className={rowClass}>
-          {videoItems}
-        </ul>
-      </div>
-    );
-  }
-};
+}
 
 export default CategoryIndexItem;

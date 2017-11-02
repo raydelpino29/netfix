@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :videos, only: [:index, :show]
     resources :categories, only: [:index, :show]
+    resources :reviews
     get '/likes', :to => 'likes#index'
     post '/like', :to => 'likes#like'
     post '/dislike', :to => 'likes#dislike'

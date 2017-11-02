@@ -8,7 +8,6 @@ class VideoItem extends React.Component {
       this.processCreate = this.processCreate.bind(this);
       this.processDelete = this.processDelete.bind(this);
       this.handleAdd = this.handleAdd.bind(this);
-      this.handleDropdown = this.handleDropdown.bind(this);
   }
 
   processDelete (field, currentLike) {
@@ -57,11 +56,6 @@ class VideoItem extends React.Component {
     }
   }
 
-  handleDropdown() {
-    debugger
-    document.getElementsByClassName('video-dropdown')[0].classList.toggle("visible");
-  }
-
   render () {
     let classLike;
     let classDislike;
@@ -93,11 +87,6 @@ class VideoItem extends React.Component {
         <i onClick={this.handleAdd} className={classMyList}></i>
         <p className="video-title">{this.props.video.title}</p>
         <i  onClick={this.handleDropdown} className="fa fa-angle-down" aria-hidden="true"></i>
-        <div className="video-dropdown">
-          <h1 className="video-title">{this.props.video.title}</h1>
-          <img className="video-show-image" src={this.props.video.thumbnail_url} />
-          <p className="video-description">{this.props.video.description}</p>
-        </div>
       </li>
     )
   }

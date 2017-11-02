@@ -19,15 +19,15 @@ class Landing extends React.Component {
               <button onClick={this.props.logout}>Logout</button>
             </div>
             <div className="blurb">
-              <p className="background-heading"><h1 className="blurb-title">Netfix Original</h1>
-                <p className="subtitle">Watch Bob Vila's 5 Tips on Pest Control:</p>
+              <div className="background-heading"><h1 className="blurb-title">Netfix Original</h1>
+                <div className="subtitle">Watch Bob Vila's 5 Tips on Pest Control:</div>
                 <div className="synopsis">Who else but the classic Bob Vila would know the best Tips
                    for putting an end to the pesky critters within your home?
                 </div>
-              </p>
+              </div>
               <div className="blurb-buttons">
-                <button className="play-button"><i class="fa fa-play" aria-hidden="true"></i>Play</button>
-                <button className="list-button"><i class="fa fa-plus" aria-hidden="true"></i>My List</button>
+                <button className="play-button"><i className="fa fa-play" aria-hidden="true"></i>Play</button>
+                <button className="list-button"><i className="fa fa-plus" aria-hidden="true"></i>My List</button>
               </div>
             </div>
             <CategoryIndexContainer />
