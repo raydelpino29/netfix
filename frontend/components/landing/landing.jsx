@@ -21,10 +21,6 @@ class Landing extends React.Component {
                    for putting an end to the pesky critters within your home?
                 </div>
               </div>
-              <div className="blurb-buttons">
-                <button className="play-button"><i className="fa fa-play" aria-hidden="true"></i>Play</button>
-                <button className="list-button"><i className="fa fa-plus" aria-hidden="true"></i>My List</button>
-              </div>
             </div>
             <CategoryIndexContainer />
           </div>
