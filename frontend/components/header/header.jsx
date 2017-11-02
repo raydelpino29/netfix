@@ -7,7 +7,7 @@ class Header extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchAllCategories();
+    this.props.fetchAllCategories(); 
   }
 
   render() {
@@ -33,8 +33,11 @@ class Header extends React.Component {
           </li>
           <li>
             <ul className='header-right'>
-              <li className='search'>Search</li>
-              <li className='profile'>Profile</li>
+              <ul className='profile'>Profile
+                <div className="profile-list">
+                  <button onClick={this.props.logout}>Logout</button>
+                </div>
+              </ul>
             </ul>
           </li>
         </ul>

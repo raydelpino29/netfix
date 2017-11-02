@@ -14,10 +14,6 @@ class Landing extends React.Component {
         <div className="landing-background">
           <div className="landing">
             <HeaderContainer />
-            <div className="temp-welcome">
-              <h1>Hi There, {this.props.currentUser.email}!</h1>
-              <button onClick={this.props.logout}>Logout</button>
-            </div>
             <div className="blurb">
               <div className="background-heading"><h1 className="blurb-title">Netfix Original</h1>
                 <div className="subtitle">Watch Bob Vila's 5 Tips on Pest Control:</div>

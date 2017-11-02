@@ -24,6 +24,7 @@ body {
 .single-category {
   position: relative;
   padding-bottom: 20px;
+  overflow: scroll;
 }
 
 .header {
@@ -219,7 +220,7 @@ body {
 
 .blurb {
   position: absolute;
-  top: 300px;
+  top: 270px;
   left: 55px;
 }
 
