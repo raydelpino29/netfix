@@ -15,7 +15,7 @@ class CategoryIndexItem extends React.Component {
   }
 
   handleSubmit() {
-
+    
   }
 
   render () {
