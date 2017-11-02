@@ -5,10 +5,10 @@ const ReviewsReducer = (state = {}, action) => {
   let newState;
   switch(action.type) {
     case RECEIVE_ALL_REVIEWS:
-      return actions.reviews;
+      return action.reviews;
 
     case RECEIVE_REVIEW:
-      newState = Object.assign({}, state, { [actions.review.id]: actions.review });
+      newState = Object.assign({}, state, { [action.review.id]: action.review });
       return newState;
 
     case REMOVE_REVIEW:

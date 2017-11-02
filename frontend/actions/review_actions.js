@@ -14,14 +14,14 @@ export const receiveAllReviews = (reviews) => {
 export const receiveReview = (review) => {
   return {
     type: RECEIVE_REVIEW,
-    reviews: review,
+    review: review,
   };
 };
 
 export const removeReview = (review) => {
   return {
     type: REMOVE_REVIEW,
-    reviews: review,
+    review: review,
   };
 };
 
@@ -51,7 +51,7 @@ export const updateReview = (review) => {
 
 export const deleteReview = (id) => {
   return (dispatch) => {
-    return ReviewsApi.updateReview(id).then((review) => {
+    return ReviewsApi.deleteReview(id).then((review) => {
       return dispatch(removeReview(review));
     });
   };
