@@ -7,10 +7,15 @@ class CategoryIndexItem extends React.Component {
     super(props);
     this.state = { display: false, video: null };
     this.handleDropdown = this.handleDropdown.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleDropdown (vid) {
     this.setState({ display: !this.state.display, video: vid });
+  }
+
+  handleSubmit() {
+
   }
 
   render () {
@@ -25,13 +30,14 @@ class CategoryIndexItem extends React.Component {
       videoItems = this.props.videos.map((video) => {
         return (
           <VideoItemContainer key={video.id} video={video} category={this.props.category}
-            classTitle={this.props.classTitle} />
+            classTitle={this.props.classTitle} handleDropdown={this.handleDropdown} />
         );
       });
     }
     let categoryClass = "single-category";
     let rowClass = "video-row";
     let headerClass;
+    let vidDropdownClass = "video-dropdown";
     let dropDownInfo = { title: "", description: "", thumbnail_url: "" };
     let title = this.props.category.name;
     if (this.props.classTitle) {
@@ -45,8 +51,9 @@ class CategoryIndexItem extends React.Component {
     if (!this.props.category) {
       return <h1>There are no videos here.</h1>
     } else {
-      if (this.state.video) {
+      if (this.state.display) {
         dropDownInfo = this.state.video
+        vidDropdownClass += " visible"
       }
       return (
         <div className={categoryClass}>
@@ -54,10 +61,15 @@ class CategoryIndexItem extends React.Component {
           <ul className={rowClass}>
             {videoItems}
           </ul>
-          <div className="video-dropdown">
+          <div className={vidDropdownClass}>
             <h1 className="video-title">{dropDownInfo.title}</h1>
             <img className="video-show-image" src={dropDownInfo.thumbnail_url} />
             <p className="video-description">{dropDownInfo.description}</p>
+            <form onSubmit={this.handleSubmit}>
+              <label>Write a Review</label>
+              <textarea></textarea>
+              <button>Submit Review</button>
+            </form>
           </div>
         </div>
       );

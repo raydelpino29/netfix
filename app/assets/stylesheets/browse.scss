@@ -120,7 +120,6 @@ body {
 
 .video-row {
   display: flex;
-  overflow: scroll;
 }
 
 .video-item-container {
@@ -199,7 +198,7 @@ body {
 }
 
 .video-dropdown {
-  position: absolute;
+  position: relative;
   display: block;
   height: 0;
   width: 0;
@@ -207,13 +206,15 @@ body {
 }
 
 .visible {
-  height: 300px;
+  height: 33.3vw;
   width: 100%;
 }
 
 .video-show-image {
-  height: 40px;
-  width: 50px;
+  height: 100%;
+  width: 91.5vw;
+  position: relative;
+  right: 0;
 }
 
 .blurb {
