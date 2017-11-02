@@ -1,21 +1,17 @@
 import React from 'react';
 import VideoItemContainer from './video_item_container';
 import Header from '../header/header';
+import ReviewFormContainer from './review_form_container';
 
 class CategoryIndexItem extends React.Component {
   constructor (props) {
     super(props);
     this.state = { display: false, video: null };
     this.handleDropdown = this.handleDropdown.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleDropdown (vid) {
     this.setState({ display: !this.state.display, video: vid });
-  }
-
-  handleSubmit() {
-    
   }
 
   render () {
@@ -38,7 +34,7 @@ class CategoryIndexItem extends React.Component {
     let rowClass = "video-row";
     let headerClass;
     let vidDropdownClass = "video-dropdown";
-    let dropDownInfo = { title: "", description: "", thumbnail_url: "" };
+    let dropDownInfo = { title: "", description: "", thumbnail_url: "", id: null };
     let title = this.props.category.name;
     if (this.props.classTitle) {
       headerClass = "header-show"
@@ -65,11 +61,7 @@ class CategoryIndexItem extends React.Component {
             <h1 className="video-title">{dropDownInfo.title}</h1>
             <img className="video-show-image" src={dropDownInfo.thumbnail_url} />
             <p className="video-description">{dropDownInfo.description}</p>
-            <form onSubmit={this.handleSubmit}>
-              <label>Write a Review</label>
-              <textarea></textarea>
-              <button>Submit Review</button>
-            </form>
+            <ReviewFormContainer videoId={dropDownInfo.id}/>
           </div>
         </div>
       );

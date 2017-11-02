@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { fetchAllVideos, fetchAllCategories } from '../../actions/video_actions';
 import { fetchAllLikes, createLike, deleteLike } from '../../actions/like_actions';
 import { fetchAllListItems, createListItem, deleteListItem } from '../../actions/my_list_actions';
+import { fetchAllReviews } from '../../actions/review_actions';
 import CategoryIndex from './category_index';
 
 const mapStateToProps = (state) => {
@@ -39,6 +40,7 @@ const mapDispatchToProps = (dispatch) => {
     fetchAllListItems: () => dispatch(fetchAllListItems()),
     createListItem: (item) => dispatch(createListItem(item)),
     deleteListItem: (id) => dispatch(deleteListItem(id)),
+    fetchAllReviews: () => dispatch(fetchAllReviews()),
   };
 };
 

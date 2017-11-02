@@ -11,6 +11,7 @@ class CategoryIndex extends React.Component {
     this.props.fetchAllVideos();
     this.props.fetchAllLikes();
     this.props.fetchAllListItems();
+    this.props.fetchAllReviews();
   }
 
   render () {
