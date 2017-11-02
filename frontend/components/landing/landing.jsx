@@ -18,6 +18,13 @@ class Landing extends React.Component {
               <h1>Hi There, {this.props.currentUser.email}!</h1>
               <button onClick={this.props.logout}>Logout</button>
             </div>
+            <p className="background-heading"><h1>Netfix</h1><h2>Original</h2>
+              <p className="subtitle">Watch Bob Vila's 5 Tips on Pest Control</p>
+              <div className="synopsis">Who else but the classic Bob Vila would know the best Tips
+                 for putting an end to the pesky critters within your home? Watch this Netfix
+                 Original to find out what you can do to stop these tiny home invaders.
+              </div>
+            </p>
             <CategoryIndexContainer />
           </div>
         </div>
