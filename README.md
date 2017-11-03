@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Main Features
 
-Things you may want to cover:
+  -Authentication
+  
+  ![screen shot 2017-11-03 at 9 23 57 am](https://user-images.githubusercontent.com/29177545/32375859-8b0d23bc-c079-11e7-9c97-ddb4875d0bab.png)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
