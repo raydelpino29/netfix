@@ -4,11 +4,6 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { fetchAllReviews, createReview, deleteReview, updateReview } from './actions/review_actions';
 
-window.fetchAllReviews = fetchAllReviews;
-window.createReview = createReview;
-window.deleteReview = deleteReview;
-window.updateReview = updateReview;
-
 document.addEventListener("DOMContentLoaded", () => {
   let store;
   if (window.currentUser) {
@@ -18,6 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   }
-  window.dispatch = store.dispatch;
   ReactDOM.render(<Root store={store} />, document.getElementById("root"));
 });
