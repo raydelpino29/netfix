@@ -29,7 +29,7 @@ class Landing extends React.Component {
     } else {
       return (
         <div className="pre-login-background">
-          <h1 className="temp-logo">Netfix</h1>
+          <img className="temp-logo" src="https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/netfix.png" />
           <div className="join-info">
             <p className="whats-next">See what's next.</p>
             <p className="anytime">Watch Anywhere. Cancel Anytime.</p>

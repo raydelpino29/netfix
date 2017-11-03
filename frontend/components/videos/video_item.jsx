@@ -88,7 +88,7 @@ class VideoItem extends React.Component {
         <i onClick={this.handleAdd} className={classMyList}></i>
         <p className="video-title">{this.props.video.title}</p>
         <i  onClick={() => this.props.handleDropdown(this.props.video)} className="fa fa-angle-down" aria-hidden="true"></i>
-      </li> //invoke this?
+      </li>
     )
   }
 }

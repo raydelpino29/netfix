@@ -55,7 +55,7 @@ class SessionForm extends React.Component {
 
     return (
       <div className="session-form-container">
-        <h1 className="temp-logo">Netfix</h1>
+        <img className="temp-logo" src="https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/netfix.png" />
         <form className="session-form" onSubmit={this.handleSubmit}>
           <div className="form-content">
             <h1 className="form-title">{header}</h1>
