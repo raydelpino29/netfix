@@ -30,6 +30,7 @@ class CategoryIndexItem extends React.Component {
         );
       });
     }
+    let divStyle;
     let categoryClass = "single-category";
     let rowClass = "video-row";
     let headerClass;
@@ -50,16 +51,19 @@ class CategoryIndexItem extends React.Component {
       if (this.state.display) {
         dropDownInfo = this.state.video
         vidDropdownClass += " visible"
+        divStyle = {
+          backgroundImage: 'url(' + dropDownInfo.thumbnail_url + ')'
+        };
       }
+      debugger
       return (
         <div className={categoryClass}>
           <h1 className={this.props.classTitle}>{title}</h1>
           <ul className={rowClass}>
             {videoItems}
           </ul>
-          <div className={vidDropdownClass}>
+          <div style={divStyle} className={vidDropdownClass}>
             <h1 className="video-title">{dropDownInfo.title}</h1>
-            <img className="video-show-image" src={dropDownInfo.thumbnail_url} />
             <p className="video-description">{dropDownInfo.description}</p>
             <ReviewFormContainer videoId={dropDownInfo.id}/>
           </div>

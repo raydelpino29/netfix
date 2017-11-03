@@ -82,6 +82,7 @@ class VideoItem extends React.Component {
     return (
       <li onClick={this.handleVideoClick} className={containerClass}>
         <Link to={`/video/${this.props.video.id}`}><img className="video-item" src={this.props.video.thumbnail_url} /></Link>
+        <Link to={`/video/${this.props.video.id}`}><i class="fa fa-play" aria-hidden="true"></i></Link>
         <i onClick={this.handleLike('like')} className={classLike}></i>
         <i onClick={this.handleLike('dislike')} className={classDislike}></i>
         <i onClick={this.handleAdd} className={classMyList}></i>

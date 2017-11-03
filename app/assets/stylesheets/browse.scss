@@ -24,6 +24,7 @@ body {
 .single-category {
   position: relative;
   padding-bottom: 20px;
+  width: 91.4vw;
   overflow: scroll;
 }
 
@@ -204,18 +205,13 @@ body {
   height: 0;
   width: 0;
   overflow: hidden;
+  background-size: cover;
 }
 
 .visible {
   height: 33.3vw;
-  width: 100%;
-}
-
-.video-show-image {
-  height: 100%;
   width: 91.5vw;
-  position: relative;
-  right: 0;
+  max-width: 100%;
 }
 
 .blurb {
@@ -251,12 +247,6 @@ blurb-title > p {
   color: #e5e5e5;
 }
 
-.play-button {
-  background: #e50914;
-  color: #e5e5e5;
-  border: 1px solid #ff0a16;
-}
-
 .list-button {
   border: 1px solid rgba(255,255,255,.4);
   background-color: rgba(0,0,0,.4)
@@ -266,6 +256,11 @@ blurb-title > p {
   background-color: rgba(51,51,51,.4);
 }
 
-.play-button:hover {
-  background-color: #ff0a16;
+.fa-play {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  left: 11vw;
+  top: 3vw;
+  transform: scale(3);
 }
