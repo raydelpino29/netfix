@@ -18,9 +18,14 @@ Users are able to like, dislike, and add videos to their My List. On hover of th
 
 ![screen shot 2017-11-03 at 9 36 09 am](https://user-images.githubusercontent.com/29177545/32376236-92970110-c07a-11e7-9b1d-4f0060fa969f.png)
 
+Hovering over the Browse within the header will produce a dropdown, which will have all of the categories of videos. It also has a link to the users My List. 
+
 ![screen shot 2017-11-03 at 9 46 05 am](https://user-images.githubusercontent.com/29177545/32376749-13e56f58-c07c-11e7-9db7-021ef3564748.png)
+
+A user can play videos from within a category show page, and can remove videos from their list within the My List page. They will dynamically disappear.
 
 -Playing Videos
 
 ![screen shot 2017-11-03 at 9 51 44 am](https://user-images.githubusercontent.com/29177545/32377023-d2f7b28e-c07c-11e7-9dd9-78458bbfc73f.png)
 
+Clicking on a video from any page will bring the user to the video show page. Here, they can watch their video and go back to whatever previous page they were on.
