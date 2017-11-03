@@ -18,4 +18,5 @@ Main Features
 
 -Playing Videos
 
-![screen shot 2017-11-03 at 9 50 19 am](https://user-images.githubusercontent.com/29177545/32376876-730c73fa-c07c-11e7-928a-01b96afdc633.png)
+![screen shot 2017-11-03 at 9 51 44 am](https://user-images.githubusercontent.com/29177545/32377023-d2f7b28e-c07c-11e7-9dd9-78458bbfc73f.png)
+
