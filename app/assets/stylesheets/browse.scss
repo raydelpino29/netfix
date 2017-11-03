@@ -32,6 +32,10 @@ body {
   overflow: scroll;
 }
 
+.single-category:hover::-webkit-scrollbar {
+  display: none;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
