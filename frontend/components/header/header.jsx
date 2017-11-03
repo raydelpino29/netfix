@@ -22,8 +22,7 @@ class Header extends React.Component {
         <ul className="header">
           <li>
             <ul className="header-left">
-              <li className="logo"><img className="temp-logo" src="https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/netfix.png" />
-</li>
+              <Link to='/'><li className="logo"><img className="temp-logo" src="https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/netfix.png" /></li></Link>
               <ul className='browse'>Browse <i className="fa fa-caret-down" aria-hidden="true"></i>
                 <div className="browse-list">
                   <Link to="/myList">My List</Link>
