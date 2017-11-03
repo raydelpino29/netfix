@@ -29,3 +29,14 @@ A user can play videos from within a category show page, and can remove videos f
 ![screen shot 2017-11-03 at 9 51 44 am](https://user-images.githubusercontent.com/29177545/32377023-d2f7b28e-c07c-11e7-9dd9-78458bbfc73f.png)
 
 Clicking on a video from any page will bring the user to the video show page. Here, they can watch their video and go back to whatever previous page they were on.
+
+
+Future Feature and Implementation
+
+  -Reviewing Videos
+  
+   Netflix, though it may not be apparent, allows users review videos. I plan on implementing this feature by adding a dropdown menu that    includes a review form, which creates a review when submitted. I will also have other users' reviews on that menu, and allow for a user    to delete their own reviews.
+    
+  -Search Feature
+  
+   Netflix has a search feature that shows all videos that relate to your search on every key stroke. I plan to implement this using the      pg-search-sequelize
