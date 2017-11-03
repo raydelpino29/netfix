@@ -1,9 +1,9 @@
 # README
 
-Main Features
+__Main Features__
 
   -Authentication
-  
+  
   ![screen shot 2017-11-03 at 9 23 57 am](https://user-images.githubusercontent.com/29177545/32375859-8b0d23bc-c079-11e7-9c97-ddb4875d0bab.png)
   
 After passing through the initial landing page, the user is directed to this login/sign up page, where they can input their email and password to gain access to the site. They are able to switch between login/sign up form with a link on the bottom of the form. The proper errors appear on the top of the form if incorrect information is entered or info is left out.
@@ -31,7 +31,7 @@ A user can play videos from within a category show page, and can remove videos f
 Clicking on a video from any page will bring the user to the video show page. Here, they can watch their video and go back to whatever previous page they were on.
 
 
-Future Feature and Implementation
+__Future Feature and Implementation__
 
   -Reviewing Videos
   
