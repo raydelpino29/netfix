@@ -5,6 +5,7 @@ __Main Features__
   -Authentication
   
   ![screen shot 2017-11-03 at 9 23 57 am](https://user-images.githubusercontent.com/29177545/32375859-8b0d23bc-c079-11e7-9c97-ddb4875d0bab.png)
+<<<<<<< HEAD
 
 After passing through the initial landing page, the user is directed to this login/sign up page, where they can input their email and password to gain access to the site. They are able to switch between login/sign up form with a link on the bottom of the form. The proper errors appear on the top of the form if incorrect information is entered or info is left out.
 
@@ -26,6 +27,29 @@ A user can play videos from within a category show page, and can remove videos f
 
 -Playing Videos
 
+=======
+  
+After passing through the initial landing page, the user is directed to this login/sign up page, where they can input their email and password to gain access to the site. They are able to switch between login/sign up form with a link on the bottom of the form. The proper errors appear on the top of the form if incorrect information is entered or info is left out.
+
+  -Like/Dislike/Add to MyList
+  
+![screen shot 2017-11-03 at 9 39 06 am](https://user-images.githubusercontent.com/29177545/32376344-efad1b46-c07a-11e7-8198-4645d795a00b.png)
+
+Users are able to like, dislike, and add videos to their My List. On hover of the video, the buttons appear will change color to indicate like/add status. A user's My List can be seen by using the Browse menu.
+
+-Browse
+
+![screen shot 2017-11-03 at 9 36 09 am](https://user-images.githubusercontent.com/29177545/32376236-92970110-c07a-11e7-9b1d-4f0060fa969f.png)
+
+Hovering over the Browse within the header will produce a dropdown, which will have all of the categories of videos. It also has a link to the users My List. 
+
+![screen shot 2017-11-03 at 9 46 05 am](https://user-images.githubusercontent.com/29177545/32376749-13e56f58-c07c-11e7-9db7-021ef3564748.png)
+
+A user can play videos from within a category show page, and can remove videos from their list within the My List page. They will dynamically disappear.
+
+-Playing Videos
+
+>>>>>>> 5f67ae2d29a3033bfcdc2bb1dbe5101246eff569
 ![screen shot 2017-11-03 at 9 51 44 am](https://user-images.githubusercontent.com/29177545/32377023-d2f7b28e-c07c-11e7-9dd9-78458bbfc73f.png)
 
 Clicking on a video from any page will bring the user to the video show page. Here, they can watch their video and go back to whatever previous page they were on.
@@ -34,9 +58,17 @@ Clicking on a video from any page will bring the user to the video show page. He
 __Future Feature and Implementation__
 
   -Reviewing Videos
+<<<<<<< HEAD
 
    Netflix, though it may not be apparent, allows users review videos. I plan on implementing this feature by adding a dropdown menu that    includes a review form, which creates a review when submitted. I will also have other users' reviews on that menu, and allow for a user    to delete their own reviews.
 
   -Search Feature
 
+=======
+  
+   Netflix, though it may not be apparent, allows users review videos. I plan on implementing this feature by adding a dropdown menu that    includes a review form, which creates a review when submitted. I will also have other users' reviews on that menu, and allow for a user    to delete their own reviews.
+    
+  -Search Feature
+  
+>>>>>>> 5f67ae2d29a3033bfcdc2bb1dbe5101246eff569
    Netflix has a search feature that shows all videos that relate to your search on every key stroke. I plan to implement this using the      pg-search-sequelize

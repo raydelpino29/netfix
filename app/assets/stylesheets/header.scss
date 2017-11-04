@@ -44,3 +44,45 @@
   left: 0;
   top: 21px;
 }
+
+.no-vids {
+  margin-top: 100px;
+  position: absolute;
+}
+
+.no-vids-header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  height: 70px;
+}
+
+.no-vids-left ul {
+  padding: 3.3vh 5vw;
+}
+
+.no-vids-profile {
+  padding-top: 3.3vh;
+}
+
+.no-vids-profile:hover {
+  .no-vids-logout {
+    display: block;
+    color: #fff;
+    left: 0;
+    top: 6.5vh;
+  }
+}
+
+.no-vids {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 70px;
+  display: inline-table;
+  position: absolute;
+  right: 40vw;
+}

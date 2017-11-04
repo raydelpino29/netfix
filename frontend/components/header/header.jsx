@@ -11,19 +11,30 @@ class Header extends React.Component {
   }
 
   render() {
-
     const links = Object.values(this.props.categories).map((category, idx) => {
       return <Link key={idx} to={`/category/${category.id}`}>{category.name}</Link>
     });
 
+    let headerClass = "header";
+    let headerLeftClass = "header-left";
+    let profileClass = "profile"
+    let profileListClass = "profile-list";
+
+    if (this.props.classIndicator) {
+      headerClass = "no-vids-header";
+      headerLeftClass = "no-vids-left";
+      profileClass += " no-vids-profile";
+      profileListClass += " no-vids-logout"
+    }
+
     return (
 
       <nav>
-        <ul className="header">
+        <ul className={headerClass}>
           <li>
-            <ul className="header-left">
+            <ul className={headerLeftClass}>
               <Link to='/'><li className="logo"><img className="temp-logo" src="https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/netfix.png" /></li></Link>
-              <ul className='browse'>Browse <i className="fa fa-caret-down" aria-hidden="true"></i>
+              <ul className="browse">Browse <i className="fa fa-caret-down" aria-hidden="true"></i>
                 <div className="browse-list">
                   <Link to="/myList">My List</Link>
                   {links}
@@ -33,8 +44,8 @@ class Header extends React.Component {
           </li>
           <li>
             <ul className='header-right'>
-              <ul className='profile'>Profile
-                <div className="profile-list">
+              <ul className={profileClass}>Profile
+                <div className={profileListClass}>
                   <button onClick={this.props.logout}>Logout</button>
                 </div>
               </ul>
