@@ -29,11 +29,12 @@ body {
 }
 
 .single-category:hover {
-  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 .single-category:hover::-webkit-scrollbar {
-  display: none;
+  width: 5px;
 }
 
 .header {
