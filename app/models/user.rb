@@ -1,6 +1,7 @@
 class User < ApplicationRecord
 validates :email, :session_token, presence: true, uniqueness: true
 validates :password_digest, presence: true
+validates :password, length: { minimum: 6, allow_nil: true }
 before_validation :ensure_session_token
 
 attr_reader :password
@@ -14,7 +15,7 @@ attr_reader :password
     class_name: 'MyList',
     foreign_key: :user_id,
     primary_key: :id
-    
+
   has_many :reviews,
     class_name: 'Review',
     foreign_key: :user_id,
