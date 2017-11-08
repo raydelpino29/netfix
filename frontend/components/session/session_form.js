@@ -63,11 +63,11 @@ class SessionForm extends React.Component {
               {errorList}
             </ul>
             <div className="form-inputs">
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <br />
                 <input id="email" type="text" value={this.state.email} onChange={this.handleChange("email")} />
               <br />
-              <label for="password">Password</label>
+              <label htmlFor="password">Password</label>
               <br />
                 <input id="password" type="password" value={this.state.password} onChange={this.handleChange("password")} />
               <br />
