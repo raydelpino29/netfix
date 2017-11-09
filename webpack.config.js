@@ -14,10 +14,6 @@ var prodPlugins = [
   })
 ];
 
-plugins = plugins.concat(
-  process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins
-);
-
 module.exports = {
   entry: path.join(__dirname, 'frontend', 'netfix.jsx'),
   output: {
