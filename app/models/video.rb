@@ -16,4 +16,9 @@ has_many :likes,
   foreign_key: :video_id,
   primary_key: :id
 
+has_many :reviews,
+  class_name: 'Review',
+  foreign_key: :video_id,
+  primary_key: :id
+
 end

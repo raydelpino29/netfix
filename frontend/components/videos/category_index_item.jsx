@@ -12,7 +12,6 @@ class CategoryIndexItem extends React.Component {
 
   handleDropdown (vid) {
     this.setState({ display: !this.state.display, video: vid });
-    debugger
   }
 
   render () {
@@ -56,7 +55,6 @@ class CategoryIndexItem extends React.Component {
           backgroundImage: 'url(' + dropDownInfo.thumbnail_url + ')'
         };
       }
-      debugger
       return (
         <div className={categoryClass}>
           <h1 className={this.props.classTitle}>{title}</h1>
