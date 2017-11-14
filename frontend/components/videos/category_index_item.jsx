@@ -12,6 +12,7 @@ class CategoryIndexItem extends React.Component {
 
   handleDropdown (vid) {
     this.setState({ display: !this.state.display, video: vid });
+    debugger
   }
 
   render () {
