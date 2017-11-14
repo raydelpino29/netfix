@@ -79,6 +79,7 @@ class VideoItem extends React.Component {
     } else {
       classMyList = "icon fa fa-plus-circle";
     }
+    debugger
     return (
       <li onClick={this.handleVideoClick} className={containerClass}>
         <Link to={`/video/${this.props.video.id}`}><img className="video-item" src={this.props.video.thumbnail_url} /></Link>

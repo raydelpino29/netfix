@@ -6,7 +6,7 @@ import ReviewFormContainer from './review_form_container';
 class CategoryIndexItem extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { display: false, video: null };
+    this.state = { display: false, video: { id: null } };
     this.handleDropdown = this.handleDropdown.bind(this);
   }
 
@@ -55,6 +55,7 @@ class CategoryIndexItem extends React.Component {
           backgroundImage: 'url(' + dropDownInfo.thumbnail_url + ')'
         };
       }
+      debugger
       return (
         <div className={categoryClass}>
           <h1 className={this.props.classTitle}>{title}</h1>
@@ -64,7 +65,7 @@ class CategoryIndexItem extends React.Component {
           <div style={divStyle} className={vidDropdownClass}>
             <h1 className="video-title">{dropDownInfo.title}</h1>
             <p className="video-description">{dropDownInfo.description}</p>
-            <ReviewFormContainer videoId={dropDownInfo.id}/>
+            <ReviewFormContainer videoId={this.state.video.id}/>
           </div>
         </div>
       );
