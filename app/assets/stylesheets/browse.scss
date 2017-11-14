@@ -267,3 +267,49 @@ blurb-title > p {
   transform: scale(3);
   color: #e50914;
 }
+
+.write-review {
+  border-radius: 20px;
+  border: 3px solid #e50914;
+  width: 50%;
+  height: 45%;
+  position: relative;
+  top: 30%;
+  left: 5%;
+  padding: 5px;
+}
+
+.write-review textarea {
+  display: block;
+  background: rgba(0,0,0,.7);
+  position: relative;
+  left: 9%;
+  height: 60%;
+  width: 80%;
+  color: #fff;
+  padding: 2px;
+  color: #fff;
+}
+
+.write-review button {
+  background: #b9090b;
+  color: #fff;
+  padding: 6px 15px;
+  position: relative;
+  left: 40%;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+
+.write-review label {
+  position: relative;
+  left: 9%;
+  font-weight: bolder;
+  font-size: 20px;
+  text-shadow: 1px 0px #fff;
+  color: #b9090b;
+}
+
+.dropdown-gradient {
+  background: linear-gradient(90deg, black, rgba(0,0,0,0));
+}

@@ -63,10 +63,12 @@ class CategoryIndexItem extends React.Component {
           <ul className={rowClass}>
             {videoItems}
           </ul>
-          <div style={divStyle} className={vidDropdownClass}>
-            <h1 className="video-title">{dropDownInfo.title}</h1>
-            <p className="video-description">{dropDownInfo.description}</p>
-            <ReviewFormContainer videoId={this.state.video.id}/>
+          <div className="dropdown-gradient">
+            <div style={divStyle} className={vidDropdownClass}>
+              <h1 className="video-title">{dropDownInfo.title}</h1>
+              <p className="video-description">{dropDownInfo.description}</p>
+              <ReviewFormContainer videoId={this.state.video.id}/>
+            </div>
           </div>
         </div>
       );
