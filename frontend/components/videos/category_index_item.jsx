@@ -2,6 +2,7 @@ import React from 'react';
 import VideoItemContainer from './video_item_container';
 import Header from '../header/header';
 import ReviewFormContainer from './review_form_container';
+import ReviewListContainer from './review_list_container';
 
 class CategoryIndexItem extends React.Component {
   constructor (props) {
@@ -55,6 +56,7 @@ class CategoryIndexItem extends React.Component {
           backgroundImage: 'url(' + dropDownInfo.thumbnail_url + ')'
         };
       }
+      debugger
       return (
         <div className={categoryClass}>
           <h1 className={this.props.classTitle}>{title}</h1>
@@ -66,6 +68,7 @@ class CategoryIndexItem extends React.Component {
               <h1 className="video-title">{dropDownInfo.title}</h1>
               <p className="video-description">{dropDownInfo.description}</p>
               <ReviewFormContainer videoId={this.state.video.id}/>
+              <ReviewListContainer videoId={this.state.video.id}/>
             </div>
           </div>
         </div>

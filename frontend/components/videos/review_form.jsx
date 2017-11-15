@@ -9,7 +9,11 @@ class ReviewForm extends React.Component {
   }
 
   componentWillReceiveProps (newProps) {
-    this.setState({ videoId: newProps.videoId });
+    debugger
+    if (!this.state.videoId) {
+      debugger
+      this.setState({ videoId: newProps.videoId });
+    }
   }
 
   handleChange(e) {
@@ -22,13 +26,13 @@ class ReviewForm extends React.Component {
   }
 
   render () {
-
+    debugger
     return (
-        <form className="write-review" onSubmit={this.handleSubmit}>
-          <label htmlFor="review-body">Write a Review</label>
-          <textarea  className="review-body" onChange={this.handleChange} value={this.state.body} />
-          <button>Submit</button>
-        </form>
+      <form className="write-review" onSubmit={this.handleSubmit}>
+        <label htmlFor="review-body">Write a Review</label>
+        <textarea className="review-body" onChange={this.handleChange} value={this.state.body} />
+        <button>Submit</button>
+      </form>
     )
   }
 }
