@@ -18,19 +18,17 @@ class ReviewForm extends React.Component {
 
   handleSubmit () {
     this.props.createReview(this.state);
+    this.setState({ body: "", videoId: this.props.videoId, userId: this.props.currentUser.id });
   }
 
   render () {
-    
-    return (
-      <form className="write-review" onSubmit={this.handleSubmit}>
-        <label htmlFor="review-body">Write a Review</label>
-          <textarea  className="review-body" onChange={this.handleChange} value={this.state.body} />
-        <button>Submit</button>
-      </form>
-      <ul className="review-list">
 
-      </ul>
+    return (
+        <form className="write-review" onSubmit={this.handleSubmit}>
+          <label htmlFor="review-body">Write a Review</label>
+          <textarea  className="review-body" onChange={this.handleChange} value={this.state.body} />
+          <button>Submit</button>
+        </form>
     )
   }
 }
