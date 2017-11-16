@@ -304,7 +304,6 @@ blurb-title > p {
 .write-review label {
   position: relative;
   left: 9%;
-  font-weight: bolder;
   font-size: 20px;
   color: #b9090b;
 }
@@ -316,7 +315,7 @@ blurb-title > p {
   width: 37%;
   left: 62.5%;
   border-radius: 5px;
-  min-height: 20.6em;
+  height: 20.6em;
   top: -40%;
   overflow-y: scroll;
 }

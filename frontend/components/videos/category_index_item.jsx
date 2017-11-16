@@ -56,7 +56,6 @@ class CategoryIndexItem extends React.Component {
           backgroundImage: 'url(' + dropDownInfo.thumbnail_url + ')'
         };
       }
-      debugger
       return (
         <div className={categoryClass}>
           <h1 className={this.props.classTitle}>{title}</h1>
@@ -67,7 +66,6 @@ class CategoryIndexItem extends React.Component {
             <div style={divStyle} className={vidDropdownClass}>
               <h1 className="video-title">{dropDownInfo.title}</h1>
               <p className="video-description">{dropDownInfo.description}</p>
-              <ReviewFormContainer videoId={this.state.video.id}/>
               <ReviewListContainer videoId={this.state.video.id}/>
             </div>
           </div>

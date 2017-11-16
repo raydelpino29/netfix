@@ -27,3 +27,10 @@ export const deleteReview = (id) => {
     url: `api/reviews/${id}`
   });
 };
+
+export const editReview = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/reviews/${id}/edit`
+  });
+};

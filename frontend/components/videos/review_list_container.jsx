@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ReviewList from './review_list';
-import { updateReview, deleteReview } from '../../actions/review_actions';
+import { deleteReview, editReview } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const vidReviews = Object.values(state.entities.reviews).filter((review) => {
@@ -17,7 +17,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    updateReview: (review) => dispatch(updateReview(review)),
+    editReview: (id) => dispatch(editReview(id)),
     deleteReview: (id) => dispatch(deleteReview(id)),
   };
 };
