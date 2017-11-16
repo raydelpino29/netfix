@@ -52,7 +52,6 @@ class ReviewList extends React.Component {
         </div>
       )
     } else {
-      debugger
       return (
         <div className="list-div">
           <ReviewFormContainer videoId={this.state.videoId} review={this.state.review}/>
