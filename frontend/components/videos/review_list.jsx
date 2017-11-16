@@ -55,11 +55,10 @@ class ReviewList extends React.Component {
       debugger
       return (
         <div className="list-div">
-          <label htmlFor="review-list">Reviews</label>
+          <ReviewFormContainer videoId={this.state.videoId} review={this.state.review}/>
           <ul className="review-list">
             {reviewList}
           </ul>
-          <ReviewFormContainer videoId={this.state.videoId} review={this.state.review}/>
         </div>
       );
     }

@@ -3,7 +3,7 @@ import React from 'react';
 class ReviewForm extends React.Component {
   constructor (props) {
     super(props);
-    this.state = { body: "", videoId: this.props.videoId, userId: this.props.currentUser.id };
+    this.state = { body: "" , videoId: this.props.videoId, userId: this.props.currentUser.id };
     this.handleChange = this.handleChange.bind(this);
     this.handleCreate = this.handleCreate.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
@@ -13,7 +13,7 @@ class ReviewForm extends React.Component {
     if (!this.state.videoId) {
       this.setState({ videoId: newProps.videoId });
     } else {
-      this.setState({ body: newProps.review.body });
+      this.setState({ body: newProps.review.body, id: newProps.review.id });
     }
   }
 
@@ -23,15 +23,16 @@ class ReviewForm extends React.Component {
 
   handleCreate () {
     this.props.createReview(this.state);
-    this.setState({ body: "", videoId: this.props.videoId, userId: this.props.currentUser.id });
+    this.setState({ body: "" });
   }
 
   handleUpdate () {
     this.props.updateReview(this.state);
-    this.setState({ body: "", videoId: this.props.videoId, userId: this.props.currentUser.id });
+    this.setState({ body: "" , videoId: this.props.videoId, userId: this.props.currentUser.id });
   }
 
   render () {
+    debugger
     if (this.props.formType === "create") {
       return (
         <form className="write-review" onSubmit={this.handleCreate}>
