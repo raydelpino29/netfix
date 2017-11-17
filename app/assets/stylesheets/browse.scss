@@ -212,7 +212,8 @@ body {
   height: 0;
   width: 0;
   overflow: hidden;
-  background-size: cover;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
 }
 
 .visible {
@@ -310,8 +311,9 @@ blurb-title > p {
 .review-list {
   position: relative;
   background: rgba(0, 0, 0, 0.7);
-  height: 10em;
+  height: 16em;
   overflow-y: scroll;
+  color: white;
 }
 
 .review-list li {
@@ -320,12 +322,22 @@ blurb-title > p {
 
 .list-div {
   position: absolute;
-  width: 50%;
-  bottom: 0;
+  width: 40%;
   right: 0;
+  top: 0px;
+  z-index: 1;
 }
 
 .list-div label {
   position: relative;
   left: 7%;
+}
+
+.gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  top: 0;
+  background-color: black;
 }

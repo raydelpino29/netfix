@@ -12,7 +12,8 @@ class ReviewForm extends React.Component {
   componentWillReceiveProps (newProps) {
     if (!this.state.videoId) {
       this.setState({ videoId: newProps.videoId });
-    } else {
+    } else if (newProps.review) {
+      debugger
       this.setState({ body: newProps.review.body, id: newProps.review.id });
     }
   }
@@ -32,7 +33,6 @@ class ReviewForm extends React.Component {
   }
 
   render () {
-    debugger
     if (this.props.formType === "create") {
       return (
         <form className="write-review" onSubmit={this.handleCreate}>
