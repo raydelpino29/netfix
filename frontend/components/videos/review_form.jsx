@@ -13,7 +13,6 @@ class ReviewForm extends React.Component {
     if (!this.state.videoId) {
       this.setState({ videoId: newProps.videoId });
     } else if (newProps.review) {
-      debugger
       this.setState({ body: newProps.review.body, id: newProps.review.id });
     }
   }
@@ -22,12 +21,14 @@ class ReviewForm extends React.Component {
     this.setState({ body: e.target.value });
   }
 
-  handleCreate () {
+  handleCreate (e) {
+    e.preventDefault();
     this.props.createReview(this.state);
     this.setState({ body: "" });
   }
 
-  handleUpdate () {
+  handleUpdate (e) {
+    e.preventDefault();
     this.props.updateReview(this.state);
     this.setState({ body: "" , videoId: this.props.videoId, userId: this.props.currentUser.id });
   }
