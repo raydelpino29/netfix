@@ -341,3 +341,21 @@ blurb-title > p {
   top: 0;
   background-color: black;
 }
+
+.video-description {
+  color: #999;
+  position: relative;
+  z-index: 1;
+  left: 2%;
+  top: 5%;
+  width: 63%;
+}
+
+.visible h1 {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  font-size: 3vw;
+  left: 2%;
+  top: 2%;
+}

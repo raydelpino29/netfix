@@ -21,7 +21,7 @@ class ReviewList extends React.Component {
   }
 
   handleDelete(id) {
-
+    this.props.deleteReview(id);
   }
 
   render () {
