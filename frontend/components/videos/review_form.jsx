@@ -34,7 +34,6 @@ class ReviewForm extends React.Component {
   }
 
   render () {
-    debugger
     if (this.props.formType === "create") {
       return (
         <form className="write-review" onSubmit={this.handleCreate}>
