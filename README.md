@@ -1,3 +1,4 @@
+[live site](https://raydelpino29.github.io/netfix/)
 
 ## Main Features
 
@@ -7,27 +8,52 @@
 
 After passing through the initial landing page, the user is directed to this login/sign up page, where they can input their email and password to gain access to the site. They are able to switch between login/sign up form with a link on the bottom of the form. The proper errors appear on the top of the form if incorrect information is entered or info is left out.
 
-  - Like/Dislike/Add to MyList
+  - Like/Dislike/Saving Videos
 
-  ![screen shot 2017-11-20 at 12 19 46 pm](https://user-images.githubusercontent.com/29177545/33031780-4240f61e-cded-11e7-895b-e30649a19fb9.png)
+  ![screen shot 2017-11-21 at 2 57 24 pm](https://user-images.githubusercontent.com/29177545/33093969-8cb7ce5e-cecc-11e7-96e5-004998113f5e.png)
 
-Users are able to like, dislike, and add videos to their My List. On hover of the video, the buttons appear will change color to indicate like/add status. A user's My List can be seen by using the Browse menu.
-
-![screen shot 2017-11-03 at 9 46 05 am](https://user-images.githubusercontent.com/29177545/32376749-13e56f58-c07c-11e7-9db7-021ef3564748.png)
-
-A user can play videos from anywhere they can see its thumbnail, and can remove videos from their list within the My List page. They will dynamically disappear.
+Users are able to like, dislike, and save videos to their personal list (My List). On hover of the video, the like/dislike buttons dynamically change classes to indicate the like/add status. A user's list can be seen by using the Browse menu.
 
 - Browse
 
 ![screen shot 2017-11-20 at 12 22 15 pm](https://user-images.githubusercontent.com/29177545/33031916-9dca507a-cded-11e7-97a9-b8b325e8fc04.png)
 
-Hovering over the Browse within the header will produce a dropdown, which will have all of the categories of videos. It also has a link to the users My List.
-
+Hovering over the Browse within the header will produce a dropdown, which gives the user access to all of the video categories, as well as their personal list.
 
 - Tricky Code Implementation
 
-```javascript
+In my effort to use each React component to their full potential, rather than needlessly creating new React components, I re-purposed the same components depending on what props they were being given. Since a user's "My List" page was similar to the Category Show pages , I recycled my Category Show component for the user's personal list. However, this component is also being used for every video category. In order for the component to be aware of what category it was rendering, or if it was actually a personal list, it had to be conditionally passed props to indicate such.
 
+If the pathname was "/myList", then it would know to pass down the user's personal videos to be rendered. Otherwise, it would take the category ID from the pathname and pass down all the corresponding videos for that category:
+
+```javascript
+const mapStateToProps = (state, ownProps) => {
+  let catId = ownProps.match.params.categoryId;
+  let category;
+  if (ownProps.location.pathname === "/myList") {
+    category = "myList";
+  } else {
+    category = state.entities.categories[ownProps.match.params.categoryId];
+  }
+  let videos;
+  if (ownProps.location.pathname === "/myList") {
+    videos = Object.values(state.entities.myList).map((item) => {
+      return state.entities.videos[item.video_id];
+    });
+  } else {
+    videos = Object.values(state.entities.videos).filter((video) => {
+      if (video.category_id === parseInt(catId)) {
+        return video;
+      }
+    });
+  }
+  return {
+    categories: state.entities.categories,
+    category,
+    videos,
+    catId,
+  };
+};
 ```
 
 
