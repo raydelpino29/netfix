@@ -1,4 +1,4 @@
-[live site](https://raydelpino29.github.io/netfix/)
+[live site](https://netfix-ray.herokuapp.com)
 
 ## Main Features
 
