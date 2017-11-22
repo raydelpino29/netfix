@@ -20,7 +20,7 @@ Users are able to like, dislike, and save videos to their personal list (My List
 
 Hovering over the Browse within the header will produce a dropdown, which gives the user access to all of the video categories, as well as their personal list.
 
-- Tricky Code Implementation
+- Recycling React Components
 
 In my effort to use each React component to their full potential, rather than needlessly creating new React components, I re-purposed the same components depending on what props they were being given. Since a user's "My List" page was similar to the Category Show pages , I recycled my Category Show component for the user's personal list. However, this component is also being used for every video category. In order for the component to be aware of what category it was rendering, or if it was actually a personal list, it had to be conditionally passed props to indicate such.
 
