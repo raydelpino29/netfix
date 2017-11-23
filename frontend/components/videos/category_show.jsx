@@ -30,8 +30,13 @@ class CategoryShow extends React.Component {
         </div>
       )
     }
-    return <CategoryIndexItem classTitle="category-show-title" videos={this.props.videos}
-      myListVids={this.props.myListVids} category={this.props.category} />
+    return (
+      <div>
+        <HeaderContainer classIndicator="no videos"/>
+        <CategoryIndexItem classTitle="category-show-title" videos={this.props.videos}
+          myListVids={this.props.myListVids} category={this.props.category} />
+      </div>
+    )
   }
 }
 

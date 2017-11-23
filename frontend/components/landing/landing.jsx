@@ -8,6 +8,10 @@ class Landing extends React.Component {
     super(props);
   }
 
+  componentDidMount () {
+    this.props.fetchAllVideos();
+  }
+
   render () {
     if (this.props.currentUser) {
       return (
@@ -33,9 +37,9 @@ class Landing extends React.Component {
           <div className="join-info">
             <p className="whats-next">See what's next.</p>
             <p className="anytime">Watch Anywhere. Cancel Anytime.</p>
-            <button className="join-button" ><Link to="/signup">Join Free For a Month</Link></button>
+            <Link to="/signup"><button className="join-button" >Join Free For a Month</button></Link>
           </div>
-          <button className="sign-in-button"><Link to="/login">Sign In</Link></button>
+          <Link to="/login"><button className="sign-in-button">Sign In</button></Link>
         </div>
         )
       }

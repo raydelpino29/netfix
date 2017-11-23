@@ -9,7 +9,7 @@ import HeaderContainer from './header/header_container';
 
 const App = () => (
   <div>
-    <Route path='/' component={HeaderContainer} />
+    <Route exact path='/' component={HeaderContainer} />
     <Route exact path='/' component={LandingContainer} />
     <AuthRoute path='/login' component={SessionFormContainer} />
     <AuthRoute path='/signup' component={SessionFormContainer} />

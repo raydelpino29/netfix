@@ -5,9 +5,8 @@ body {
 
 .landing {
   background-image: image-url("vila.jpg");
-  height: 100vh;
+  height: 50em;
   position: relative;
-  top: 70px;
   background-size: cover;
 }
 
@@ -42,8 +41,12 @@ body {
   min-height: 70px;
   position: fixed;
   width: 100%;
-  margin-top: -70px;
   z-index: 2;
+  opacity: 0.7;
+}
+
+.category-page {
+  top: 0;
 }
 
 .header li, .header ul {
@@ -65,7 +68,7 @@ body {
 
 .category-index {
   position: absolute;
-  margin-top: 69vh;
+  margin-top: 45em;
   margin-left: 50px;
 }
 
@@ -358,4 +361,12 @@ blurb-title > p {
   font-size: 3vw;
   left: 2%;
   top: 2%;
+}
+
+.dropdown-gradient {
+    margin-top: 10px;
+}
+
+.splash {
+  display: none;
 }

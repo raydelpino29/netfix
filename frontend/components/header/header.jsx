@@ -27,6 +27,12 @@ class Header extends React.Component {
       profileListClass += " no-vids-logout"
     }
 
+    if (this.props.headerClass === "show-page") {
+      headerClass = "header category-page"
+    } else if (this.props.headerClass === "splash") {
+      headerClass = "header splash"
+    }
+
     return (
 
       <nav>

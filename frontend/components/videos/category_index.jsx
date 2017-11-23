@@ -8,7 +8,6 @@ class CategoryIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllCategories();
-    this.props.fetchAllVideos();
     this.props.fetchAllLikes();
     this.props.fetchAllListItems();
     this.props.fetchAllReviews();

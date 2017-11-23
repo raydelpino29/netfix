@@ -8,7 +8,6 @@ const mapStateToProps = (state, ownProps) => {
   if (ownProps.review) {
     formType = "edit";
   }
-  debugger
   return {
     currentUser: state.session.currentUser,
     review: ownProps.review,
