@@ -9,13 +9,13 @@ import HeaderContainer from './header/header_container';
 
 const App = () => (
   <div>
-    <Route exact path='/' component={HeaderContainer} />
-    <Route exact path='/' component={LandingContainer} />
-    <AuthRoute path='/login' component={SessionFormContainer} />
-    <AuthRoute path='/signup' component={SessionFormContainer} />
-    <ProtectedRoute exact path='/video/:videoId' component={VideoPlayerContainer} />
-    <ProtectedRoute exact path='/category/:categoryId' component={CategoryShowContainer} />
-    <ProtectedRoute exact path='/myList' component={CategoryShowContainer} />
+    <Route exact path='/' component={ HeaderContainer } />
+    <Route exact path='/' component={ LandingContainer } />
+    <AuthRoute path='/login' component={ SessionFormContainer } />
+    <AuthRoute path='/signup' component={ SessionFormContainer } />
+    <ProtectedRoute exact path='/video/:videoId' component={ VideoPlayerContainer } />
+    <ProtectedRoute exact path='/category/:categoryId' component={ CategoryShowContainer } />
+    <ProtectedRoute exact path='/myList' component={ CategoryShowContainer } />
   </div>
 );
 

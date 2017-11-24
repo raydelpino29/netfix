@@ -5,7 +5,7 @@ body {
 
 .landing {
   background-image: image-url("vila.jpg");
-  height: 50em;
+  height: 45em;
   position: relative;
   background-size: cover;
 }
@@ -42,7 +42,6 @@ body {
   position: fixed;
   width: 100%;
   z-index: 2;
-  opacity: 0.7;
 }
 
 .category-page {
@@ -68,7 +67,7 @@ body {
 
 .category-index {
   position: absolute;
-  margin-top: 45em;
+  margin-top: 40em;
   margin-left: 50px;
 }
 
@@ -187,7 +186,7 @@ body {
 }
 
 .playing-video {
-  height: 45em;
+  height: 50em;
 }
 
 .fa-chevron-circle-left {
@@ -369,4 +368,12 @@ blurb-title > p {
 
 .splash {
   display: none;
+}
+
+.blurb button {
+  background-color: #b9090b;
+  color: #fff;
+  padding: .55em 1.3em;
+  margin-right: 1em;
+  border-radius: 0;
 }
