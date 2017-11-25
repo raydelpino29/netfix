@@ -26,10 +26,13 @@ class Landing extends React.Component {
 
   render () {
     let videoId;
+    let listButtonClass = "fa fa-plus";
     if (this.props.landingVideo) {
       videoId = this.props.landingVideo.id;
     }
-    debugger
+    if (this.props.myListStatus === "added") {
+      listButtonClass = "fa fa-check";
+    }
     if (this.props.currentUser) {
       return (
         <div className="landing-background">
@@ -42,8 +45,10 @@ class Landing extends React.Component {
                 <div className="synopsis">Who else but the classic Bob Vila would know the best Tips
                    for putting an end to the pesky critters within your home?
                 </div>
-                <Link to={`/video/${videoId}`}><button>Play</button></Link>
-                <button onClick={this.handleClick}>My List</button>
+                <Link to={`/video/${videoId}`}><button className="play-landing">
+                  <i className="fa fa-play landing-play" aria-hidden="true"></i>Play</button></Link>
+                <button className="my-list-landing" onClick={this.handleClick}>
+                  <i className={listButtonClass} aria-hidden="true"></i>  My List</button>
               </div>
             </div>
             <CategoryIndexContainer />
