@@ -9,10 +9,22 @@ class CategoryIndexItem extends React.Component {
     super(props);
     this.state = { display: false, video: { id: null } };
     this.handleDropdown = this.handleDropdown.bind(this);
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   handleDropdown (vid) {
     this.setState({ display: !this.state.display, video: vid });
+  }
+
+  handleScroll (direction, category) {
+        if (direction === "left") {
+          $(`${category}`).animate({
+          scrollLeft: "+=200px"
+          }, "slow");
+        } else {
+          $(`${category}`).animate({
+          scrollLeft: "-=200px"
+          }, "slow");    }
   }
 
   render () {
@@ -56,12 +68,17 @@ class CategoryIndexItem extends React.Component {
           backgroundImage: 'url(' + dropDownInfo.thumbnail_url + ')'
         };
       }
+      const currentCategory = this.props.category;
       return (
         <div className={categoryClass}>
           <h1 className={this.props.classTitle}>{title}</h1>
-          <ul className={rowClass}>
+          <button onClick={() => this.handleScroll("left", currentCategory.name)}>
+            <i className="fa fa-angle-left" aria-hidden="true"></i></button>
+          <ul id={currentCategory.name} className={rowClass}>
             {videoItems}
           </ul>
+          <button onClick={() => this.handleScroll("right", currentCategory.name)}>
+            <i className="fa fa-angle-right" aria-hidden="true"></i></button>
           <div className="dropdown-gradient">
             <div style={divStyle} className={vidDropdownClass}>
               <h1>{dropDownInfo.title}</h1>
