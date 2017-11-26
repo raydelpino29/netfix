@@ -41,6 +41,7 @@ class Landing extends React.Component {
             <div className="blurb">
               <div className="background-heading">
                 <h1 className="blurb-title">Netfix Original</h1>
+                <img src="https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/propertylogo.png" />
                 <div className="subtitle">Watch Bob Vila's 5 Tips on Pest Control:</div>
                 <div className="synopsis">Who else but the classic Bob Vila would know the best Tips
                    for putting an end to the pesky critters within your home?

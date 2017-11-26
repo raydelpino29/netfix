@@ -72,13 +72,9 @@ class CategoryIndexItem extends React.Component {
       return (
         <div className={categoryClass}>
           <h1 className={this.props.classTitle}>{title}</h1>
-          <button onClick={() => this.handleScroll("left", currentCategory.name)}>
-            <i className="fa fa-angle-left" aria-hidden="true"></i></button>
           <ul id={currentCategory.name} className={rowClass}>
             {videoItems}
           </ul>
-          <button onClick={() => this.handleScroll("right", currentCategory.name)}>
-            <i className="fa fa-angle-right" aria-hidden="true"></i></button>
           <div className="dropdown-gradient">
             <div style={divStyle} className={vidDropdownClass}>
               <h1>{dropDownInfo.title}</h1>

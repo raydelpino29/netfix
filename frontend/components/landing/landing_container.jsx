@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
   let landingVideo;
   if (state.entities.videos) {
     landingVideo = Object.values(state.entities.videos).filter((video) => {
-      if (video.title === "Pest Removal") return video;
+      if (video.title === "Home Upgrades") return video;
     })[0];
   }
   let myListStatus = "not added";
