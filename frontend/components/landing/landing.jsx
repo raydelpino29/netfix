@@ -42,9 +42,10 @@ class Landing extends React.Component {
               <div className="background-heading">
                 <h1 className="blurb-title">Netfix Original</h1>
                 <img src="https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/propertylogo.png" />
-                <div className="subtitle">Watch Bob Vila's 5 Tips on Pest Control:</div>
-                <div className="synopsis">Who else but the classic Bob Vila would know the best Tips
-                   for putting an end to the pesky critters within your home?
+                <div className="subtitle">Check out these 10 easy home upgrades:</div>
+                <div className="synopsis">The well-known Property Brothers have some awesome
+                  advice for customizing your home to look much more appealing. How can you go
+                   further than just having posters on your wall? Find out with their helpful video!
                 </div>
                 <Link to={`/video/${videoId}`}><button className="play-landing">
                   <i className="fa fa-play landing-play" aria-hidden="true"></i>Play</button></Link>

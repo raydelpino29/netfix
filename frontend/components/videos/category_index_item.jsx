@@ -44,6 +44,7 @@ class CategoryIndexItem extends React.Component {
       });
     }
     let divStyle;
+    let containerClass = "dropdown-container";
     let categoryClass = "single-category";
     let rowClass = "video-row";
     let headerClass;
@@ -51,9 +52,10 @@ class CategoryIndexItem extends React.Component {
     let dropDownInfo = { title: "", description: "", thumbnail_url: "", id: null };
     let title = this.props.category.name;
     if (this.props.classTitle) {
-      headerClass = "header-show"
-      categoryClass = "single-category show"
-      rowClass = "video-row-show"
+      headerClass = "header-show";
+      categoryClass = "single-category show";
+      rowClass = "video-row-show";
+      containerClass = "dropdown-container-show"
     }
     if (this.props.category === "myList") {
       title = "My List";
@@ -75,7 +77,7 @@ class CategoryIndexItem extends React.Component {
           <ul id={currentCategory.name} className={rowClass}>
             {videoItems}
           </ul>
-          <div className="dropdown-gradient">
+          <div className={containerClass}>
             <div style={divStyle} className={vidDropdownClass}>
               <h1>{dropDownInfo.title}</h1>
               <p className="video-description">{dropDownInfo.description}</p>

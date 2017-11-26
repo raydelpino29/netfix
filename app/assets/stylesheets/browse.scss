@@ -221,6 +221,7 @@ body {
   height: 33.3vw;
   width: 91.5vw;
   max-width: 100%;
+  overflow: visible;
 }
 
 .blurb {
@@ -233,6 +234,7 @@ body {
   width: 500px;
   margin-bottom: 15px;
   font-weight: 400px;
+  color: #fff;
 }
 
 .blurb-title {
@@ -249,6 +251,7 @@ blurb-title > p {
 .subtitle {
   margin-bottom: 10px;
   font-size: 20px;
+  color: #fff;
 }
 
 .list-button {
@@ -361,7 +364,7 @@ blurb-title > p {
   top: 2%;
 }
 
-.dropdown-gradient {
+.dropdown-container {
     margin-top: 10px;
 }
 

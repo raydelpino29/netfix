@@ -45,7 +45,6 @@ class ReviewList extends React.Component {
       return (
         <div className="list-div">
           <ReviewFormContainer videoId={this.state.videoId} review={this.state.review}/>
-          <label htmlFor="review-list">Reviews</label>
           <ul className="review-list">
             <p>No Reviews Yet!</p>
           </ul>
