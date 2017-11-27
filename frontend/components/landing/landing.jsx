@@ -44,8 +44,7 @@ class Landing extends React.Component {
                 <img src="https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/propertylogo.png" />
                 <div className="subtitle">Check out these 10 easy home upgrades:</div>
                 <div className="synopsis">The well-known Property Brothers have some awesome
-                  advice for customizing your home to look much more appealing. How can you go
-                   further than just having posters on your wall? Find out with their helpful video!
+                  advice for customizing your home to look much more appealing.
                 </div>
                 <Link to={`/video/${videoId}`}><button className="play-landing">
                   <i className="fa fa-play landing-play" aria-hidden="true"></i>Play</button></Link>

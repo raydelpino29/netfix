@@ -180,7 +180,7 @@ body {
   left: 50px;
   z-index: 1;
   color: #e5e5e5;
-  text-shadow: 0 0 3px #000;
+  text-shadow: 1px 2px 2px black;
 }
 
 .playing-video {
@@ -199,11 +199,16 @@ body {
   position: absolute;
   visibility: hidden;
   z-index: 2;
-  bottom: 14px;
+  bottom: 16px;
   left: 147px;
-  transform: scale(1.7);
+  transform: scale(2.2);
   color: white;
   cursor: pointer;
+  text-shadow: 1px 2px 2px black;
+}
+
+.fa-angle-down:hover {
+  color: #b9090b;
 }
 
 .video-dropdown {
@@ -238,8 +243,9 @@ body {
 }
 
 .blurb-title {
-  font-size: 40px;
-  font-weight: 40px;
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
   margin-bottom: 5px;
 }
 
@@ -270,6 +276,11 @@ blurb-title > p {
   left: 47%;
   top: 30%;
   transform: scale(3);
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+.fa-play:hover {
   color: #e50914;
 }
 
@@ -301,7 +312,7 @@ blurb-title > p {
   padding: 6px 15px;
   position: relative;
   left: 40%;
-  border-radius: 5px;
+  border-radius: 0px;
   margin-top: 2%;
 }
 
@@ -322,6 +333,15 @@ blurb-title > p {
 
 .review-list li {
   margin-left: 15%;
+}
+
+.review-list button {
+  background: #b9090b;
+  color: #fff;
+  padding: 3px 15px;
+  position: relative;
+  border-radius: 0px;
+  margin-right: 8px;
 }
 
 .list-div {
@@ -415,4 +435,5 @@ blurb-title > p {
 
 .background-heading img {
   width: 15em;
+  opacity: .7;
 }
