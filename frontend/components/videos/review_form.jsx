@@ -7,12 +7,17 @@ class ReviewForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleCreate = this.handleCreate.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.editForm = true;
   }
 
   componentWillReceiveProps (newProps) {
     if (!this.state.videoId) {
       this.setState({ videoId: newProps.videoId });
+    } else if (newProps.videoId !== this.props.videoId) {
+      this.editForm = false;
+      this.setState({ body: "", id: undefined, videoId: newProps.videoId });
     } else if (newProps.review) {
+      this.editForm = true;
       this.setState({ body: newProps.review.body, id: newProps.review.id });
     }
   }
@@ -30,11 +35,12 @@ class ReviewForm extends React.Component {
   handleUpdate (e) {
     e.preventDefault();
     this.props.updateReview(this.state);
+    this.editForm = false;
     this.setState({ body: "" , videoId: this.props.videoId, userId: this.props.currentUser.id });
   }
 
   render () {
-    if (this.props.formType === "create") {
+    if (this.props.formType === "create" || !this.editForm) {
       return (
         <form className="write-review" onSubmit={this.handleCreate}>
           <label htmlFor="review-body">Write a Review</label>

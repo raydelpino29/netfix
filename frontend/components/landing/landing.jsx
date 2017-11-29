@@ -16,7 +16,6 @@ class Landing extends React.Component {
 
   handleClick () {
     if (this.props.myListStatus === "added") {
-      debugger
       this.props.deleteListItem(this.props.myListVid.id);
     } else if (this.props.myListStatus === "not added") {
     this.props.createListItem({ user_id: this.props.currentUser.id,

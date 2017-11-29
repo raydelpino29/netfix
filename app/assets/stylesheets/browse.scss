@@ -226,7 +226,24 @@ body {
   height: 33.3vw;
   width: 91.5vw;
   max-width: 100%;
-  overflow: visible;
+  overflow: hidden;
+}
+
+.close-menu {
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+  font-size: 50px;
+  padding-top: 0;
+  top: -13px;
+  left: 10px;
+  text-shadow: -2px 2px #b9090b;
+}
+
+.close-menu:hover {
+  top: -11px;
+  left: 8px;
+  text-shadow: 0px 0px #b9090b;
 }
 
 .blurb {
@@ -370,8 +387,8 @@ blurb-title > p {
   color: #999;
   position: relative;
   z-index: 1;
-  left: 2%;
-  top: 5%;
+  left: 4%;
+  top: 8%;
   width: 63%;
 }
 
@@ -380,8 +397,8 @@ blurb-title > p {
   position: relative;
   z-index: 1;
   font-size: 3vw;
-  left: 2%;
-  top: 2%;
+  left: 4%;
+  top: 7%;
 }
 
 .dropdown-container {
@@ -400,13 +417,13 @@ blurb-title > p {
   color: #fff;
   margin-right: 1em;
   border-radius: 0;
-  font-size: 1vw;
+  font-size: 0.8em;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .my-list-landing {
-  font-size: 1vw;
+  font-size: 0.8em;
   font-weight: 700;
   text-transform: uppercase;
   margin-right: .75em;

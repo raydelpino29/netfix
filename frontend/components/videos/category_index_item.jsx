@@ -9,22 +9,10 @@ class CategoryIndexItem extends React.Component {
     super(props);
     this.state = { display: false, video: { id: null } };
     this.handleDropdown = this.handleDropdown.bind(this);
-    this.handleScroll = this.handleScroll.bind(this);
   }
 
   handleDropdown (vid) {
     this.setState({ display: !this.state.display, video: vid });
-  }
-
-  handleScroll (direction, category) {
-        if (direction === "left") {
-          $(`${category}`).animate({
-          scrollLeft: "+=200px"
-          }, "slow");
-        } else {
-          $(`${category}`).animate({
-          scrollLeft: "-=200px"
-          }, "slow");    }
   }
 
   render () {
@@ -79,6 +67,7 @@ class CategoryIndexItem extends React.Component {
           </ul>
           <div className={containerClass}>
             <div style={divStyle} className={vidDropdownClass}>
+              <button className="close-menu" onClick={this.handleDropdown}>&times;</button>
               <h1>{dropDownInfo.title}</h1>
               <p className="video-description">{dropDownInfo.description}</p>
               <ReviewListContainer videoId={this.state.video.id}/>
