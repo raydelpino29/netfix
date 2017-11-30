@@ -23,7 +23,6 @@ body {
 
 .single-category {
   position: relative;
-  padding-bottom: 20px;
   width: 91.4vw;
   overflow: hidden;
 }
@@ -81,6 +80,7 @@ body {
 .category-index h1 {
   color: #e5e5e5;
   font-weight: 700;
+  font-size: 22px;
 }
 
 .fa-thumbs-o-up {
@@ -128,6 +128,9 @@ body {
 
 .video-row {
   display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-top: 2em;
 }
 
 .video-item-container {
@@ -199,7 +202,7 @@ body {
   position: absolute;
   visibility: hidden;
   z-index: 2;
-  bottom: 16px;
+  bottom: 19px;
   left: 147px;
   transform: scale(2.2);
   color: white;
