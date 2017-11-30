@@ -50,7 +50,7 @@ class Header extends React.Component {
           </li>
           <li>
             <ul className='header-right'>
-              <ul className={profileClass}>Profile
+              <ul className={profileClass}><i class="fa fa-user" aria-hidden="true"></i> Profile
                 <div className={profileListClass}>
                   <button onClick={this.props.logout}>Logout</button>
                 </div>

@@ -27,11 +27,6 @@ body {
   overflow: hidden;
 }
 
-.single-category:hover {
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -202,14 +197,19 @@ body {
 }
 
 .playing-video {
-  height: 50em;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
 }
 
 .fa-chevron-circle-left {
-  position: absolute;
-  transform: scale(1.8);
-  top: 10px;
-  left: 10px;
+  position: relative;
+  top: 1em;
+  left: 2em;
+  transform: scale(3);
+  color: #e50914;
   z-index: 2;
 }
 
@@ -471,4 +471,9 @@ blurb-title > p {
 .background-heading img {
   width: 15em;
   opacity: .7;
+}
+
+.fa-user {
+  left: -5px;
+  position: relative;
 }

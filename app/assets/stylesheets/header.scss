@@ -29,14 +29,16 @@
 .profile {
   color: #e5e5e5;
   cursor: pointer;
-  margin-right: 20px;
+  right: 40px;
   position: relative;
+  padding-bottom: 25px;
 }
 
 .profile:hover {
   .profile-list {
     display: block;
     color: #fff;
+    top: 45px;
   }
 }
 
