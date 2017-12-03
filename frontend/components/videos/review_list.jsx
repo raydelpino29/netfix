@@ -29,7 +29,7 @@ class ReviewList extends React.Component {
       if (review.user_id === this.props.currentUser.id) {
         return (
           <li key={review.id}>
-            <p>{review.body}</p>
+            <div>{review.body}</div>
             <button onClick={() => this.handleEdit(review)}>Edit</button>
             <button onClick={() => this.handleDelete(review.id)}>Delete</button>
           </li>

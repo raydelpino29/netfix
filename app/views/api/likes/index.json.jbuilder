@@ -1,7 +1,7 @@
 likeIds = []
 dislikeIds = []
 
-current_user.likes.each do |like|
+Like.all.each do |like|
   if like.like_status === 1
     type = "like"
   else

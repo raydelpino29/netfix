@@ -4,9 +4,11 @@ import { fetchAllListItems, createListItem, deleteListItem } from '../../actions
 import VideoItem from './video_item';
 
 const mapStateToProps = (state, ownProps) => {
-  //use ownProps to grab the one video being rendered, then calculate the number of likes and dislikes by iterating through all the likes that have that video ID
+  // find out why the correct number of likes/dislikes aren't appearing on dropdown
   let numLikes = 0;
   let numDislikes = 0;
+  let likedVids = [];
+  let dislikedVids = [];
     Object.values(state.entities.likes).forEach((like) => {
       if (like.video_id === ownProps.video.id) {
         if (like.like_type === "like") {
@@ -15,16 +17,16 @@ const mapStateToProps = (state, ownProps) => {
           numDislikes += 1;
         }
       }
+      debugger
+      if (like.user_id === state.session.currentUser.id && like.video_id === ownProps.video.id) {
+        if (like.like_type === "like") {
+          likedVids.push(like.video_id);
+        } else {
+          dislikedVids.push(like.video_id);
+        }
+      }
     });
-  let likedVids = [];
-  let dislikedVids = [];
-  Object.values(state.entities.likes).forEach((like) => {
-    if (like.like_type === "like") {
-      likedVids.push(like.video_id);
-    } else {
-      dislikedVids.push(like.video_id);
-    }
-  });
+    debugger
   let likeStatus;
   if (likedVids.includes(ownProps.video.id)) {
     likeStatus = "like";
