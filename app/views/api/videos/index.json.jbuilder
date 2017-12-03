@@ -3,5 +3,6 @@
     json.partial! 'api/videos/video', video: video
     json.thumbnail_url asset_path(video.thumbnail.url)
     json.video_url asset_path(video.video.url)
+    json.likes video.likes
   end
 end

@@ -10,6 +10,13 @@ class VideoItem extends React.Component {
       this.handleAdd = this.handleAdd.bind(this);
   }
 
+  componentWillReceiveProps (newProps) {
+    if (newProps.video !== this.props) {
+      this.props.handleDropdown(newProps.video, newProps.numLikes,
+        newProps.numDislikes, true);
+    }
+  }
+
   processDelete (field, currentLike) {
     this.props.deleteLike(currentLike.id);
   }
@@ -87,7 +94,8 @@ class VideoItem extends React.Component {
         <i onClick={this.handleLike('dislike')} className={classDislike}></i>
         <i onClick={this.handleAdd} className={classMyList}></i>
         <p className="video-title">{this.props.video.title}</p>
-        <i  onClick={() => this.props.handleDropdown(this.props.video)} className="fa fa-angle-down" aria-hidden="true"></i>
+        <i  onClick={ () => this.props.handleDropdown(this.props.video,
+            this.props.numLikes, this.props.numDislikes) } className="fa fa-angle-down" aria-hidden="true"></i>
       </li>
     )
   }

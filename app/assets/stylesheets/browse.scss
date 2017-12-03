@@ -240,6 +240,26 @@ body {
   transition-duration: 400ms;
 }
 
+.video-dropdown p {
+  position: relative;
+  z-index: 1;
+  left: 36%;
+  color: #fff;
+}
+
+.video-dropdown i {
+  font-size: 30px;
+  text-shadow: 1px 1px #fff;
+}
+
+.likes {
+  color: green;
+}
+
+.dislikes {
+  color: #e50914;
+}
+
 .visible {
   height: 33.3vw;
   width: 91.5vw;
@@ -361,7 +381,7 @@ blurb-title > p {
 .review-list {
   position: relative;
   background: rgba(0, 0, 0, 0.7);
-  height: 30em;
+  height: 35vh;
   overflow-y: scroll;
   color: white;
 }
@@ -406,7 +426,7 @@ blurb-title > p {
   position: relative;
   z-index: 1;
   left: 4%;
-  top: 8%;
+  top: 30%;
   width: 63%;
 }
 

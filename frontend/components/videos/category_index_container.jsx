@@ -9,7 +9,6 @@ const mapStateToProps = (state) => {
   let listItems = Object.values(state.entities.myList).map((item) => {
     return item.video_id;
   });
-  //keep counter 
   let likedVids = [];
   let dislikedVids = [];
   Object.values(state.entities.likes).forEach((like) => {

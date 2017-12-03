@@ -11,8 +11,16 @@ class CategoryIndexItem extends React.Component {
     this.handleDropdown = this.handleDropdown.bind(this);
   }
 
-  handleDropdown (vid) {
-    this.setState({ display: !this.state.display, video: vid });
+  handleDropdown (vid, likes, dislikes, received) {
+    debugger
+    if (!received) {
+      let video = Object.assign({}, vid, { likes }, { dislikes });
+      this.setState({ display: !this.state.display, video });
+    } else if (this.state.video.id === vid.id) {
+      debugger
+      let video = Object.assign({}, vid, { likes }, { dislikes });
+      this.setState({ display: this.state.display, video });
+    }
   }
 
   render () {
@@ -25,6 +33,15 @@ class CategoryIndexItem extends React.Component {
       });
     } else {
       videoItems = this.props.videos.map((video) => {
+        let likes = 0;
+        let disLikes = 0;
+        Object.values(video.likes).forEach((like) => {
+          if (like.like_status === 1) {
+            likes += 1;
+          } else if (like.like_status === 0) {
+            disLikes += 1;
+          }
+        });
         return (
           <VideoItemContainer key={video.id} video={video} category={this.props.category}
             classTitle={this.props.classTitle} handleDropdown={this.handleDropdown} />
@@ -37,7 +54,8 @@ class CategoryIndexItem extends React.Component {
     let rowClass = "video-row";
     let headerClass;
     let vidDropdownClass = "video-dropdown";
-    let dropDownInfo = { title: "", description: "", thumbnail_url: "", id: null };
+    let dropDownInfo = { title: "", description: "", thumbnail_url: "",
+      id: null, likes: 0, dislikes: 0 };
     let title = this.props.category.name;
     if (this.props.classTitle) {
       headerClass = "header-show";
@@ -69,7 +87,9 @@ class CategoryIndexItem extends React.Component {
             <div style={divStyle} className={vidDropdownClass}>
               <button className="close-menu" onClick={this.handleDropdown}>&times;</button>
               <h1>{dropDownInfo.title}</h1>
-              <p className="video-description">{dropDownInfo.description}</p>
+              <div className="video-description">{dropDownInfo.description}</div>
+              <p><i className="likes">{dropDownInfo.likes}</i> Users have liked this video!</p>
+              <p><i className="dislikes">{dropDownInfo.dislikes}</i> Users have disliked this video.</p>
               <ReviewListContainer videoId={this.state.video.id}/>
               <div className="gradient"></div>
             </div>

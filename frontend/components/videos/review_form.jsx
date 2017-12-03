@@ -11,7 +11,6 @@ class ReviewForm extends React.Component {
   }
 
   componentWillReceiveProps (newProps) {
-    debugger
     if (!this.state.videoId) {
       this.setState({ videoId: newProps.videoId });
     } else if (newProps.videoId !== this.props.videoId) {

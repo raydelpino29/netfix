@@ -4,6 +4,18 @@ import { fetchAllListItems, createListItem, deleteListItem } from '../../actions
 import VideoItem from './video_item';
 
 const mapStateToProps = (state, ownProps) => {
+  //use ownProps to grab the one video being rendered, then calculate the number of likes and dislikes by iterating through all the likes that have that video ID
+  let numLikes = 0;
+  let numDislikes = 0;
+    Object.values(state.entities.likes).forEach((like) => {
+      if (like.video_id === ownProps.video.id) {
+        if (like.like_type === "like") {
+          numLikes += 1;
+        } else if (like.like_type === "dislike") {
+          numDislikes += 1;
+        }
+      }
+    });
   let likedVids = [];
   let dislikedVids = [];
   Object.values(state.entities.likes).forEach((like) => {
@@ -27,14 +39,14 @@ const mapStateToProps = (state, ownProps) => {
     myListStatus = "added";
   }
   return {
-    videos: Object.values(state.entities.videos),
     currentUser: state.session.currentUser,
-    categories: Object.values(state.entities.categories),
     likes: Object.values(state.entities.likes),
     myList: Object.values(state.entities.myList),
     myListVids,
     likeStatus,
     myListStatus,
+    numLikes,
+    numDislikes,
   };
 };
 
