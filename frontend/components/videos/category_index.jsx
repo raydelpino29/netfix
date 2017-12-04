@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoryIndexItem from './category_index_item';
+import CategoryIndexItemContainer from './category_index_item_container';
 
 class CategoryIndex extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class CategoryIndex extends React.Component {
         }
       });
       return (
-        <ul key={category.id}><CategoryIndexItem category={category} videos={videos}  /></ul>
+        <ul key={category.id}><CategoryIndexItemContainer category={category} videos={videos}  /></ul>
       );
     });
 

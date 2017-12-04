@@ -17,7 +17,6 @@ const mapStateToProps = (state, ownProps) => {
           numDislikes += 1;
         }
       }
-      debugger
       if (like.user_id === state.session.currentUser.id && like.video_id === ownProps.video.id) {
         if (like.like_type === "like") {
           likedVids.push(like.video_id);
@@ -26,7 +25,6 @@ const mapStateToProps = (state, ownProps) => {
         }
       }
     });
-    debugger
   let likeStatus;
   if (likedVids.includes(ownProps.video.id)) {
     likeStatus = "like";

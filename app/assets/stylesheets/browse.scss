@@ -249,6 +249,7 @@ body {
 
 .video-dropdown i {
   font-size: 30px;
+  margin-right: 10px;
   text-shadow: 1px 1px #fff;
 }
 
@@ -388,6 +389,8 @@ blurb-title > p {
 
 .review-list li {
   margin-left: 15%;
+  padding-bottom: 13px;
+  border-bottom: 1px solid grey;
 }
 
 .review-list button {
@@ -496,4 +499,18 @@ blurb-title > p {
 .fa-user {
   left: -5px;
   position: relative;
+}
+
+.dropdown-functions i {
+  position: relative;
+  z-index: 1;
+  visibility: visible;
+  left: 10%;
+  top: 20vh;
+}
+
+.dropdown-functions {
+  position: relative;
+  left: 15%;
+  top: 15%;
 }

@@ -8,16 +8,68 @@ class CategoryIndexItem extends React.Component {
   constructor (props) {
     super(props);
     this.state = { display: false, video: { id: null } };
+    this.itemStatus = null;
+    this.likeStatus = null;
+    this.processCreate = this.processCreate.bind(this);
+    this.processDelete = this.processDelete.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleLike = this.handleLike.bind(this);
     this.handleDropdown = this.handleDropdown.bind(this);
   }
 
-  handleDropdown (vid, likes, dislikes, received) {
-    debugger
+  processDelete (field, currentLike) {
+    this.props.deleteLike(currentLike.id);
+  }
+
+  processCreate (field) {
+    let like_status;
+    like_status = field === 'like' ? 1 : 0;
+    this.props.createLike({ user_id: this.props.currentUser.id,
+      video_id: this.state.video.id, like_status });
+  }
+
+  handleAdd (e) {
+    if (this.itemStatus) {
+      let currentListItem;
+      Object.values(this.props.myList).forEach((item) => {
+        if (item.video_id === this.state.video.id) {
+          currentListItem = item;
+        }
+      });
+      this.props.deleteListItem(currentListItem.id);
+      this.itemStatus = null;
+    } else {
+      this.props.createListItem({ user_id: this.props.currentUser.id,
+        video_id: this.state.video.id });
+      this.itemStatus = "added";
+    }
+  }
+
+  handleLike(field) {
+    if (this.likeStatus) { //if there is already a like or dislike, delete it on click
+      let currentLike;
+      const like = Object.values(this.props.likes).forEach((like) => {
+        if (like.video_id === this.state.video.id) {
+          currentLike = like;
+        }
+      });
+      this.likeStatus = null;
+      this.processDelete(field, currentLike);
+    } else {
+      this.likeStatus = field;
+      this.processCreate(field);
+    }
+  }
+
+  handleDropdown (vid, likes, dislikes, likeStatus, myListStatus, received) {
     if (!received) {
+      this.itemStatus = myListStatus;
+      this.likeStatus = likeStatus;
       let video = Object.assign({}, vid, { likes }, { dislikes });
       this.setState({ display: !this.state.display, video });
     } else if (this.state.video.id === vid.id) {
-      debugger
+      this.itemStatus = myListStatus;
+      this.likeStatus = likeStatus;
       let video = Object.assign({}, vid, { likes }, { dislikes });
       this.setState({ display: this.state.display, video });
     }
@@ -28,7 +80,9 @@ class CategoryIndexItem extends React.Component {
     if (this.props.myListVids) {
       videoItems = this.props.myListVids.map((video) => {
         return (
-          <VideoItemContainer key={video.id} video={video} handleDropdown={this.handleDropdown} />
+          <VideoItemContainer key={video.id} video={video}
+            likeStatus={this.likeStatus} itemStatus={this.itemStatus}
+            handleDropdown={this.handleDropdown} />
         );
       });
     } else {
@@ -44,6 +98,7 @@ class CategoryIndexItem extends React.Component {
         });
         return (
           <VideoItemContainer key={video.id} video={video} category={this.props.category}
+            likeStatus={this.likeStatus} itemStatus={this.itemStatus}
             classTitle={this.props.classTitle} handleDropdown={this.handleDropdown} />
         );
       });
@@ -77,6 +132,24 @@ class CategoryIndexItem extends React.Component {
         };
       }
       const currentCategory = this.props.category;
+      let classLike;
+      let classDislike;
+      let classMyList;
+      if (this.likeStatus === "like") {
+        classLike = "icon fa fa-thumbs-o-up active-like";
+        classDislike = "";
+      } else if (this.likeStatus === "dislike") {
+        classDislike = "icon fa fa-thumbs-o-down active-dislike";
+        classLike = "";
+      } else {
+        classLike = "icon fa fa-thumbs-o-up";
+        classDislike = "icon fa fa-thumbs-o-down";
+      }
+      if (this.itemStatus) {
+        classMyList = "icon fa fa-plus-circle active-add";
+      } else {
+        classMyList = "icon fa fa-plus-circle";
+      }
       return (
         <div className={categoryClass}>
           <h1 className={this.props.classTitle}>{title}</h1>
@@ -90,6 +163,11 @@ class CategoryIndexItem extends React.Component {
               <div className="video-description">{dropDownInfo.description}</div>
               <p><i className="likes">{dropDownInfo.likes}</i> Users have liked this video!</p>
               <p><i className="dislikes">{dropDownInfo.dislikes}</i> Users have disliked this video.</p>
+              <div className="dropdown-functions">
+                <i onClick={this.handleAdd} className={classMyList}></i>
+                <i onClick={() => this.handleLike("like")} className={classLike}></i>
+                <i onClick={() => this.handleLike("dislike")} className={classDislike}></i>
+              </div>
               <ReviewListContainer videoId={this.state.video.id}/>
               <div className="gradient"></div>
             </div>

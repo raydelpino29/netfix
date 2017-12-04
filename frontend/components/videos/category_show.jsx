@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoryIndexItem from './category_index_item';
+import CategoryIndexItemContainer from './category_index_item_container';
 import HeaderContainer from '../header/header_container';
 
 class CategoryShow extends React.Component {
@@ -33,7 +33,7 @@ class CategoryShow extends React.Component {
     return (
       <div>
         <HeaderContainer classIndicator="no videos"/>
-        <CategoryIndexItem classTitle="category-show-title" videos={this.props.videos}
+        <CategoryIndexItemContainer classTitle="category-show-title" videos={this.props.videos}
           myListVids={this.props.myListVids} category={this.props.category} />
       </div>
     )

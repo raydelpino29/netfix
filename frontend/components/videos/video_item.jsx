@@ -11,9 +11,9 @@ class VideoItem extends React.Component {
   }
 
   componentWillReceiveProps (newProps) {
-    if (newProps.video !== this.props) {
-      this.props.handleDropdown(newProps.video, newProps.numLikes,
-        newProps.numDislikes, true);
+    if (newProps !== this.props) {
+      this.props.handleDropdown(newProps.video, newProps.numLikes, newProps.numDislikes,
+        this.props.likeStatus, this.props.myListStatus, true);
     }
   }
 
@@ -44,8 +44,6 @@ class VideoItem extends React.Component {
   }
 
   handleLike(field) {
-    let other;
-    other = field === 'like' ? 'dislike' : 'like';
     if (this.props.likeStatus) { //if there is already a like or dislike, delete it on click
       let currentLike;
       const like = Object.values(this.props.likes).forEach((like) => {
@@ -95,7 +93,8 @@ class VideoItem extends React.Component {
         <i onClick={this.handleAdd} className={classMyList}></i>
         <p className="video-title">{this.props.video.title}</p>
         <i  onClick={ () => this.props.handleDropdown(this.props.video,
-            this.props.numLikes, this.props.numDislikes) } className="fa fa-angle-down" aria-hidden="true"></i>
+            this.props.numLikes, this.props.numDislikes, this.props.likeStatus,
+          this.props.myListStatus) } className="fa fa-angle-down" aria-hidden="true"></i>
       </li>
     )
   }
