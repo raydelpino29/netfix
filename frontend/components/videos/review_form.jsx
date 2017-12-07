@@ -11,7 +11,6 @@ class ReviewForm extends React.Component {
   }
 
   componentWillReceiveProps (newProps) {
-    debugger
     if (!this.state.videoId) {
       this.setState({ videoId: newProps.videoId });
     } else if (newProps.videoId !== this.props.videoId) { //we are opening the dropdown at a new video, and don't want to remember the last video's review info
