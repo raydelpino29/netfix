@@ -133,17 +133,13 @@ body {
   height: 7px;
 }
 
-.review-list::-webkit-scrollbar {
-  width: 7px;
-  height: 100%;
-}
 
-.video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb {
+.video-row::-webkit-scrollbar-thumb {
   background: red;
   border-radius: 15px;
 }
 
-.video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track {
+.video-row::-webkit-scrollbar-track {
   background: gray;
   border-radius: 15px;
 }
@@ -387,7 +383,7 @@ blurb-title > p {
 .review-list {
   position: relative;
   background: rgba(0, 0, 0, 0.7);
-  height: 36.5vh;
+  height: 41vh;
   overflow-y: scroll;
   color: white;
 }
