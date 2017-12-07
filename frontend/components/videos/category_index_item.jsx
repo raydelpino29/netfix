@@ -161,8 +161,10 @@ class CategoryIndexItem extends React.Component {
               <button className="close-menu" onClick={this.handleDropdown}>&times;</button>
               <h1>{dropDownInfo.title}</h1>
               <div className="video-description">{dropDownInfo.description}</div>
-              <p><i className="likes">{dropDownInfo.likes}</i> Users have liked this video!</p>
-              <p><i className="dislikes">{dropDownInfo.dislikes}</i> Users have disliked this video.</p>
+              <div className="video-like-count">
+                <p><i className="likes">{dropDownInfo.likes}</i> Users have liked this video!</p>
+                <p><i className="dislikes">{dropDownInfo.dislikes}</i> Users have disliked this video.</p>
+              </div>
               <div className="dropdown-functions">
                 <i onClick={this.handleAdd} className={classMyList}></i>
                 <i onClick={() => this.handleLike("like")} className={classLike}></i>
