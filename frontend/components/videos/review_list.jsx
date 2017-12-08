@@ -54,9 +54,11 @@ class ReviewList extends React.Component {
       return (
         <div className="list-div">
           <ReviewFormContainer videoId={this.state.videoId} review={this.state.review}/>
-          <ul className="review-list">
-            {reviewList}
-          </ul>
+          <div className="review-list-container">
+            <ul className="review-list">
+              {reviewList}
+            </ul>
+          </div>
         </div>
       );
     }

@@ -387,7 +387,7 @@ blurb-title > p {
 .review-list {
   position: relative;
   background: rgba(0, 0, 0, 0.7);
-  height: 41vh;
+  height: 100%;
   overflow-y: scroll;
   color: white;
 }
@@ -518,4 +518,8 @@ blurb-title > p {
   position: relative;
   left: 15%;
   top: 15%;
+}
+
+.review-list-container {
+  height: 20vw;
 }
