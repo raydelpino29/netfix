@@ -38,7 +38,6 @@ class ReviewForm extends React.Component {
     this.editForm = false;
     this.setState({ body: "" , videoId: this.props.videoId, userId: this.props.currentUser.id });
   }
-
   render () {
     if (this.props.formType === "create" || !this.editForm) {
       return (

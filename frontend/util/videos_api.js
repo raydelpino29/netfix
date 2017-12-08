@@ -25,3 +25,11 @@ export const fetchCategory = (id) => {
     url: `/api/categories/${id}`
   });
 };
+
+export const searchVideos = (query) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/videos/search`,
+    data: { query }
+  });
+};

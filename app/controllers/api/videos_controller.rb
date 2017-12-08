@@ -8,4 +8,8 @@ class Api::VideosController < ApplicationController
     @video = Video.find(params[:id])
   end
 
+  def search
+    @videos = Video.where("title LIKE ?", "%#{params[query].downcase}%")
+  end
+
 end
