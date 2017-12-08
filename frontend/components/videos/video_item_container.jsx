@@ -4,7 +4,6 @@ import { fetchAllListItems, createListItem, deleteListItem } from '../../actions
 import VideoItem from './video_item';
 
 const mapStateToProps = (state, ownProps) => {
-  // find out why the correct number of likes/dislikes aren't appearing on dropdown
   let numLikes = 0;
   let numDislikes = 0;
   let likedVids = [];
