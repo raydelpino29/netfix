@@ -7,7 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-demo_user = User.create!({ email: "coolDude@gmail.com", password: "starwars" })
+demo_user1 = User.create!({ email: "coolDude@gmail.com", password: "starwars" })
+demo_user2 = User.create!({ email: "steph@gmail.com", password: "starwars" })
+demo_user3 = User.create!({ email: "justin@gmail.com", password: "starwars" })
+demo_user4 = User.create!({ email: "max@gmail.com", password: "starwars" })
 
 Category.destroy_all
 category1 = Category.create!({ name: "Food", description: "Check out these videos to learn some awesome LifeProTips for cooking and preparing food!" })
@@ -167,3 +170,25 @@ video34.save!
 video35.save!
 video36.save!
 video37.save!
+
+Review.destroy_all
+Video.all.each do |video|
+  if video.id % 2 == 0
+    Like.create!({ user_id: demo_user1.id, video_id: video.id, like_status: 1 })
+    Like.create!({ user_id: demo_user2.id, video_id: video.id, like_status: 1 })
+    Like.create!({ user_id: demo_user3.id, video_id: video.id, like_status: 1 })
+    Like.create!({ user_id: demo_user4.id, video_id: video.id, like_status: 1 })
+    MyList.create!({ user_id: demo_user1.id, video_id: video.id })
+  elsif video.id == video1.id || video.id == video10.id || video.id == video22.id || video.id == video32.id || video.id == video33.id
+    Like.create!({ user_id: demo_user1.id, video_id: video.id, like_status: 0 })
+    Like.create!({ user_id: demo_user2.id, video_id: video.id, like_status: 0 })
+    Like.create!({ user_id: demo_user3.id, video_id: video.id, like_status: 0 })
+    Like.create!({ user_id: demo_user4.id, video_id: video.id, like_status: 0 })
+  end
+
+  Review.create!({ body: "Really helpful video!", user_id: demo_user1.id, video_id: video.id })
+  Review.create!({ body: "So great, I reviewed it again!", user_id: demo_user1.id, video_id: video.id })
+  Review.create!({ body: "The video was okay. I wish it was more helpful.", user_id: demo_user2.id, video_id: video.id })
+  Review.create!({ body: "One of the better ones for sure.", user_id: demo_user3.id, video_id: video.id })
+  Review.create!({ body: "Totally added this to my list.", user_id: demo_user4.id, video_id: video.id })
+end
