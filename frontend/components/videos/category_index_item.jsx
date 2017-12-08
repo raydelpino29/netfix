@@ -49,7 +49,7 @@ class CategoryIndexItem extends React.Component {
     if (this.likeStatus) { //if there is already a like or dislike, delete it on click
       let currentLike;
       const like = Object.values(this.props.likes).forEach((like) => {
-        if (like.video_id === this.state.video.id) {
+        if (like.video_id === this.state.video.id && like.user_id === this.props.currentUser.id) {
           currentLike = like;
         }
       });

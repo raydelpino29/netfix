@@ -172,6 +172,9 @@ video36.save!
 video37.save!
 
 Review.destroy_all
+MyList.destroy_all
+Like.destroy_all
+
 Video.all.each do |video|
   if video.id % 2 == 0
     Like.create!({ user_id: demo_user1.id, video_id: video.id, like_status: 1 })

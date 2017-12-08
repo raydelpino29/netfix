@@ -16,12 +16,12 @@ const mapStateToProps = (state, ownProps) => {
         } else if (like.like_type === "dislike") {
           numDislikes += 1;
         }
-      }
-      if (like.user_id === state.session.currentUser.id && like.video_id === ownProps.video.id) {
-        if (like.like_type === "like") {
-          likedVids.push(like.video_id);
-        } else {
-          dislikedVids.push(like.video_id);
+        if (like.user_id === state.session.currentUser.id) {
+          if (like.like_type === "like") {
+            likedVids.push(like.video_id);
+          } else {
+            dislikedVids.push(like.video_id);
+          }
         }
       }
     });
