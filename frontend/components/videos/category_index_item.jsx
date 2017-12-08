@@ -146,7 +146,7 @@ class CategoryIndexItem extends React.Component {
         classDislike = "icon fa fa-thumbs-o-down";
       }
       if (this.itemStatus) {
-        classMyList = "icon fa fa-plus-circle active-add";
+        classMyList = "fa fa-check-circle active-add";
       } else {
         classMyList = "icon fa fa-plus-circle";
       }

@@ -80,7 +80,7 @@ class VideoItem extends React.Component {
       classDislike = "icon fa fa-thumbs-o-down";
     }
     if (this.props.myListStatus) {
-      classMyList = "icon fa fa-plus-circle active-add";
+      classMyList = "fa fa-check-circle active-add";
     } else {
       classMyList = "icon fa fa-plus-circle";
     }
