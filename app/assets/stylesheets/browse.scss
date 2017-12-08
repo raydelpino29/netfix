@@ -133,13 +133,18 @@ body {
   height: 7px;
 }
 
+.review-list::-webkit-scrollbar {
+  height:  100%;
+  width: 7px;
+}
 
-.video-row::-webkit-scrollbar-thumb {
+
+.video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb {
   background: red;
   border-radius: 15px;
 }
 
-.video-row::-webkit-scrollbar-track {
+.video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track {
   background: gray;
   border-radius: 15px;
 }
@@ -373,8 +378,12 @@ blurb-title > p {
   padding: 6px 15px;
   position: relative;
   left: 40%;
-  border-radius: 0px;
+  border-radius: 5px;
   margin-top: 2%;
+}
+
+.write-review button:hover {
+  background: #c20002;
 }
 
 .write-review label {
@@ -403,7 +412,7 @@ blurb-title > p {
   color: #fff;
   padding: 3px 15px;
   position: relative;
-  border-radius: 0px;
+  border-radius: 5px;
   margin-right: 8px;
 }
 
