@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchInputContainer from './search_input_container';
 
 class Header extends React.Component {
   constructor(props) {
@@ -50,6 +51,7 @@ class Header extends React.Component {
             </ul>
           </li>
           <li>
+            <SearchInputContainer location={this.props.location} />
             <ul className='header-right'>
               <ul className={profileClass}><i className="fa fa-user" aria-hidden="true"></i> Profile
                 <div className={profileListClass}>

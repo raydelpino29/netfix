@@ -1,7 +1,7 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
 
-class SearchInput extends React.Component {
+class SearchPage extends React.Component {
 
   constructor (props) {
     super(props);
@@ -35,3 +35,5 @@ class SearchInput extends React.Component {
     </div>
   }
 }
+
+export default SearchPage

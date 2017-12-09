@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
 import { searchVideos } from '../../actions/video_actions';
-import SearchInput from './search_input';
+import SearchPage from './search_page';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    location: ownProps.location
+    //determine what props to send
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    searchVideos: (query) => dispatch(searchVideos(query)),
+    searchVideos: (query) => dispatch(searchVideos(query))
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchInput);
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);

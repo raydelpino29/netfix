@@ -12,10 +12,11 @@ class SearchInput extends React.Component {
   componentDidMount () {
     if (this.state.search !== "") {
       this.setState({ search: this.props.location.query.q });
+    }
   }
 
   componentWillReceiveProps (newProps) {
-    if (!this.props.location.pathname.includes("search")) {
+    if (!newProps.location.pathname.includes("search")) {
       this.setState({ search: "" });
     }
   }
@@ -30,8 +31,10 @@ class SearchInput extends React.Component {
   }
 
   render () {
-    <div>
+    <div className="search-input">
       <input placeholder="Search" value={this.state.search} onChange={this.handleChange}/>
     </div>
   }
 }
+
+export default SearchInput
