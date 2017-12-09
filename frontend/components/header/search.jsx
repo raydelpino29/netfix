@@ -10,7 +10,7 @@ class SearchInput extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchSearch(this.props.location.query.q);
+    this.props.searchVideos(this.props.location.query.q);
   }
 
   componentWillReceiveProps (newProps) {

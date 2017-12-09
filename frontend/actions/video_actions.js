@@ -3,11 +3,19 @@ import * as VideosApi from '../util/videos_api';
 export const RECEIVE_ALL_VIDEOS = 'RECEIVE_ALL_VIDEOS';
 export const RECEIVE_ALL_CATEGORIES = 'RECEIVE_ALL_CATEGORIES';
 export const RECEIVE_VIDEO = 'RECEIVE_VIDEO';
+export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 export const RECEIVE_CATEGORY = 'RECEIVE_CATEGORY';
 
 export const receiveAllVideos = (videos) => {
   return {
     type: RECEIVE_ALL_VIDEOS,
+    videos,
+  };
+};
+
+export const receiveVideos = (videos) => {
+  return {
+    type: RECEIVE_VIDEOS,
     videos,
   };
 };
@@ -45,6 +53,14 @@ export const fetchVideo = (id) => {
   return (dispatch) => {
     return VideosApi.fetchVideo(id).then((video) => {
       dispatch(receiveVideo(video));
+    });
+  };
+};
+
+export const searchVideos = (query) => {
+  return (dispatch) => {
+    return VideosApi.searchVideos(query).then((videos) => {
+      dispatch(receiveVideos(videos));
     });
   };
 };
