@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_VIDEOS, RECEIVE_VIDEO, RECEIVE_VIDEOS } from '../actions/video_actions';
+import { RECEIVE_ALL_VIDEOS, RECEIVE_VIDEO } from '../actions/video_actions';
 
 const VideoReducer = (state = {}, action) => {
   Object.freeze(state);

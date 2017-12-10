@@ -8,26 +8,33 @@ class SearchPage extends React.Component {
     super(props);
   }
 
+  // componentWillMount () {
+  //   debugger
+  //   this.props.searchVideos(this.props.location.search.slice(1));
+  // }
+
   componentDidMount() {
     debugger
-    this.props.searchVideos(this.props.location.query.q);
+    this.props.searchVideos(this.props.location.search.slice(1));
   }
 
   componentWillReceiveProps (newProps) {
     debugger
-    if (newProps.location.query.q !== this.props.location.query.q) {
-      this.props.searchVideos(this.props.location.query.q);
+    if (newProps.location.search !== this.props.location.search) {
+      this.props.searchVideos(this.props.location.search.slice(1));
     }
   }
 
   render () {
-    debugger
+    let category = { name: "Search" };
     let vids;
     this.props.searchedVids ? vids = this.props.searchedVids : vids = [];
+    debugger
     return (
       <div>
         <HeaderContainer location={this.props.location} history={this.props.history} />
-        <CategoryIndexItemContainer classTitle="category-show-title" videos={this.props.searchedVids} />
+        <CategoryIndexItemContainer classTitle="category-show-title" videos={vids}
+          category={category} />
       </div>
     )
   }

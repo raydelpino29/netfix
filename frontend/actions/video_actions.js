@@ -14,6 +14,7 @@ export const receiveAllVideos = (videos) => {
 };
 
 export const receiveVideos = (videos) => {
+  debugger
   return {
     type: RECEIVE_VIDEOS,
     videos,

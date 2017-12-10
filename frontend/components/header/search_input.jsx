@@ -10,7 +10,7 @@ class SearchInput extends React.Component {
 
   componentDidMount () {
     if (this.state.search !== "") {
-      this.setState({ search: this.props.location.query.q });
+      this.setState({ search: this.props.search.slice(1) });
     }
   }
 
@@ -24,7 +24,7 @@ class SearchInput extends React.Component {
     debugger
     this.setState({ search: e.target.value }, () => {
         if (this.state.search !== "") {
-          this.props.history.push(`/search?q=${this.state.search}`);
+          this.props.history.push(`/search?${this.state.search}`);
         } else {
           this.props.history.push("/");
         }
