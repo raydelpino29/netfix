@@ -8,11 +8,7 @@ const mapStateToProps = (state, ownProps) => {
   if (ownProps.classIndicator) {
     headerClass = "show-page";
   }
-  if (ownProps.location) {
-    if (ownProps.location.pathname === "/") {
-      headerClass = "splash";
-    }
-  }
+  
   return {
     categories: state.entities.categories,
     currentUser: state.session.currentUser,

@@ -34,7 +34,6 @@ class Header extends React.Component {
     } else if (this.props.headerClass === "splash") {
       headerClass = "header splash"
     }
-
     return (
 
       <nav>
@@ -51,7 +50,7 @@ class Header extends React.Component {
             </ul>
           </li>
           <li>
-            <SearchInputContainer location={this.props.location} />
+            <SearchInputContainer location={this.props.location} history={this.props.history}/>
             <ul className='header-right'>
               <ul className={profileClass}><i className="fa fa-user" aria-hidden="true"></i> Profile
                 <div className={profileListClass}>

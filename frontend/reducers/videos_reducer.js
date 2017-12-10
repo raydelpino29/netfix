@@ -12,9 +12,7 @@ const VideoReducer = (state = {}, action) => {
     return newState;
 
     case RECEIVE_VIDEOS:
-    Object.values(action.videos).map((video) => {
-      newState = Object.assign({}, state, { [video.id]: video });
-    });
+    newState = Object.assign({}, state, { search: action.videos });
     return newState;
 
     default:

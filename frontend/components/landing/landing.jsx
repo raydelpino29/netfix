@@ -36,7 +36,7 @@ class Landing extends React.Component {
       return (
         <div className="landing-background">
           <div className="landing">
-            <HeaderContainer />
+            <HeaderContainer location={this.props.location} history={this.props.history} />
             <div className="blurb">
               <div className="background-heading">
                 <h1 className="blurb-title">Netfix Original</h1>

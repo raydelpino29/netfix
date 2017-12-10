@@ -4,7 +4,7 @@ import SearchPage from './search_page';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    //determine what props to send
+    searchedVids: state.search,
   };
 };
 

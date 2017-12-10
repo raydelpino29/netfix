@@ -6,18 +6,18 @@ import LandingContainer from './landing/landing_container';
 import VideoPlayerContainer from './videos/video_player_container';
 import CategoryShowContainer from './videos/category_show_container';
 import HeaderContainer from './header/header_container';
-import SearchPage from './header/search_page';
+import SearchPageContainer from './header/search_page_container';
+import SearchInputContainer from './header/search_input_container';
 
 const App = () => (
   <div>
-    <Route exact path='/' component={ HeaderContainer } />
     <Route exact path='/' component={ LandingContainer } />
     <AuthRoute path='/login' component={ SessionFormContainer } />
     <AuthRoute path='/signup' component={ SessionFormContainer } />
     <ProtectedRoute exact path='/video/:videoId' component={ VideoPlayerContainer } />
     <ProtectedRoute exact path='/category/:categoryId' component={ CategoryShowContainer } />
     <ProtectedRoute exact path='/myList' component={ CategoryShowContainer } />
-    <ProtectedRoute path='/search' component={ SearchPage } />
+    <ProtectedRoute path='/search' component={ SearchPageContainer } />
   </div>
 );
 

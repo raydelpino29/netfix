@@ -1,5 +1,4 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
 
 class SearchInput extends React.Component {
 
@@ -22,18 +21,23 @@ class SearchInput extends React.Component {
   }
 
   handleChange (e) {
-    this.setState({ search: e.target.value });
-    if (this.state.search !== "") {
-      hashHistory.push(`/search/q=${this.state.search}`);
-    } else {
-      hashHistory.push("/");
-    }
+    debugger
+    this.setState({ search: e.target.value }, () => {
+        if (this.state.search !== "") {
+          this.props.history.push(`/search/q=${this.state.search}`);
+        } else {
+          this.props.history.push("/");
+        }
+      }
+     );
   }
 
   render () {
-    <div className="search-input">
-      <input placeholder="Search" value={this.state.search} onChange={this.handleChange}/>
-    </div>
+    return (
+      <div className="search-input">
+        <input placeholder="Search" value={this.state.search} onChange={this.handleChange}/>
+      </div>
+    )
   }
 }
 
