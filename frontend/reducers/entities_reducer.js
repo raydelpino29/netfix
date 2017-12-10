@@ -4,6 +4,7 @@ import CategoriesReducer from './categories_reducer';
 import LikesReducer from './likes_reducer';
 import MyListReducer from './my_list_reducer';
 import ReviewsReducer from './reviews_reducer';
+import SearchReducer from './search_reducer';
 
 const EntitiesReducer = combineReducers({
   videos: VideoReducer,
@@ -11,6 +12,7 @@ const EntitiesReducer = combineReducers({
   likes: LikesReducer,
   myList: MyListReducer,
   reviews: ReviewsReducer,
+  search: SearchReducer,
 });
 
 export default EntitiesReducer;

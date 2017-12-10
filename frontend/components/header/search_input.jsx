@@ -24,7 +24,7 @@ class SearchInput extends React.Component {
     debugger
     this.setState({ search: e.target.value }, () => {
         if (this.state.search !== "") {
-          this.props.history.push(`/search/q=${this.state.search}`);
+          this.props.history.push(`/search?q=${this.state.search}`);
         } else {
           this.props.history.push("/");
         }

@@ -11,10 +11,6 @@ const VideoReducer = (state = {}, action) => {
     newState = Object.assign({}, state, { [action.video.id]: action.video });
     return newState;
 
-    case RECEIVE_VIDEOS:
-    newState = Object.assign({}, state, { search: action.videos });
-    return newState;
-
     default:
       return state;
   }

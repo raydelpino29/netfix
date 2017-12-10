@@ -12,7 +12,6 @@ class Header extends React.Component {
   }
 
   render() {
-    debugger
     const links = Object.values(this.props.categories).map((category, idx) => {
       return <Link key={idx} to={`/category/${category.id}`}>{category.name}</Link>
     });
@@ -34,6 +33,7 @@ class Header extends React.Component {
     } else if (this.props.headerClass === "splash") {
       headerClass = "header splash"
     }
+    debugger
     return (
 
       <nav>

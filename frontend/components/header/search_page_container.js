@@ -4,7 +4,7 @@ import SearchPage from './search_page';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    searchedVids: state.search,
+    searchedVids: Object.values(state.entities.search),
   };
 };
 

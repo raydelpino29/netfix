@@ -7,7 +7,6 @@ import VideoPlayerContainer from './videos/video_player_container';
 import CategoryShowContainer from './videos/category_show_container';
 import HeaderContainer from './header/header_container';
 import SearchPageContainer from './header/search_page_container';
-import SearchInputContainer from './header/search_input_container';
 
 const App = () => (
   <div>
