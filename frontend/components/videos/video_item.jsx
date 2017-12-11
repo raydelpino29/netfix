@@ -11,9 +11,10 @@ class VideoItem extends React.Component {
   }
 
   componentWillReceiveProps (newProps) {
+    debugger
     if (newProps !== this.props) {
       this.props.handleDropdown(newProps.video, newProps.numLikes, newProps.numDislikes,
-        this.props.likeStatus, this.props.myListStatus, true);
+        newProps.likeStatus, newProps.myListStatus, true);
     }
   }
 

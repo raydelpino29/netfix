@@ -172,8 +172,8 @@ class CategoryIndexItem extends React.Component {
               </div>
               <div className="dropdown-functions">
                 <i onClick={this.handleAdd} className={classMyList}></i>
-                <i onClick={() => this.handleLike("like")} className={classLike}></i>
-                <i onClick={() => this.handleLike("dislike")} className={classDislike}></i>
+                  <i onClick={() => this.handleLike("like")} className={classLike}></i>
+                  <i onClick={() => this.handleLike("dislike")} className={classDislike}></i>
               </div>
               <ReviewListContainer videoId={this.state.video.id}/>
               <div className="gradient"></div>
