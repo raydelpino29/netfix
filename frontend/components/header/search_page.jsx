@@ -9,19 +9,16 @@ class SearchPage extends React.Component {
   }
 
   componentDidMount() {
-    debugger
     this.props.searchVideos(this.props.location.search.slice(1));
   }
 
   componentWillReceiveProps (newProps) {
-    debugger
     if (newProps.location.search !== this.props.location.search) {
       this.props.searchVideos(newProps.location.search.slice(1));
     }
   }
 
   render () {
-    debugger
     let category = { name: "Search" };
     let vids;
     this.props.searchedVids ? vids = this.props.searchedVids : vids = [];

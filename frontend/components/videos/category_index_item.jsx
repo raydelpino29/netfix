@@ -61,8 +61,13 @@ class CategoryIndexItem extends React.Component {
     }
   }
 
-  handleDropdown (vid, likes, dislikes, likeStatus, myListStatus, received) {
-    if (!received) {
+  handleDropdown (vid, likes, dislikes, likeStatus, myListStatus, receivedLike) {
+    if (!receivedLike && this.state.video.id !== vid.id) {
+      this.itemStatus = myListStatus;
+      this.likeStatus = likeStatus;
+      let video = Object.assign({}, vid, { likes }, { dislikes });
+      this.setState({ display: !this.state.display, video });
+    } else if (!receivedLike) {
       this.itemStatus = myListStatus;
       this.likeStatus = likeStatus;
       let video = Object.assign({}, vid, { likes }, { dislikes });
@@ -76,7 +81,6 @@ class CategoryIndexItem extends React.Component {
   }
 
   render () {
-    debugger
     let videoItems;
     if (this.props.myListVids) {
       videoItems = this.props.myListVids.map((video) => {

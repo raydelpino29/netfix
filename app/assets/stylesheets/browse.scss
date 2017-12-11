@@ -443,8 +443,8 @@ blurb-title > p {
   position: relative;
   z-index: 1;
   left: 4%;
-  top: 30%;
-  width: 63%;
+  top: 36%;
+  width: 50%;
 }
 
 .visible h1 {
@@ -493,7 +493,7 @@ blurb-title > p {
 .landing-play {
   visibility: visible;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   left: 0;
   top: 0;
   transform: scale(1);
@@ -533,6 +533,15 @@ blurb-title > p {
   height: 20vw;
 }
 
-.search-input input {
-  color: white;
+.search-input {
+  display: inline;
+}
+
+.search-input input, .fa-search {
+  color: #fff;
+  cursor: pointer;
+}
+
+.fa-search {
+  padding-right: 5px;
 }

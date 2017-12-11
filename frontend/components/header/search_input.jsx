@@ -9,6 +9,8 @@ class SearchInput extends React.Component {
   }
 
   componentDidMount () {
+
+    document.getElementById('search-bar').select();
     if (this.props.location.search !== "") {
       this.setState({ search: this.props.location.search.slice(1) });
     }
@@ -34,7 +36,8 @@ class SearchInput extends React.Component {
   render () {
     return (
       <div className="search-input">
-        <input placeholder="Search" value={this.state.search} onChange={this.handleChange}/>
+        <i className="fa fa-search" aria-hidden="true"></i>
+        <input id="search-bar" placeholder="Search" value={this.state.search} onChange={this.handleChange}/>
       </div>
     )
   }
