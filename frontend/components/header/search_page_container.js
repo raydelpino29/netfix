@@ -3,7 +3,6 @@ import { searchVideos } from '../../actions/video_actions';
 import SearchPage from './search_page';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return {
     searchedVids: Object.values(state.entities.search),
   };

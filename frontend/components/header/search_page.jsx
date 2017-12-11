@@ -8,11 +8,6 @@ class SearchPage extends React.Component {
     super(props);
   }
 
-  // componentWillMount () {
-  //   debugger
-  //   this.props.searchVideos(this.props.location.search.slice(1));
-  // }
-
   componentDidMount() {
     debugger
     this.props.searchVideos(this.props.location.search.slice(1));
@@ -21,20 +16,19 @@ class SearchPage extends React.Component {
   componentWillReceiveProps (newProps) {
     debugger
     if (newProps.location.search !== this.props.location.search) {
-      this.props.searchVideos(this.props.location.search.slice(1));
+      this.props.searchVideos(newProps.location.search.slice(1));
     }
   }
 
   render () {
+    debugger
     let category = { name: "Search" };
     let vids;
     this.props.searchedVids ? vids = this.props.searchedVids : vids = [];
-    debugger
     return (
       <div>
-        <HeaderContainer location={this.props.location} history={this.props.history} />
-        <CategoryIndexItemContainer classTitle="category-show-title" videos={vids}
-          category={category} />
+        <HeaderContainer classIndicator="videos" location={this.props.location} history={this.props.history} />
+        <CategoryIndexItemContainer videos={vids} classTitle="category-show-title" category={category} />
       </div>
     )
   }

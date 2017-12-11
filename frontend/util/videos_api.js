@@ -27,7 +27,6 @@ export const fetchCategory = (id) => {
 };
 
 export const searchVideos = (query) => {
-  debugger
   return $.ajax({
     method: 'GET',
     url: `/api/videos/search`,

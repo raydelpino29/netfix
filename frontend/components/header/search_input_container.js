@@ -3,7 +3,6 @@ import { searchVideos } from '../../actions/video_actions';
 import SearchInput from './search_input';
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  debugger
   return {
     searchVideos: (query) => dispatch(searchVideos(query)),
   };

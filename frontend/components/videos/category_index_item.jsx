@@ -76,6 +76,7 @@ class CategoryIndexItem extends React.Component {
   }
 
   render () {
+    debugger
     let videoItems;
     if (this.props.myListVids) {
       videoItems = this.props.myListVids.map((video) => {

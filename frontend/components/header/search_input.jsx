@@ -9,19 +9,18 @@ class SearchInput extends React.Component {
   }
 
   componentDidMount () {
-    if (this.state.search !== "") {
-      this.setState({ search: this.props.search.slice(1) });
+    if (this.props.location.search !== "") {
+      this.setState({ search: this.props.location.search.slice(1) });
     }
   }
 
   componentWillReceiveProps (newProps) {
-    if (!newProps.location.pathname.includes("search")) {
+    if (newProps.location.pathname !== "/search") {
       this.setState({ search: "" });
     }
   }
 
   handleChange (e) {
-    debugger
     this.setState({ search: e.target.value }, () => {
         if (this.state.search !== "") {
           this.props.history.push(`/search?${this.state.search}`);
