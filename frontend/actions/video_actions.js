@@ -65,6 +65,14 @@ export const searchVideos = (query) => {
   };
 };
 
+export const searchCatVideos = (query, id) => {
+  return (dispatch) => {
+    return VideosApi.searchCatVideos(query, id).then((videos) => {
+      dispatch(receiveVideos(videos));
+    });
+  };
+};
+
 export const fetchAllCategories = () => {
   return (dispatch) => {
     return VideosApi.fetchAllCategories().then((categories) => {

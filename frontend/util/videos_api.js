@@ -33,3 +33,11 @@ export const searchVideos = (query) => {
     data: { query }
   });
 };
+
+export const searchCatVideos = (query, id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/category/${id}/search`,
+    data: { query }
+  });
+};
