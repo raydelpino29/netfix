@@ -28,7 +28,6 @@ class Header extends React.Component {
       profileClass += " no-vids-profile";
       profileListClass += " no-vids-logout"
     }
-    debugger
     if (this.props.headerClass === "show-page") {
       headerClass = "header category-page"
     } else if (!this.props.currentUser) {
