@@ -20,6 +20,7 @@ class Header extends React.Component {
     let headerLeftClass = "header-left";
     let profileClass = "profile"
     let profileListClass = "profile-list";
+    let email = this.props.currentUser ? this.props.currentUser.email : null;
 
     if (this.props.classIndicator) {
       headerClass = "no-vids-header";
@@ -27,14 +28,14 @@ class Header extends React.Component {
       profileClass += " no-vids-profile";
       profileListClass += " no-vids-logout"
     }
-
+    debugger
     if (this.props.headerClass === "show-page") {
       headerClass = "header category-page"
-    } else if (this.props.headerClass === "splash") {
+    } else if (!this.props.currentUser) {
       headerClass = "header splash"
     }
-    return (
 
+    return (
       <nav>
         <ul className={headerClass}>
           <li>
@@ -51,7 +52,7 @@ class Header extends React.Component {
           <li>
             <ul className='header-right'>
               <SearchInputContainer location={this.props.location} history={this.props.history}/>
-              <ul className={profileClass}><i className="fa fa-user" aria-hidden="true"></i>{this.props.currentUser.email}
+              <ul className={profileClass}><i className="fa fa-user" aria-hidden="true"></i>{email}
                 <div className={profileListClass}>
                   <button onClick={this.props.logout}>Logout of NetFix</button>
                 </div>
