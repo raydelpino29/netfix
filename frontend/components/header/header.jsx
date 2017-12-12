@@ -12,6 +12,7 @@ class Header extends React.Component {
   }
 
   render() {
+    debugger
     const links = Object.values(this.props.categories).map((category, idx) => {
       return <Link key={idx} to={`/category/${category.id}`}>{category.name}</Link>
     });
@@ -30,7 +31,7 @@ class Header extends React.Component {
     }
     if (this.props.headerClass === "show-page") {
       headerClass = "header category-page"
-    } else if (!this.props.currentUser) {
+    } else if (!this.props.currentUser || this.props.location.pathname.includes("/video")) {
       headerClass = "header splash"
     }
 
