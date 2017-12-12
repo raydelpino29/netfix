@@ -35,7 +35,7 @@ class SearchInput extends React.Component {
   }
 
   typingTimer (input) {
-    setTimeout(() => this.changeQuery(input), 500);
+    setTimeout(() => this.changeQuery(input), 200);
   }
 
   handleChange (e) {
