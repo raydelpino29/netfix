@@ -24,7 +24,11 @@ class SearchInput extends React.Component {
 
   changeQuery (input) {
     if (this.state.search !== "") {
-      this.props.history.push(`/search?${this.state.search}`);
+      if (this.props.location.pathname.includes("/category")) {
+        this.props.history.push(`/category/${this.props.location.pathname.slice(10)}/search?${this.state.search}`);
+      } else {
+        this.props.history.push(`/search?${this.state.search}`);
+      }
     } else {
       this.props.history.push("/");
     }

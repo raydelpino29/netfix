@@ -18,6 +18,7 @@ const App = () => (
     <ProtectedRoute exact path='/category/:categoryId' component={ CategoryShowContainer } />
     <ProtectedRoute exact path='/myList' component={ CategoryShowContainer } />
     <ProtectedRoute path='/search' component={ SearchPageContainer } />
+    <ProtectedRoute path='/category/:categoryId/search' component={ SearchPageContainer } />
   </div>
 );
 

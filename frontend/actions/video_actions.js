@@ -57,17 +57,10 @@ export const fetchVideo = (id) => {
   };
 };
 
-export const searchVideos = (query) => {
+export const searchVideos = (query, id) => {
+  debugger
   return (dispatch) => {
-    return VideosApi.searchVideos(query).then((videos) => {
-      dispatch(receiveVideos(videos));
-    });
-  };
-};
-
-export const searchCatVideos = (query, id) => {
-  return (dispatch) => {
-    return VideosApi.searchCatVideos(query, id).then((videos) => {
+    return VideosApi.searchVideos(query, id).then((videos) => {
       dispatch(receiveVideos(videos));
     });
   };

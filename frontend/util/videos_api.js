@@ -26,18 +26,13 @@ export const fetchCategory = (id) => {
   });
 };
 
-export const searchVideos = (query) => {
+export const searchVideos = (query, id) => {
+  let url;
+  url = id ? `/api/categories/${id}/search` : "/api/videos/search";
+  debugger
   return $.ajax({
     method: 'GET',
-    url: `/api/videos/search`,
-    data: { query }
-  });
-};
-
-export const searchCatVideos = (query, id) => {
-  return $.ajax({
-    method: 'GET',
-    url: `/api/category/${id}/search`,
+    url,
     data: { query }
   });
 };
