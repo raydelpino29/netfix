@@ -58,7 +58,6 @@ export const fetchVideo = (id) => {
 };
 
 export const searchVideos = (query, id) => {
-  debugger
   return (dispatch) => {
     return VideosApi.searchVideos(query, id).then((videos) => {
       dispatch(receiveVideos(videos));

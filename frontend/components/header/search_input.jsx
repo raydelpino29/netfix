@@ -11,12 +11,12 @@ class SearchInput extends React.Component {
   componentDidMount () {
     document.getElementById('search-bar').select();
     if (this.props.location.search !== "") {
-      this.setState({ search: this.props.location.search.slice(1)})
+      this.setState({ search: this.props.location.search.slice(1)});
     }
   }
 
   componentWillReceiveProps (newProps) {
-    if (newProps.location.pathname !== "/search") {
+    if (!newProps.location.pathname.includes("/search")) {
       this.setState({ search: "" });
     }
   }
@@ -25,7 +25,7 @@ class SearchInput extends React.Component {
   changeQuery (input) {
     if (this.state.search !== "") {
       if (this.props.location.pathname.includes("/category")) {
-        this.props.history.push(`/category/${this.props.location.pathname.slice(10)}/search?${this.state.search}`);
+        this.props.history.push(`/category/${this.props.location.pathname.slice(10).split("/")[0]}/search?${this.state.search}`);
       } else {
         this.props.history.push(`/search?${this.state.search}`);
       }
