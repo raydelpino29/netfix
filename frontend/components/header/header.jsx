@@ -51,9 +51,9 @@ class Header extends React.Component {
           <li>
             <ul className='header-right'>
               <SearchInputContainer location={this.props.location} history={this.props.history}/>
-              <ul className={profileClass}><i className="fa fa-user" aria-hidden="true"></i> Profile
+              <ul className={profileClass}><i className="fa fa-user" aria-hidden="true"></i>{this.props.currentUser.email}
                 <div className={profileListClass}>
-                  <button onClick={this.props.logout}>Logout</button>
+                  <button onClick={this.props.logout}>Logout of NetFix</button>
                 </div>
               </ul>
             </ul>

@@ -9,10 +9,9 @@ class SearchInput extends React.Component {
   }
 
   componentDidMount () {
-
     document.getElementById('search-bar').select();
     if (this.props.location.search !== "") {
-      this.setState({ search: this.props.location.search.slice(1) });
+      this.setState({ search: this.props.location.search.slice(1)})
     }
   }
 
@@ -22,15 +21,23 @@ class SearchInput extends React.Component {
     }
   }
 
+
+  changeQuery (input) {
+    if (this.state.search !== "") {
+      this.props.history.push(`/search?${this.state.search}`);
+    } else {
+      this.props.history.push("/");
+    }
+  }
+
+  typingTimer (input) {
+    setTimeout(() => this.changeQuery(input), 500);
+  }
+
   handleChange (e) {
-    this.setState({ search: e.target.value }, () => {
-        if (this.state.search !== "") {
-          this.props.history.push(`/search?${this.state.search}`);
-        } else {
-          this.props.history.push("/");
-        }
-      }
-     );
+    this.setState({ search: e.target.value });
+    clearTimeout(this.typingTimer);
+    this.typingTimer();
   }
 
   render () {

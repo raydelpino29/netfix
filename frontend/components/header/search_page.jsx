@@ -9,12 +9,14 @@ class SearchPage extends React.Component {
   }
 
   componentDidMount() {
-    this.props.searchVideos(this.props.location.search.slice(1));
+    let query = this.props.location.search.slice(1)
+    this.props.searchVideos(query);
   }
 
   componentWillReceiveProps (newProps) {
+    let query = newProps.location.search.slice(1)
     if (newProps.location.search !== this.props.location.search) {
-      this.props.searchVideos(newProps.location.search.slice(1));
+      this.props.searchVideos(query);
     }
   }
 
@@ -24,7 +26,6 @@ class SearchPage extends React.Component {
     this.props.searchedVids ? vids = this.props.searchedVids : vids = [];
     return (
       <div>
-        <HeaderContainer classIndicator="videos" location={this.props.location} history={this.props.history} />
         <CategoryIndexItemContainer videos={vids} classTitle="category-show-title" category={category} />
       </div>
     )

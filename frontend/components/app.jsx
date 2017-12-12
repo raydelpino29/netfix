@@ -11,6 +11,7 @@ import SearchPageContainer from './header/search_page_container';
 const App = () => (
   <div>
     <Route exact path='/' component={ LandingContainer } />
+    <Route path='/' component={ HeaderContainer } />
     <AuthRoute path='/login' component={ SessionFormContainer } />
     <AuthRoute path='/signup' component={ SessionFormContainer } />
     <ProtectedRoute exact path='/video/:videoId' component={ VideoPlayerContainer } />

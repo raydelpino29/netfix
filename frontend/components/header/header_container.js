@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
   if (ownProps.classIndicator) {
     headerClass = "show-page";
   }
-  
+
   return {
     categories: state.entities.categories,
     currentUser: state.session.currentUser,
