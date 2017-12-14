@@ -10,7 +10,7 @@ After passing through the initial landing page, the user is directed to this log
 
 
 
-
+ 
   - Like/Dislike/Save Videos
 
   ![screen shot 2017-11-21 at 2 57 24 pm](https://user-images.githubusercontent.com/29177545/33093969-8cb7ce5e-cecc-11e7-96e5-004998113f5e.png)
