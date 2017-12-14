@@ -10,6 +10,7 @@ After passing through the initial landing page, the user is directed to this log
 <br />
 <br />
 <br />
+<br />
   - Like/Dislike/Save Videos
 
   ![screen shot 2017-11-21 at 2 57 24 pm](https://user-images.githubusercontent.com/29177545/33093969-8cb7ce5e-cecc-11e7-96e5-004998113f5e.png)
@@ -18,11 +19,13 @@ Users are able to like, dislike, and save videos to their personal list (My List
 <br />
 <br />
 <br />
+<br />
 - Browse
 
 ![screen shot 2017-11-20 at 12 22 15 pm](https://user-images.githubusercontent.com/29177545/33031916-9dca507a-cded-11e7-97a9-b8b325e8fc04.png)
 
 Hovering over the Browse within the header will produce a dropdown, which gives the user access to all of the video categories, as well as their personal list.
+<br />
 <br />
 <br />
 <br />
@@ -76,6 +79,7 @@ componentWillReceiveProps (newProps) {
   }
 }
 ```
+<br />
 <br />
 <br />
 <br />
