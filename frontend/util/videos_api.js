@@ -6,6 +6,7 @@ export const fetchAllVideos = () => {
 };
 
 export const fetchVideo = (id) => {
+  debugger
   return $.ajax({
     method: 'GET',
     url: `/api/videos/${id}`
