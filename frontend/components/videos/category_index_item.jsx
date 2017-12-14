@@ -82,6 +82,19 @@ class CategoryIndexItem extends React.Component {
 
   render () {
     let videoItems;
+    let divStyle;
+    let containerClass = "dropdown-container";
+    let categoryClass = "single-category";
+    let rowClass = "video-row";
+    let headerClass;
+    let vidDropdownClass = "video-dropdown";
+    let dropDownInfo = { title: "", description: "", thumbnail_url: "",
+      id: null, likes: 0, dislikes: 0 };
+    let title = this.props.category.name;
+    const currentCategory = this.props.category;
+    let classLike;
+    let classDislike;
+    let classMyList;
     if (this.props.myListVids) {
       videoItems = this.props.myListVids.map((video) => {
         return (
@@ -108,15 +121,6 @@ class CategoryIndexItem extends React.Component {
         );
       });
     }
-    let divStyle;
-    let containerClass = "dropdown-container";
-    let categoryClass = "single-category";
-    let rowClass = "video-row";
-    let headerClass;
-    let vidDropdownClass = "video-dropdown";
-    let dropDownInfo = { title: "", description: "", thumbnail_url: "",
-      id: null, likes: 0, dislikes: 0 };
-    let title = this.props.category.name;
     if (this.props.classTitle) {
       headerClass = "header-show";
       categoryClass = "single-category show";
@@ -136,10 +140,6 @@ class CategoryIndexItem extends React.Component {
           backgroundImage: 'url(' + dropDownInfo.thumbnail_url + ')'
         };
       }
-      const currentCategory = this.props.category;
-      let classLike;
-      let classDislike;
-      let classMyList;
       if (this.likeStatus === "like") {
         classLike = "icon fa fa-thumbs-o-up active-like";
         classDislike = "";

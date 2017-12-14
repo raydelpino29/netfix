@@ -14,7 +14,7 @@ class CategoryIndex extends React.Component {
   }
 
   render () {
-    const categoryIndexItems = this.props.categories.map((category) => {
+    let categoryIndexItems = this.props.categories.map((category) => {
       const videos = this.props.videos.filter((video) => {
         if (video.category_id === category.id) {
           return video;
@@ -24,6 +24,19 @@ class CategoryIndex extends React.Component {
         <ul key={category.id}><CategoryIndexItemContainer category={category} videos={videos}  /></ul>
       );
     });
+
+    if (this.props.listItems.length > 0) {
+      const category = "myList"
+      const items = new Set(this.props.listItems)
+      const videos = this.props.videos.filter((video) => {
+        if (items.has(video.id)) {
+          return video;
+        }
+      })
+      categoryIndexItems.unshift(
+        <ul key={category.id}><CategoryIndexItemContainer category={category} videos={videos}  /></ul>
+      )
+    }
 
     return (
       <ul className="category-index">
