@@ -8,7 +8,7 @@
 
 After passing through the initial landing page, the user is directed to this login/sign up page, where they can input their email and password to gain access to the site. They are able to switch between login/sign up form with a link on the bottom of the form. The proper errors appear on the top of the form if incorrect information is entered or info is left out.
 
-  - Like/Dislike/Saving Videos
+  - Like/Dislike/Save Videos
 
   ![screen shot 2017-11-21 at 2 57 24 pm](https://user-images.githubusercontent.com/29177545/33093969-8cb7ce5e-cecc-11e7-96e5-004998113f5e.png)
 
@@ -20,53 +20,59 @@ Users are able to like, dislike, and save videos to their personal list (My List
 
 Hovering over the Browse within the header will produce a dropdown, which gives the user access to all of the video categories, as well as their personal list.
 
-- Recycling React Components
+- Search Videos (site-wide or within scope of category)
 
-In my effort to use each React component to their full potential, rather than needlessly creating new React components, I re-purposed the same components depending on what props they were being given. Since a user's "My List" page was similar to the Category Show pages , I recycled my Category Show component for the user's personal list. However, this component is also being used for every video category. In order for the component to be aware of what category it was rendering, or if it was actually a personal list, it had to be conditionally passed props to indicate such.
+![screen shot 2017-12-14 at 12 41 18 pm](https://user-images.githubusercontent.com/29177545/34006402-332107fe-e0cc-11e7-8f16-900d28176595.png)
 
-If the pathname was "/myList", then it would know to pass down the user's personal videos to be rendered. Otherwise, it would take the category ID from the pathname and pass down all the corresponding videos for that category:
+Typing into the search bar will send a request with every key stroke. The request triggers an ActiveRecord query that sanitizes user input, protecting from SQL injection, and return all videos whose title includes the user input. If the user is already browsing videos within a category page, the search bar will only return videos within the scope of that category.
 
+There was some tricky implementation with this component when taking into account a user who typed really fast. In this case, the search page's willReceiveProps lifecycle method wouldn't sense that it's newProps search query was different from it's current props query. The first letter triggered a query, but the user typed other letters before the initial videos reached the front end. I solved this issue by waiting until the user stopped typing to trigger a query. This fired far less requests, making the search bar a less expensive component, and guaranteed the correct videos to appear on the search page.
+
+
+Search Bar Component:
 ```javascript
-const mapStateToProps = (state, ownProps) => {
-  let catId = ownProps.match.params.categoryId;
-  let category;
-  if (ownProps.location.pathname === "/myList") {
-    category = "myList";
+changeQuery (input) {
+  if (this.state.search !== "") {
+    if (this.props.location.pathname.includes("/category")) {
+      this.props.history.push(`/category/${this.props.location.pathname.slice(10).split("/")[0]}/search?${this.state.search}`);
+    } else {
+      this.props.history.push(`/search?${this.state.search}`);
+    }
   } else {
-    category = state.entities.categories[ownProps.match.params.categoryId];
+    this.props.history.push("/");
   }
-  let videos;
-  if (ownProps.location.pathname === "/myList") {
-    videos = Object.values(state.entities.myList).map((item) => {
-      return state.entities.videos[item.video_id];
-    });
-  } else {
-    videos = Object.values(state.entities.videos).filter((video) => {
-      if (video.category_id === parseInt(catId)) {
-        return video;
-      }
-    });
-  }
-  return {
-    categories: state.entities.categories,
-    category,
-    videos,
-    catId,
-  };
-};
+}
+
+typingTimer (input) {
+  setTimeout(() => this.changeQuery(input), 200);
+}
+
+handleChange (e) {
+  this.setState({ search: e.target.value });
+  clearTimeout(this.typingTimer);
+  this.typingTimer();
+}
 ```
 
+Search Page Component:
+```javascript
+componentDidMount() {
+  let id = this.props.match.params ? this.props.match.params.categoryId : null;
+  let query = this.props.location.search.slice(1);
+  this.props.searchVideos(query, id);
+}
 
-## Future Feature and Implementation
+componentWillReceiveProps (newProps) {
+  let id = this.props.match.params ? this.props.match.params.categoryId : null;
+  let query = newProps.location.search.slice(1);
+  if (newProps.location.search !== this.props.location.search) {
+    this.props.searchVideos(query, id);
+  }
+}
+```
 
-  - Reviewing Videos
+- Review Videos
 
-   Netflix, though it may not be apparent, allows users review videos. I plan on implementing this feature by adding a dropdown menu that    includes a review form, which creates a review when submitted. I will also have other users' reviews on that menu, and allow for a user    to delete their own reviews.
+![screen shot 2017-12-14 at 1 18 38 pm](https://user-images.githubusercontent.com/29177545/34007891-725db8e0-e0d1-11e7-8055-c60dc0bcbb12.png)
 
-  - Search Feature
-
-   Netflix, though it may not be apparent, allows users review videos. I plan on implementing this feature by adding a dropdown menu that    includes a review form, which creates a review when submitted. I will also have other users' reviews on that menu, and allow for a user    to delete their own reviews.
-
-  - Search Feature
-
-   Netflix has a search feature that shows all videos that relate to your search on every key stroke. I plan to implement this using an OnChange event handler that will render a page of videos whose title includes the letters entered into the input field.
+Every video item has a button that will render a dropdown with its information, as well as a review form that allows users to edit and create reviews. There is also a review list that enables users to render the edit form or delete a review. 
