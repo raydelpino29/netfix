@@ -7,28 +7,25 @@
   ![screen shot 2017-11-03 at 9 23 57 am](https://user-images.githubusercontent.com/29177545/32375859-8b0d23bc-c079-11e7-9c97-ddb4875d0bab.png)
 
 After passing through the initial landing page, the user is directed to this login/sign up page, where they can input their email and password to gain access to the site. They are able to switch between login/sign up form with a link on the bottom of the form. The proper errors appear on the top of the form if incorrect information is entered or info is left out.
-
-
-
- 
+<br />
+<br />
+<br />
   - Like/Dislike/Save Videos
 
   ![screen shot 2017-11-21 at 2 57 24 pm](https://user-images.githubusercontent.com/29177545/33093969-8cb7ce5e-cecc-11e7-96e5-004998113f5e.png)
 
 Users are able to like, dislike, and save videos to their personal list (My List). On hover of the video, the like/dislike buttons dynamically change classes to indicate the like/add status. A user's list can be seen by using the Browse menu.
-
-
-
-
+<br />
+<br />
+<br />
 - Browse
 
 ![screen shot 2017-11-20 at 12 22 15 pm](https://user-images.githubusercontent.com/29177545/33031916-9dca507a-cded-11e7-97a9-b8b325e8fc04.png)
 
 Hovering over the Browse within the header will produce a dropdown, which gives the user access to all of the video categories, as well as their personal list.
-
-
-
-
+<br />
+<br />
+<br />
 - Search Videos (site-wide or within scope of category)
 
 ![screen shot 2017-12-14 at 12 41 18 pm](https://user-images.githubusercontent.com/29177545/34006402-332107fe-e0cc-11e7-8f16-900d28176595.png)
@@ -79,10 +76,10 @@ componentWillReceiveProps (newProps) {
   }
 }
 ```
-
-
-
-
+<br />
+<br />
+<br />
+<br />
 - Review Videos
 
 ![screen shot 2017-12-14 at 1 18 38 pm](https://user-images.githubusercontent.com/29177545/34007891-725db8e0-e0d1-11e7-8055-c60dc0bcbb12.png)
