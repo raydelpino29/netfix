@@ -358,11 +358,9 @@ blurb-title > p {
 .write-review {
   border-top: 3px solid #e50914;
   border-bottom: 1px solid gray;
-  height: 45%;
   z-index: 1;
   position: relative;
   background: rgba(0, 0, 0, 0.7);
-  top: 46%;
   padding: 5px;
 }
 
@@ -427,6 +425,7 @@ blurb-title > p {
   right: 0;
   top: 0px;
   z-index: 1;
+  height: 33.3vw;
 }
 
 .list-div label {
