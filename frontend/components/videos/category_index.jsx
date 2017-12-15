@@ -34,7 +34,7 @@ class CategoryIndex extends React.Component {
         }
       })
       categoryIndexItems.unshift(
-        <ul key={category.id}><CategoryIndexItemContainer category={category} videos={videos}  /></ul>
+        <ul key="0"><CategoryIndexItemContainer category={category} videos={videos}  /></ul>
       )
     }
 

@@ -167,6 +167,11 @@ body {
   padding: 4px;
 }
 
+.video-item-container div {
+  width: 75.5%;
+  transition-duration: 400ms;
+}
+
 .video-item-container:hover {
   transform: scale(1.3);
   transition-duration: 400ms;
@@ -196,11 +201,11 @@ body {
 .video-title {
   visibility: hidden;
   position: absolute;
-  bottom: 30px;
-  left: 50px;
-  z-index: 1;
-  color: #e5e5e5;
-  text-shadow: 1px 2px 2px black;
+  bottom: 37px;
+  left: 40px;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 1px 1px 1px black;
 }
 
 .playing-video {
@@ -224,9 +229,9 @@ body {
   position: absolute;
   visibility: hidden;
   z-index: 2;
-  bottom: 19px;
+  bottom: 23px;
   left: 147px;
-  transform: scale(2.2);
+  transform: scale(3);
   color: white;
   cursor: pointer;
   text-shadow: 1px 2px 2px black;
@@ -340,7 +345,7 @@ blurb-title > p {
   position: absolute;
   z-index: 2;
   left: 47%;
-  top: 30%;
+  top: 40%;
   transform: scale(3);
   color: #fff;
   text-shadow: 1px 1px 2px black;

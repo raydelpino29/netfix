@@ -21,7 +21,7 @@ class SessionForm extends React.Component {
 
   handleDemo(e) {
     e.preventDefault();
-    this.props.processForm({ email: 'coolDude@gmail.com', password: 'starwars'});
+    this.props.login({ email: 'coolDude@gmail.com', password: 'starwars'});
   }
 
   handleSubmit(e) {
@@ -48,10 +48,10 @@ class SessionForm extends React.Component {
         <li>{error}</li>
       );
     });
-    let demoLogin;
-    if (this.props.formType === 'login') {
-      demoLogin = <button className='demo' onClick={this.handleDemo}>Demo Login</button>
-    }
+    // let demoLogin;
+    // if (this.props.formType === 'login') {
+    //   demoLogin = <button className='demo' onClick={this.handleDemo}>Demo Login</button>
+    // }
 
     return (
       <div className="session-form-container">
@@ -63,17 +63,19 @@ class SessionForm extends React.Component {
               {errorList}
             </ul>
             <div className="form-inputs">
-              <label htmlFor="email">Email</label>
-              <br />
+              <div>
+                <label htmlFor="email">Email</label>
+                <br />
                 <input id="email" type="text" value={this.state.email} onChange={this.handleChange("email")} />
-              <br />
-              <label htmlFor="password">Password</label>
-              <br />
+                <br />
+                <label htmlFor="password">Password</label>
+                <br />
                 <input id="password" type="password" value={this.state.password} onChange={this.handleChange("password")} />
+              </div>
               <br />
               <button className="form-submit">{this.props.formType}</button>
               <br />
-                {demoLogin}
+                <button className='demo' onClick={this.handleDemo}>Demo Login</button>
               <br />
               <button className="linker">{linker}</button>
             </div>
