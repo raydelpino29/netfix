@@ -362,7 +362,7 @@ blurb-title > p {
   position: relative;
   background: rgba(0,0,0,0.7);
   padding: 5px;
-  height: 40%;
+  height: 12vw;
 }
 
 .write-review textarea {
@@ -371,7 +371,7 @@ blurb-title > p {
   background: #fff;
   padding: 2px;
   height: 46%;
-  margin: auto auto;
+  margin: 10px auto;
   width: 86%;
 }
 
@@ -382,7 +382,7 @@ blurb-title > p {
   position: relative;
   display: block;
   border-radius: 5px;
-  margin: 3% auto;
+  margin: 0 auto;
 }
 
 .write-review button:hover {
@@ -399,7 +399,7 @@ blurb-title > p {
 .review-list {
   position: relative;
   background: rgba(0, 0, 0, 0.7);
-  height: 93%;
+  height: 98%;
   overflow-y: scroll;
   color: white;
 }
@@ -539,7 +539,7 @@ blurb-title > p {
 }
 
 .review-list-container {
-  height: 19.8vw;
+  height: 20.6vw;
 }
 
 .search-input {
