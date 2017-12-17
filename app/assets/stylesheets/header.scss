@@ -16,11 +16,7 @@
 .browse-list a, .profile-list button {
   display: block;
   position: relative;
-  margin: 2px 10px;
-}
-
-.browse-list a:hover {
-  text-decoration: underline;
+  margin: 9px 20px;
 }
 
 .browse:hover {
@@ -87,4 +83,18 @@
   display: inline-table;
   position: absolute;
   right: 40vw;
+}
+
+.browse-item a {
+  display: flex;
+}
+
+.browse-item p {
+  margin-left: 8%;
+  position: relative;
+  bottom: 2px;
+}
+
+.browse-item p:hover {
+  text-decoration: underline;
 }

@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchInputContainer from './search_input_container';
@@ -13,9 +15,41 @@ class Header extends React.Component {
 
   render() {
     const links = Object.values(this.props.categories).map((category, idx) => {
-      return <Link key={idx} to={`/category/${category.id}`}>{category.name}</Link>
-    });
+      let itemClass = "browse-item"
+      switch(category.name) {
+        case "Food":
+          return (
+            <div key={idx} className={itemClass}>
+              <Link key={idx} to={`/category/${category.id}`}>
+                <i className="fa fa-cutlery" aria-hidden="true"></i><p>{category.name}</p></Link>
+            </div>
+          )
+        case "Housework":
+          return (
+            <div key={idx} className={itemClass}>
+              <Link key={idx} to={`/category/${category.id}`}><i className="fa fa-home" aria-hidden="true"></i><p>{category.name}</p></Link>
+            </div>
+          )
+        case "Music":
+          return (
+            <div key={idx} className={itemClass}>
+              <Link key={idx} to={`/category/${category.id}`}><i className="fa fa-music" aria-hidden="true"></i><p>{category.name}</p></Link>
+            </div>
+          )
+        case "Automobiles":
+          return (
+            <div key={idx} className={itemClass}>
+              <Link key={idx} to={`/category/${category.id}`}><i className="fa fa-car" aria-hidden="true"></i><p>{category.name}</p></Link>
+            </div>
+          )
 
+        default:
+          return
+      }
+    });
+    links.unshift(
+
+    )
     let headerClass = "header";
     let headerLeftClass = "header-left";
     let profileClass = "profile"
@@ -42,7 +76,12 @@ class Header extends React.Component {
               <Link to='/'><li className="logo"><img className="temp-logo" src="https://s3.us-east-2.amazonaws.com/netfix-dev/videos/thumbnails/000/000/netfix.png" /></li></Link>
               <ul className="browse">Browse <i className="fa fa-caret-down" aria-hidden="true"></i>
                 <div className="browse-list">
-                  <Link to="/myList">My List</Link>
+                  <div className="browse-item">
+                    <Link to="/myList">
+                      <i className="fa fa-list" aria-hidden="true"></i>
+                      <p>My List</p>
+                    </Link>
+                  </div>
                   {links}
                 </div>
               </ul>
