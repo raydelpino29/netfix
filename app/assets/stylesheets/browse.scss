@@ -277,7 +277,7 @@ body {
 }
 
 .visible {
-  height: 33.3vw;
+  height: 450px;
   width: 91.5vw;
   max-width: 100%;
   overflow: hidden;
@@ -360,9 +360,8 @@ blurb-title > p {
   border-bottom: 1px solid gray;
   z-index: 1;
   position: relative;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   padding: 5px;
-  height: 12vw;
 }
 
 .write-review textarea {
@@ -370,7 +369,8 @@ blurb-title > p {
   position: relative;
   background: #fff;
   padding: 2px;
-  height: 46%;
+  min-height: 70px;
+  max-height: 70px;
   margin: 10px auto;
   width: 86%;
 }
@@ -399,7 +399,7 @@ blurb-title > p {
 .review-list {
   position: relative;
   background: rgba(0, 0, 0, 0.7);
-  height: 98%;
+  height: 100%;
   overflow-y: scroll;
   color: white;
 }
@@ -422,10 +422,13 @@ blurb-title > p {
 .list-div {
   position: absolute;
   width: 40%;
+  display: flex;
   right: 0;
+  flex-direction: column;
   top: 0px;
+  flex-wrap: wrap;
   z-index: 1;
-  height: 33.3vw;
+  height: 100%;
 }
 
 .list-div label {
@@ -539,7 +542,8 @@ blurb-title > p {
 }
 
 .review-list-container {
-  height: 20.6vw;
+  height: 62%;
+  width: 100%;
 }
 
 .search-input {
