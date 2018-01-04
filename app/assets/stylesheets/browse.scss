@@ -232,7 +232,7 @@ body {
   bottom: 23px;
   left: 147px;
   transform: scale(3);
-  color: white;
+  color: #e50914;
   cursor: pointer;
   text-shadow: 1px 2px 2px black;
 }
@@ -265,7 +265,15 @@ body {
 
 .video-like-count {
   position: relative;
-  left: 36%;
+  display: block;
+  width: 60%;
+}
+
+.video-like-count p {
+  position: relative;
+  z-index: 1;
+  left: 7%;
+  top: 50px;
 }
 
 .likes {
@@ -291,13 +299,6 @@ body {
   padding-top: 0;
   top: -13px;
   left: 10px;
-  text-shadow: -2px 2px #b9090b;
-}
-
-.close-menu:hover {
-  top: -11px;
-  left: 8px;
-  text-shadow: 0px 0px #b9090b;
 }
 
 .blurb {
@@ -367,8 +368,9 @@ blurb-title > p {
 .write-review textarea {
   display: block;
   position: relative;
-  background: #fff;
-  padding: 2px;
+  background-color: transparent;
+  border: solid 2px #333;
+  color: white;
   min-height: 70px;
   max-height: 70px;
   margin: 10px auto;
@@ -417,6 +419,12 @@ blurb-title > p {
   position: relative;
   border-radius: 5px;
   margin-right: 8px;
+  margin-top: 10px;
+}
+
+.review-list h3 {
+  font-size: 12px;
+  color: #999;
 }
 
 .list-div {
@@ -447,10 +455,11 @@ blurb-title > p {
 
 .video-description {
   color: #999;
-  position: relative;
+  position: absolute;
   z-index: 1;
   left: 4%;
-  top: 36%;
+  top: 65%;
+  transform: translateY(-50%);
   width: 50%;
 }
 
@@ -526,13 +535,30 @@ blurb-title > p {
   position: relative;
   z-index: 1;
   visibility: visible;
-  left: 10%;
-  top: 150px;
+  left: 5%;
+  margin: 0 10px;
+  transition-property: left;
+  transition-duration: 400ms;
 }
 
 .dropdown-functions {
   position: relative;
-  left: 15%;
+  display: flex;
+  top: 15%;
+  width: 60%;
+}
+
+.dropdown-functions .fa-plus-circle, .dropdown-functions .fa-thumbs-o-up,
+.dropdown-functions .fa-thumbs-o-down, .dropdown-functions .fa-check-circle {
+  bottom: 0;
+}
+
+.dropdown-functions .active-dislike {
+  left: 0;
+}
+
+.dropdown-functions .active-like {
+  left: 20px;
 }
 
 .dropdown-functions p {
