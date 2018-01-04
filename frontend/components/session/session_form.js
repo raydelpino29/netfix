@@ -43,15 +43,11 @@ class SessionForm extends React.Component {
     } else {
       linker = <Link to='/signup'>Sign Up</Link>;
     }
-    const errorList = this.props.errors.map((error) => {
+    const errorList = this.props.errors.map((error, idx) => {
       return (
-        <li>{error}</li>
+        <li key={idx}>{error}</li>
       );
     });
-    // let demoLogin;
-    // if (this.props.formType === 'login') {
-    //   demoLogin = <button className='demo' onClick={this.handleDemo}>Demo Login</button>
-    // }
 
     return (
       <div className="session-form-container">

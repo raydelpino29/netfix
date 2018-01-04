@@ -7,12 +7,10 @@ class VideoPlayer extends React.Component {
   }
 
   componentDidMount() {
-    debugger
     this.props.fetchVideo(this.props.vidId);
   }
 
   componentWillReceiveProps(newProps) {
-    debugger
     if (newProps.match.params.videoId !== this.props.match.params.videoId) {
       this.props.fetchVideo(newProps.vidId);
     }
