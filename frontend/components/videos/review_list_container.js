@@ -5,7 +5,6 @@ import { deleteReview, editReview } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const vidReviews = Object.values(state.entities.reviews).filter((review) => {
-    debugger
     if (review.video_id === ownProps.videoId) {
       return review;
     }

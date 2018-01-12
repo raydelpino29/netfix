@@ -140,12 +140,14 @@ body {
 }
 
 
-.video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb {
+.video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
   background: red;
   border-radius: 15px;
 }
 
-.video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track {
+.video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track,
+ textarea::-webkit-scrollbar-track {
   background: gray;
   border-radius: 15px;
 }
@@ -375,6 +377,7 @@ blurb-title > p {
   max-height: 70px;
   margin: 10px auto;
   width: 86%;
+  overflow-x: hidden;
 }
 
 .write-review button {
