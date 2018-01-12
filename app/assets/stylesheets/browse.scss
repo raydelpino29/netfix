@@ -133,26 +133,23 @@ body {
   width:  100%;
   height: 7px;
 }
-
 .video-row::-webkit-scrollbar {
   width:  100%;
   height: 7px;
 }
 
-.review-list::-webkit-scrollbar, textarea::-webkit-scrollbar {
+.review-list::-webkit-scrollbar {
   height:  100%;
   width: 7px;
 }
 
 
-.video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb,
-textarea::-webkit-scrollbar-thumb {
+.video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb {
   background: red;
   border-radius: 15px;
 }
 
-.video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track,
-textarea::-webkit-scrollbar-track {
+.video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track {
   background: gray;
   border-radius: 15px;
 }
