@@ -134,18 +134,19 @@ body {
   height: 7px;
 }
 
-.review-list::-webkit-scrollbar {
-  height:  100%;
+.review-list::-webkit-scrollbar, textarea::-webkit-scrollbar {
+  height: 100%;
   width: 7px;
 }
 
-
-.video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb {
+.video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
   background: red;
   border-radius: 15px;
 }
 
-.video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track {
+.video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
   background: gray;
   border-radius: 15px;
 }
@@ -555,11 +556,11 @@ blurb-title > p {
 }
 
 .dropdown-functions .active-dislike {
-  left: 0;
+  left: 1%;
 }
 
 .dropdown-functions .active-like {
-  left: 20px;
+  left: 4%;
 }
 
 .dropdown-functions p {
