@@ -129,25 +129,29 @@ body {
   padding-top: 2em;
 }
 
-.video-row::-webkit-scrollbar {
+.video-row::-webkit-scrollbar, .video-row::-moz-scrollbar, .video-row::-ms-scrollbar {
   width:  100%;
   height: 7px;
 }
 
-.review-list::-webkit-scrollbar {
+.review-list::-webkit-scrollbar, .review-list::-moz-scrollbar,
+.review-list::-ms-scrollbar, textarea::-webkit-scrollbar, textarea::-moz-scrollbar, textarea::-ms-scrollbar {
   height:  100%;
   width: 7px;
 }
 
-
 .video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb,
-textarea::-webkit-scrollbar-thumb {
+textarea::-webkit-scrollbar-thumb, .video-row::-moz-scrollbar-thumb, .review-list::-moz-scrollbar-thumb,
+textarea::-moz-scrollbar-thumb, .video-row::-ms-scrollbar-thumb, .review-list::-ms-scrollbar-thumb,
+textarea::-ms-scrollbar-thumb {
   background: red;
   border-radius: 15px;
 }
 
 .video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track,
- textarea::-webkit-scrollbar-track {
+ textarea::-webkit-scrollbar-track, .video-row::-moz-scrollbar-track, .review-list::-moz-scrollbar-track,
+  textarea::-moz-scrollbar-track, .video-row::-ms-scrollbar-track, .review-list::-ms-scrollbar-track,
+   textarea::-ms-scrollbar-track {
   background: gray;
   border-radius: 15px;
 }
