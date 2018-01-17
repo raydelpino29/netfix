@@ -30,6 +30,8 @@
 
 .dropdown-container-show {
   position: fixed;
-  margin-top: 5em;
   z-index: 1;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
 }
