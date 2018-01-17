@@ -12,6 +12,7 @@ class SearchPage extends React.Component {
     let id = this.props.match.params ? this.props.match.params.categoryId : null;
     let query = this.props.location.search.slice(1);
     this.props.searchVideos(query, id);
+    this.props.fetchAllReviews();
   }
 
   componentWillReceiveProps (newProps) {
