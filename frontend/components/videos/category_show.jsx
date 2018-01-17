@@ -9,6 +9,7 @@ class CategoryShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchAllVideos().then(this.props.fetchAllListItems);
+    this.props.fetchAllReviews();
     if (this.props.match.params.categoryId && this.props.match.params.categoryId !== "myList") {
       this.props.fetchCategory(this.props.catId);
     }

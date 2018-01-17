@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchCategory, fetchAllVideos } from '../../actions/video_actions';
 import { fetchAllListItems } from '../../actions/my_list_actions';
+import { fetchAllReviews } from '../../actions/review_actions';
 import CategoryShow from './category_show';
 
 const mapStateToProps = (state, ownProps) => {
@@ -36,7 +37,8 @@ const mapDispatchToProps = (dispatch) => {
   return {
     fetchCategory: (id) => dispatch(fetchCategory(id)),
     fetchAllVideos: () => dispatch(fetchAllVideos()),
-    fetchAllListItems: () => dispatch(fetchAllListItems())
+    fetchAllListItems: () => dispatch(fetchAllListItems()),
+    fetchAllReviews: () => dispatch(fetchAllReviews())
   };
 };
 
