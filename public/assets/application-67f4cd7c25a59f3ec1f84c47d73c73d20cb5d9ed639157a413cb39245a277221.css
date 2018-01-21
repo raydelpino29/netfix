@@ -1,0 +1,4768 @@
+/* line 1, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/css-reset.scss */
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+/* line 19, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/css-reset.scss */
+ul {
+  list-style: none;
+}
+
+/* line 23, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/css-reset.scss */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 29, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/css-reset.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* line 40, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/css-reset.scss */
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+/* line 1, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+body {
+  background: #141414;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 6, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.landing {
+  background-image: url(/assets/propertybrothers-370c7d23e93ac4bdf1719530549e615f3841a3b70580265868f6e940bc78441c.jpg);
+  height: 45em;
+  position: relative;
+  background-size: cover;
+}
+
+/* line 13, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-item {
+  width: 230px;
+  height: 140px;
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* line 24, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.single-category {
+  position: relative;
+  width: 94vw;
+  min-width: 1100px;
+  overflow: hidden;
+}
+
+/* line 31, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+/* line 43, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.category-page {
+  top: 0;
+}
+
+/* line 47, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.header li, .header ul {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: inline;
+}
+
+/* line 53, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.logo {
+  padding-left: 40px;
+}
+
+/* line 57, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.browse {
+  color: #e50914;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 9em;
+  padding-bottom: 25px;
+}
+
+/* line 65, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.category-index {
+  position: absolute;
+  margin-top: 40em;
+  margin-left: 3%;
+}
+
+/* line 71, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.temp-welcome {
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+}
+
+/* line 77, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.category-index h1 {
+  color: #e5e5e5;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+/* line 83, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-thumbs-o-up {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  z-index: 1;
+  cursor: pointer;
+  visibility: hidden;
+  color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 50%;
+  padding: 3px;
+  background: rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 3px #000;
+  margin-bottom: 10px;
+  transform: scale(0.8);
+}
+
+/* line 101, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-thumbs-o-down {
+  position: absolute;
+  right: 50px;
+  bottom: 37px;
+  z-index: 1;
+  cursor: pointer;
+  visibility: hidden;
+  color: #e5e5e5;
+  text-shadow: 0 0 3px #000;
+  border: 1px solid #e5e5e5;
+  padding: 3px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  transform: scale(0.8);
+}
+
+/* line 117, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.active-like {
+  bottom: 26px;
+  color: #FFE303;
+}
+
+/* line 122, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.active-dislike {
+  color: #a50000;
+}
+
+/* line 126, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-row {
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-top: 2em;
+}
+
+/* line 133, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-row::-webkit-scrollbar {
+  width: 100%;
+  height: 7px;
+}
+
+/* line 138, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.review-list::-webkit-scrollbar, textarea::-webkit-scrollbar {
+  height: 100%;
+  width: 7px;
+}
+
+/* line 143, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-row::-webkit-scrollbar-thumb, .review-list::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 15px;
+}
+
+/* line 149, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-row::-webkit-scrollbar-track, .review-list::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background: gray;
+  border-radius: 15px;
+}
+
+/* line 155, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-item-container {
+  position: relative;
+  transition-duration: 400ms;
+}
+
+/* line 160, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-plus-circle, .fa-check-circle {
+  position: absolute;
+  right: 50px;
+  bottom: 16px;
+  cursor: pointer;
+  z-index: 1;
+  visibility: hidden;
+  color: #e5e5e5;
+  text-shadow: 0 0 3px #000;
+  padding: 4px;
+}
+
+/* line 172, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-item-container div {
+  width: 75.5%;
+  transition-duration: 400ms;
+}
+
+/* line 177, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-item-container:hover {
+  transform: scale(1.3);
+  transition-duration: 400ms;
+  padding-left: 35px;
+  padding-right: 34px;
+}
+/* line 182, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-item-container:hover i, .video-item-container:hover p {
+  visibility: visible;
+}
+
+/* line 187, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-thumbs-o-down:hover {
+  color: #a50000;
+}
+
+/* line 191, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-thumbs-o-up:hover {
+  color: #FFE303;
+}
+
+/* line 195, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-plus-circle:hover {
+  color: #FFD700;
+}
+
+/* line 199, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.active-add {
+  color: #FFD700;
+}
+
+/* line 203, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-title {
+  visibility: hidden;
+  position: absolute;
+  bottom: 37px;
+  left: 40px;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* line 213, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.playing-video {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+/* line 221, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-chevron-circle-left {
+  position: relative;
+  top: 1em;
+  left: 2em;
+  transform: scale(3);
+  color: #e50914;
+  z-index: 2;
+}
+
+/* line 230, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-angle-down {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+  bottom: 23px;
+  left: 147px;
+  transform: scale(3);
+  color: #e50914;
+  cursor: pointer;
+  text-shadow: 1px 2px 2px black;
+}
+
+/* line 242, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-angle-down:hover {
+  color: #b9090b;
+}
+
+/* line 246, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-dropdown {
+  position: relative;
+  display: block;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  transition-duration: 400ms;
+}
+
+/* line 257, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-dropdown p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+/* line 263, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-dropdown i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+/* line 268, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-like-count {
+  position: relative;
+  display: block;
+  width: 60%;
+}
+
+/* line 274, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-like-count p {
+  position: relative;
+  z-index: 1;
+  left: 7%;
+  top: 50px;
+}
+
+/* line 281, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.likes {
+  color: #32CD32;
+}
+
+/* line 285, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.dislikes {
+  color: #e50914;
+}
+
+/* line 289, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.visible {
+  height: 450px;
+  width: 94vw;
+  min-width: 1100px;
+  overflow: hidden;
+}
+
+/* line 296, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.close-menu {
+  position: absolute;
+  color: #fff;
+  z-index: 1;
+  font-size: 50px;
+  padding-top: 0;
+  top: -13px;
+  left: 10px;
+}
+
+/* line 306, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.blurb {
+  position: absolute;
+  top: 270px;
+  left: 55px;
+}
+
+/* line 312, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.synopsis {
+  width: 500px;
+  margin-bottom: 15px;
+  font-weight: 400px;
+  color: #fff;
+}
+
+/* line 319, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.blurb-title {
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* line 326, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+blurb-title > p {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+/* line 331, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.subtitle {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* line 337, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.list-button {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 342, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.list-button:hover {
+  background-color: rgba(51, 51, 51, 0.4);
+}
+
+/* line 346, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-play {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  left: 47%;
+  top: 30%;
+  transform: scale(3);
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* line 357, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-play:hover {
+  color: #e50914;
+}
+
+/* line 361, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.write-review {
+  border-top: 3px solid #e50914;
+  border-bottom: 1px solid gray;
+  z-index: 1;
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+}
+
+/* line 370, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.write-review textarea {
+  display: block;
+  position: relative;
+  background-color: transparent;
+  border: solid 2px #333;
+  color: white;
+  min-height: 70px;
+  max-height: 70px;
+  margin: 10px auto;
+  width: 86%;
+  overflow-x: hidden;
+}
+
+/* line 383, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.write-review button {
+  background: #b9090b;
+  color: #fff;
+  padding: 6px 15px;
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+/* line 393, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.write-review button:hover {
+  background: #c20002;
+}
+
+/* line 397, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.write-review label {
+  position: relative;
+  left: 9%;
+  font-size: 20px;
+  color: #b9090b;
+}
+
+/* line 404, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.review-list {
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  overflow-y: scroll;
+  color: white;
+}
+
+/* line 412, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.review-list li {
+  margin-left: 5%;
+  padding-bottom: 13px;
+  border-bottom: 1px solid grey;
+}
+
+/* line 418, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.review-list button {
+  background: #b9090b;
+  color: #fff;
+  padding: 3px 15px;
+  position: relative;
+  border-radius: 5px;
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+/* line 428, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.review-list h3 {
+  font-size: 12px;
+  color: #999;
+}
+
+/* line 433, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.list-div {
+  position: absolute;
+  width: 40%;
+  display: flex;
+  right: 0;
+  flex-direction: column;
+  top: 0px;
+  z-index: 1;
+  height: 100%;
+}
+
+/* line 444, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.list-div label {
+  position: relative;
+  left: 7%;
+}
+
+/* line 449, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+  top: 0;
+  background-color: black;
+}
+
+/* line 458, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.video-description {
+  color: #999;
+  position: absolute;
+  z-index: 1;
+  left: 4%;
+  top: 65%;
+  transform: translateY(-50%);
+  width: 50%;
+}
+
+/* line 468, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.visible h1 {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  font-size: 35px;
+  left: 4%;
+  top: 7%;
+}
+
+/* line 477, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.dropdown-container {
+  margin-top: 10px;
+}
+
+/* line 481, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.splash {
+  display: none;
+}
+
+/* line 485, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.play-landing {
+  padding: .57em 1.35em;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: #e50914;
+  border-color: #ff0a16;
+  color: #fff;
+  margin-right: 1em;
+  border-radius: 0;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 498, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.my-list-landing {
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: .75em;
+  padding: .57em 1.35em;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0;
+}
+
+/* line 511, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.landing-play {
+  visibility: visible;
+  position: relative;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  transform: scale(1);
+  color: #fff;
+  padding-right: 6px;
+}
+
+/* line 522, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-plus {
+  padding-right: 3px;
+}
+
+/* line 526, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.background-heading img {
+  width: 15em;
+  opacity: .7;
+}
+
+/* line 531, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-user {
+  left: -5px;
+  position: relative;
+}
+
+/* line 536, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.dropdown-functions i {
+  position: relative;
+  z-index: 1;
+  visibility: visible;
+  left: 5%;
+  margin: 0 10px;
+  transition-property: left;
+  transition-duration: 400ms;
+}
+
+/* line 546, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.dropdown-functions {
+  position: relative;
+  display: flex;
+  top: 15%;
+  width: 60%;
+}
+
+/* line 553, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.dropdown-functions .fa-plus-circle, .dropdown-functions .fa-thumbs-o-up,
+.dropdown-functions .fa-thumbs-o-down, .dropdown-functions .fa-check-circle {
+  bottom: 0;
+}
+
+/* line 558, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.dropdown-functions .active-dislike {
+  left: 1%;
+}
+
+/* line 562, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.dropdown-functions .active-like {
+  left: 4%;
+}
+
+/* line 566, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.dropdown-functions p {
+  left: 14%;
+  top: 16vh;
+}
+
+/* line 571, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.review-list-container {
+  height: 62%;
+  width: 100%;
+}
+
+/* line 576, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.search-input {
+  display: inline;
+}
+
+/* line 580, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.search-input input, .fa-search {
+  color: #fff;
+  cursor: pointer;
+}
+
+/* line 585, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/browse.scss */
+.fa-search {
+  padding-right: 5px;
+}
+/* line 5, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.pre-login-background {
+  background-image: url(/assets/prelogin-40905a989ed4b46c570a7f70a71ed84290f78b222feaa6b31ee6b91870e14981.png);
+  height: 100vh;
+  background-size: cover;
+}
+
+/* line 11, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.temp-logo {
+  position: absolute;
+  left: 40px;
+  top: 22px;
+  height: 30px;
+  width: 100px;
+}
+
+/* line 19, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.join-button, .sign-in-button {
+  background-color: #e50914;
+}
+
+/* line 23, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.sign-in-button {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  padding: 8px 2em;
+  color: white;
+  border-radius: 3px;
+}
+
+/* line 33, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.join-button {
+  padding: 12px 2em;
+  color: white;
+  border-radius: 3px;
+  margin-top: 15px;
+}
+
+/* line 40, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.join-info {
+  position: absolute;
+  top: 30%;
+  left: 40px;
+  text-shadow: 1px black;
+  text-shadow: 1px 1px 2px grey;
+}
+
+/* line 48, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.whats-next {
+  font-size: 60px;
+  color: white;
+  text-shadow: 1px black;
+  text-shadow: 1px 1px 2px grey;
+}
+
+/* line 55, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.anytime {
+  font-size: 25px;
+  color: white;
+  text-shadow: 1px 1px 2px grey;
+  text-shadow: 1px black;
+}
+
+/* line 62, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.session-form-container {
+  background-image: url(/assets/login-image-41ba0c719d830e2b142a6f6d2c08d3951872ec6cdbdd35d3cfe07c8411e77100.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+
+/* line 68, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.session-form {
+  position: relative;
+  margin: 0 auto;
+  background-color: #f3f3f3;
+  width: 400px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 35px;
+}
+
+/* line 79, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.form-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+/* line 85, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.form-inputs input {
+  box-sizing: border-box;
+  border: solid 1px #b3b3b3;
+  background-color: #faffbd;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* line 95, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.form-submit, .demo {
+  text-align: center;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #e50914;
+  color: white;
+  font-size: 20px;
+}
+
+/* line 108, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.form-submit {
+  margin-top: 70px;
+}
+
+/* line 113, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.linker {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* line 118, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/users.scss */
+.form-inputs div {
+  position: relative;
+  top: 25px;
+}
+/* line 1, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/category-show.scss */
+.category-show-title {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 70px;
+  display: inline-table;
+  position: absolute;
+  left: 9%;
+}
+
+/* line 11, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/category-show.scss */
+.show {
+  margin: 6em 4%;
+  display: flex;
+  min-height: 50em;
+}
+
+/* line 17, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/category-show.scss */
+.video-row-show {
+  margin-top: 100px;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 96%;
+  left: 9%;
+}
+
+/* line 26, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/category-show.scss */
+.video-show {
+  margin-bottom: 25px;
+  max-height: 9.83em;
+}
+
+/* line 31, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/category-show.scss */
+.dropdown-container-show {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+/* line 1, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.browse-list, .profile-list {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border-top: 1px solid #e5e5e5;
+  background-color: rgba(0, 0, 0, 0.7);
+  left: 0px;
+  top: 46px;
+}
+
+/* line 11, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.browse {
+  display: inline-block;
+  position: relative;
+}
+
+/* line 16, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.browse-list a, .profile-list button {
+  display: block;
+  position: relative;
+  margin: 9px 20px;
+}
+
+/* line 23, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.browse:hover .browse-list {
+  display: block;
+  color: #fff;
+}
+
+/* line 29, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.profile {
+  color: #e5e5e5;
+  cursor: pointer;
+  right: 40px;
+  position: relative;
+  padding-bottom: 25px;
+}
+
+/* line 38, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.profile:hover .profile-list {
+  display: block;
+  color: #fff;
+  top: 45px;
+}
+
+/* line 45, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.profile-list {
+  left: 0;
+  top: 21px;
+}
+
+/* line 50, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.no-vids {
+  margin-top: 100px;
+  position: absolute;
+}
+
+/* line 55, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.no-vids-header {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  height: 70px;
+}
+
+/* line 66, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.no-vids-profile {
+  padding-top: 3.3vh;
+}
+
+/* line 71, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.no-vids-profile:hover .no-vids-logout {
+  display: block;
+  color: #fff;
+  left: 0;
+  top: 6.5vh;
+}
+
+/* line 79, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.no-vids {
+  color: #fff;
+  font-size: 36px;
+  margin-bottom: 70px;
+  display: inline-table;
+  position: absolute;
+  right: 40vw;
+}
+
+/* line 88, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.browse-item a {
+  display: flex;
+}
+
+/* line 92, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.browse-item p {
+  margin-left: 8%;
+  position: relative;
+  bottom: 2px;
+}
+
+/* line 98, /Users/raymonddelpino/Documents/Job Search Curriculum/netfix/app/assets/stylesheets/header.scss */
+.browse-item p:hover {
+  text-decoration: underline;
+}
+@charset "UTF-8";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+
+
+
+
+ */
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/assets/font-awesome/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot?v=4.7.0");
+  src: url("/assets/font-awesome/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot?v=4.7.0#iefix") format("embedded-opentype"), url("/assets/font-awesome/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2?v=4.7.0") format("woff2"), url("/assets/font-awesome/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff?v=4.7.0") format("woff"), url("/assets/font-awesome/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf?v=4.7.0") format("truetype"), url("/assets/font-awesome/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 4, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_core.scss */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 5, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_larger.scss */
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+/* line 10, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_larger.scss */
+.fa-2x {
+  font-size: 2em;
+}
+
+/* line 11, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_larger.scss */
+.fa-3x {
+  font-size: 3em;
+}
+
+/* line 12, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_larger.scss */
+.fa-4x {
+  font-size: 4em;
+}
+
+/* line 13, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_larger.scss */
+.fa-5x {
+  font-size: 5em;
+}
+
+/* line 3, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_fixed-width.scss */
+.fa-fw {
+  width: 1.2857142857em;
+  text-align: center;
+}
+
+/* line 4, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_list.scss */
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.1428571429em;
+  list-style-type: none;
+}
+/* line 8, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_list.scss */
+.fa-ul > li {
+  position: relative;
+}
+
+/* line 10, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_list.scss */
+.fa-li {
+  position: absolute;
+  left: -2.1428571429em;
+  width: 2.1428571429em;
+  top: 0.1428571429em;
+  text-align: center;
+}
+/* line 16, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_list.scss */
+.fa-li.fa-lg {
+  left: -1.8571428571em;
+}
+
+/* line 4, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em;
+}
+
+/* line 10, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa-pull-left {
+  float: left;
+}
+
+/* line 11, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa-pull-right {
+  float: right;
+}
+
+/* line 14, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.fa-pull-left {
+  margin-right: .3em;
+}
+/* line 15, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.fa-pull-right {
+  margin-left: .3em;
+}
+
+/* Deprecated as of 4.4.0 */
+/* line 19, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 20, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 23, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.pull-left {
+  margin-right: .3em;
+}
+/* line 24, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_bordered-pulled.scss */
+.fa.pull-right {
+  margin-left: .3em;
+}
+
+/* line 4, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_animated.scss */
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+/* line 9, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_animated.scss */
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+/* line 4, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 5, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 6, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+/* line 8, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 9, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+.fa-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/* line 14, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_rotated-flipped.scss */
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  filter: none;
+}
+
+/* line 4, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+/* line 12, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 18, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+/* line 19, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+/* line 20, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_stacked.scss */
+.fa-inverse {
+  color: #fff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 4, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-glass:before {
+  content: "";
+}
+
+/* line 5, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-music:before {
+  content: "";
+}
+
+/* line 6, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search:before {
+  content: "";
+}
+
+/* line 7, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-o:before {
+  content: "";
+}
+
+/* line 8, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heart:before {
+  content: "";
+}
+
+/* line 9, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star:before {
+  content: "";
+}
+
+/* line 10, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-o:before {
+  content: "";
+}
+
+/* line 11, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user:before {
+  content: "";
+}
+
+/* line 12, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-film:before {
+  content: "";
+}
+
+/* line 13, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th-large:before {
+  content: "";
+}
+
+/* line 14, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th:before {
+  content: "";
+}
+
+/* line 15, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-th-list:before {
+  content: "";
+}
+
+/* line 16, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check:before {
+  content: "";
+}
+
+/* line 17, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: "";
+}
+
+/* line 20, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search-plus:before {
+  content: "";
+}
+
+/* line 21, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-search-minus:before {
+  content: "";
+}
+
+/* line 22, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-power-off:before {
+  content: "";
+}
+
+/* line 23, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-signal:before {
+  content: "";
+}
+
+/* line 24, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gear:before,
+.fa-cog:before {
+  content: "";
+}
+
+/* line 26, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trash-o:before {
+  content: "";
+}
+
+/* line 27, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-home:before {
+  content: "";
+}
+
+/* line 28, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-o:before {
+  content: "";
+}
+
+/* line 29, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-clock-o:before {
+  content: "";
+}
+
+/* line 30, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-road:before {
+  content: "";
+}
+
+/* line 31, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-download:before {
+  content: "";
+}
+
+/* line 32, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-down:before {
+  content: "";
+}
+
+/* line 33, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-up:before {
+  content: "";
+}
+
+/* line 34, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-inbox:before {
+  content: "";
+}
+
+/* line 35, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play-circle-o:before {
+  content: "";
+}
+
+/* line 36, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: "";
+}
+
+/* line 38, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-refresh:before {
+  content: "";
+}
+
+/* line 39, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-alt:before {
+  content: "";
+}
+
+/* line 40, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lock:before {
+  content: "";
+}
+
+/* line 41, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag:before {
+  content: "";
+}
+
+/* line 42, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-headphones:before {
+  content: "";
+}
+
+/* line 43, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-off:before {
+  content: "";
+}
+
+/* line 44, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-down:before {
+  content: "";
+}
+
+/* line 45, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-up:before {
+  content: "";
+}
+
+/* line 46, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-qrcode:before {
+  content: "";
+}
+
+/* line 47, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-barcode:before {
+  content: "";
+}
+
+/* line 48, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tag:before {
+  content: "";
+}
+
+/* line 49, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tags:before {
+  content: "";
+}
+
+/* line 50, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-book:before {
+  content: "";
+}
+
+/* line 51, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bookmark:before {
+  content: "";
+}
+
+/* line 52, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-print:before {
+  content: "";
+}
+
+/* line 53, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-camera:before {
+  content: "";
+}
+
+/* line 54, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-font:before {
+  content: "";
+}
+
+/* line 55, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bold:before {
+  content: "";
+}
+
+/* line 56, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-italic:before {
+  content: "";
+}
+
+/* line 57, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-text-height:before {
+  content: "";
+}
+
+/* line 58, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-text-width:before {
+  content: "";
+}
+
+/* line 59, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-left:before {
+  content: "";
+}
+
+/* line 60, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-center:before {
+  content: "";
+}
+
+/* line 61, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-right:before {
+  content: "";
+}
+
+/* line 62, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-align-justify:before {
+  content: "";
+}
+
+/* line 63, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list:before {
+  content: "";
+}
+
+/* line 64, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dedent:before,
+.fa-outdent:before {
+  content: "";
+}
+
+/* line 66, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-indent:before {
+  content: "";
+}
+
+/* line 67, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-video-camera:before {
+  content: "";
+}
+
+/* line 68, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: "";
+}
+
+/* line 71, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pencil:before {
+  content: "";
+}
+
+/* line 72, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-marker:before {
+  content: "";
+}
+
+/* line 73, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-adjust:before {
+  content: "";
+}
+
+/* line 74, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tint:before {
+  content: "";
+}
+
+/* line 75, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "";
+}
+
+/* line 77, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-square-o:before {
+  content: "";
+}
+
+/* line 78, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-square-o:before {
+  content: "";
+}
+
+/* line 79, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows:before {
+  content: "";
+}
+
+/* line 80, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-step-backward:before {
+  content: "";
+}
+
+/* line 81, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fast-backward:before {
+  content: "";
+}
+
+/* line 82, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-backward:before {
+  content: "";
+}
+
+/* line 83, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play:before {
+  content: "";
+}
+
+/* line 84, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pause:before {
+  content: "";
+}
+
+/* line 85, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stop:before {
+  content: "";
+}
+
+/* line 86, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-forward:before {
+  content: "";
+}
+
+/* line 87, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fast-forward:before {
+  content: "";
+}
+
+/* line 88, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-step-forward:before {
+  content: "";
+}
+
+/* line 89, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eject:before {
+  content: "";
+}
+
+/* line 90, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-left:before {
+  content: "";
+}
+
+/* line 91, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-right:before {
+  content: "";
+}
+
+/* line 92, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-circle:before {
+  content: "";
+}
+
+/* line 93, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-circle:before {
+  content: "";
+}
+
+/* line 94, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-circle:before {
+  content: "";
+}
+
+/* line 95, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-circle:before {
+  content: "";
+}
+
+/* line 96, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question-circle:before {
+  content: "";
+}
+
+/* line 97, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-info-circle:before {
+  content: "";
+}
+
+/* line 98, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-crosshairs:before {
+  content: "";
+}
+
+/* line 99, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-circle-o:before {
+  content: "";
+}
+
+/* line 100, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-circle-o:before {
+  content: "";
+}
+
+/* line 101, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ban:before {
+  content: "";
+}
+
+/* line 102, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-left:before {
+  content: "";
+}
+
+/* line 103, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-right:before {
+  content: "";
+}
+
+/* line 104, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-up:before {
+  content: "";
+}
+
+/* line 105, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-down:before {
+  content: "";
+}
+
+/* line 106, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-forward:before,
+.fa-share:before {
+  content: "";
+}
+
+/* line 108, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-expand:before {
+  content: "";
+}
+
+/* line 109, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-compress:before {
+  content: "";
+}
+
+/* line 110, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus:before {
+  content: "";
+}
+
+/* line 111, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus:before {
+  content: "";
+}
+
+/* line 112, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-asterisk:before {
+  content: "";
+}
+
+/* line 113, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exclamation-circle:before {
+  content: "";
+}
+
+/* line 114, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gift:before {
+  content: "";
+}
+
+/* line 115, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-leaf:before {
+  content: "";
+}
+
+/* line 116, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fire:before {
+  content: "";
+}
+
+/* line 117, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eye:before {
+  content: "";
+}
+
+/* line 118, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eye-slash:before {
+  content: "";
+}
+
+/* line 119, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "";
+}
+
+/* line 121, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plane:before {
+  content: "";
+}
+
+/* line 122, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar:before {
+  content: "";
+}
+
+/* line 123, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-random:before {
+  content: "";
+}
+
+/* line 124, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comment:before {
+  content: "";
+}
+
+/* line 125, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-magnet:before {
+  content: "";
+}
+
+/* line 126, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-up:before {
+  content: "";
+}
+
+/* line 127, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-down:before {
+  content: "";
+}
+
+/* line 128, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-retweet:before {
+  content: "";
+}
+
+/* line 129, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shopping-cart:before {
+  content: "";
+}
+
+/* line 130, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder:before {
+  content: "";
+}
+
+/* line 131, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-open:before {
+  content: "";
+}
+
+/* line 132, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-v:before {
+  content: "";
+}
+
+/* line 133, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-h:before {
+  content: "";
+}
+
+/* line 134, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: "";
+}
+
+/* line 136, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitter-square:before {
+  content: "";
+}
+
+/* line 137, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-square:before {
+  content: "";
+}
+
+/* line 138, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-camera-retro:before {
+  content: "";
+}
+
+/* line 139, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-key:before {
+  content: "";
+}
+
+/* line 140, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gears:before,
+.fa-cogs:before {
+  content: "";
+}
+
+/* line 142, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comments:before {
+  content: "";
+}
+
+/* line 143, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-o-up:before {
+  content: "";
+}
+
+/* line 144, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-o-down:before {
+  content: "";
+}
+
+/* line 145, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-half:before {
+  content: "";
+}
+
+/* line 146, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heart-o:before {
+  content: "";
+}
+
+/* line 147, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sign-out:before {
+  content: "";
+}
+
+/* line 148, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linkedin-square:before {
+  content: "";
+}
+
+/* line 149, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumb-tack:before {
+  content: "";
+}
+
+/* line 150, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-external-link:before {
+  content: "";
+}
+
+/* line 151, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sign-in:before {
+  content: "";
+}
+
+/* line 152, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trophy:before {
+  content: "";
+}
+
+/* line 153, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github-square:before {
+  content: "";
+}
+
+/* line 154, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-upload:before {
+  content: "";
+}
+
+/* line 155, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lemon-o:before {
+  content: "";
+}
+
+/* line 156, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-phone:before {
+  content: "";
+}
+
+/* line 157, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-square-o:before {
+  content: "";
+}
+
+/* line 158, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bookmark-o:before {
+  content: "";
+}
+
+/* line 159, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-phone-square:before {
+  content: "";
+}
+
+/* line 160, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitter:before {
+  content: "";
+}
+
+/* line 161, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "";
+}
+
+/* line 163, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github:before {
+  content: "";
+}
+
+/* line 164, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlock:before {
+  content: "";
+}
+
+/* line 165, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-credit-card:before {
+  content: "";
+}
+
+/* line 166, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-feed:before,
+.fa-rss:before {
+  content: "";
+}
+
+/* line 168, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hdd-o:before {
+  content: "";
+}
+
+/* line 169, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bullhorn:before {
+  content: "";
+}
+
+/* line 170, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell:before {
+  content: "";
+}
+
+/* line 171, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-certificate:before {
+  content: "";
+}
+
+/* line 172, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-right:before {
+  content: "";
+}
+
+/* line 173, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-left:before {
+  content: "";
+}
+
+/* line 174, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-up:before {
+  content: "";
+}
+
+/* line 175, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-o-down:before {
+  content: "";
+}
+
+/* line 176, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-left:before {
+  content: "";
+}
+
+/* line 177, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-right:before {
+  content: "";
+}
+
+/* line 178, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-up:before {
+  content: "";
+}
+
+/* line 179, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-down:before {
+  content: "";
+}
+
+/* line 180, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-globe:before {
+  content: "";
+}
+
+/* line 181, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wrench:before {
+  content: "";
+}
+
+/* line 182, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tasks:before {
+  content: "";
+}
+
+/* line 183, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-filter:before {
+  content: "";
+}
+
+/* line 184, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-briefcase:before {
+  content: "";
+}
+
+/* line 185, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrows-alt:before {
+  content: "";
+}
+
+/* line 186, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-group:before,
+.fa-users:before {
+  content: "";
+}
+
+/* line 188, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chain:before,
+.fa-link:before {
+  content: "";
+}
+
+/* line 190, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud:before {
+  content: "";
+}
+
+/* line 191, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flask:before {
+  content: "";
+}
+
+/* line 192, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cut:before,
+.fa-scissors:before {
+  content: "";
+}
+
+/* line 194, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-copy:before,
+.fa-files-o:before {
+  content: "";
+}
+
+/* line 196, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paperclip:before {
+  content: "";
+}
+
+/* line 197, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "";
+}
+
+/* line 199, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-square:before {
+  content: "";
+}
+
+/* line 200, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "";
+}
+
+/* line 203, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-ul:before {
+  content: "";
+}
+
+/* line 204, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-list-ol:before {
+  content: "";
+}
+
+/* line 205, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-strikethrough:before {
+  content: "";
+}
+
+/* line 206, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-underline:before {
+  content: "";
+}
+
+/* line 207, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-table:before {
+  content: "";
+}
+
+/* line 208, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-magic:before {
+  content: "";
+}
+
+/* line 209, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-truck:before {
+  content: "";
+}
+
+/* line 210, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest:before {
+  content: "";
+}
+
+/* line 211, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest-square:before {
+  content: "";
+}
+
+/* line 212, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-plus-square:before {
+  content: "";
+}
+
+/* line 213, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-plus:before {
+  content: "";
+}
+
+/* line 214, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-money:before {
+  content: "";
+}
+
+/* line 215, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-down:before {
+  content: "";
+}
+
+/* line 216, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-up:before {
+  content: "";
+}
+
+/* line 217, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-left:before {
+  content: "";
+}
+
+/* line 218, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-caret-right:before {
+  content: "";
+}
+
+/* line 219, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-columns:before {
+  content: "";
+}
+
+/* line 220, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "";
+}
+
+/* line 222, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: "";
+}
+
+/* line 224, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: "";
+}
+
+/* line 226, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope:before {
+  content: "";
+}
+
+/* line 227, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linkedin:before {
+  content: "";
+}
+
+/* line 228, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "";
+}
+
+/* line 230, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-legal:before,
+.fa-gavel:before {
+  content: "";
+}
+
+/* line 232, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "";
+}
+
+/* line 234, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comment-o:before {
+  content: "";
+}
+
+/* line 235, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-comments-o:before {
+  content: "";
+}
+
+/* line 236, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flash:before,
+.fa-bolt:before {
+  content: "";
+}
+
+/* line 238, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sitemap:before {
+  content: "";
+}
+
+/* line 239, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-umbrella:before {
+  content: "";
+}
+
+/* line 240, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "";
+}
+
+/* line 242, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lightbulb-o:before {
+  content: "";
+}
+
+/* line 243, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exchange:before {
+  content: "";
+}
+
+/* line 244, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud-download:before {
+  content: "";
+}
+
+/* line 245, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cloud-upload:before {
+  content: "";
+}
+
+/* line 246, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-md:before {
+  content: "";
+}
+
+/* line 247, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stethoscope:before {
+  content: "";
+}
+
+/* line 248, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-suitcase:before {
+  content: "";
+}
+
+/* line 249, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-o:before {
+  content: "";
+}
+
+/* line 250, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-coffee:before {
+  content: "";
+}
+
+/* line 251, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cutlery:before {
+  content: "";
+}
+
+/* line 252, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-text-o:before {
+  content: "";
+}
+
+/* line 253, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-building-o:before {
+  content: "";
+}
+
+/* line 254, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hospital-o:before {
+  content: "";
+}
+
+/* line 255, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ambulance:before {
+  content: "";
+}
+
+/* line 256, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-medkit:before {
+  content: "";
+}
+
+/* line 257, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fighter-jet:before {
+  content: "";
+}
+
+/* line 258, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-beer:before {
+  content: "";
+}
+
+/* line 259, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-h-square:before {
+  content: "";
+}
+
+/* line 260, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-square:before {
+  content: "";
+}
+
+/* line 261, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-left:before {
+  content: "";
+}
+
+/* line 262, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-right:before {
+  content: "";
+}
+
+/* line 263, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-up:before {
+  content: "";
+}
+
+/* line 264, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-double-down:before {
+  content: "";
+}
+
+/* line 265, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-left:before {
+  content: "";
+}
+
+/* line 266, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-right:before {
+  content: "";
+}
+
+/* line 267, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-up:before {
+  content: "";
+}
+
+/* line 268, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angle-down:before {
+  content: "";
+}
+
+/* line 269, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-desktop:before {
+  content: "";
+}
+
+/* line 270, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-laptop:before {
+  content: "";
+}
+
+/* line 271, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tablet:before {
+  content: "";
+}
+
+/* line 272, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "";
+}
+
+/* line 274, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-o:before {
+  content: "";
+}
+
+/* line 275, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-quote-left:before {
+  content: "";
+}
+
+/* line 276, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-quote-right:before {
+  content: "";
+}
+
+/* line 277, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spinner:before {
+  content: "";
+}
+
+/* line 278, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle:before {
+  content: "";
+}
+
+/* line 279, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "";
+}
+
+/* line 281, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-github-alt:before {
+  content: "";
+}
+
+/* line 282, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-o:before {
+  content: "";
+}
+
+/* line 283, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-folder-open-o:before {
+  content: "";
+}
+
+/* line 284, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-smile-o:before {
+  content: "";
+}
+
+/* line 285, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-frown-o:before {
+  content: "";
+}
+
+/* line 286, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-meh-o:before {
+  content: "";
+}
+
+/* line 287, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gamepad:before {
+  content: "";
+}
+
+/* line 288, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-keyboard-o:before {
+  content: "";
+}
+
+/* line 289, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag-o:before {
+  content: "";
+}
+
+/* line 290, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flag-checkered:before {
+  content: "";
+}
+
+/* line 291, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-terminal:before {
+  content: "";
+}
+
+/* line 292, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-code:before {
+  content: "";
+}
+
+/* line 293, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: "";
+}
+
+/* line 295, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "";
+}
+
+/* line 298, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-location-arrow:before {
+  content: "";
+}
+
+/* line 299, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-crop:before {
+  content: "";
+}
+
+/* line 300, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-code-fork:before {
+  content: "";
+}
+
+/* line 301, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "";
+}
+
+/* line 303, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question:before {
+  content: "";
+}
+
+/* line 304, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-info:before {
+  content: "";
+}
+
+/* line 305, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-exclamation:before {
+  content: "";
+}
+
+/* line 306, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-superscript:before {
+  content: "";
+}
+
+/* line 307, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-subscript:before {
+  content: "";
+}
+
+/* line 308, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eraser:before {
+  content: "";
+}
+
+/* line 309, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-puzzle-piece:before {
+  content: "";
+}
+
+/* line 310, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-microphone:before {
+  content: "";
+}
+
+/* line 311, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-microphone-slash:before {
+  content: "";
+}
+
+/* line 312, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shield:before {
+  content: "";
+}
+
+/* line 313, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-o:before {
+  content: "";
+}
+
+/* line 314, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fire-extinguisher:before {
+  content: "";
+}
+
+/* line 315, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rocket:before {
+  content: "";
+}
+
+/* line 316, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-maxcdn:before {
+  content: "";
+}
+
+/* line 317, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-left:before {
+  content: "";
+}
+
+/* line 318, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-right:before {
+  content: "";
+}
+
+/* line 319, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-up:before {
+  content: "";
+}
+
+/* line 320, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chevron-circle-down:before {
+  content: "";
+}
+
+/* line 321, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-html5:before {
+  content: "";
+}
+
+/* line 322, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-css3:before {
+  content: "";
+}
+
+/* line 323, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-anchor:before {
+  content: "";
+}
+
+/* line 324, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-unlock-alt:before {
+  content: "";
+}
+
+/* line 325, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bullseye:before {
+  content: "";
+}
+
+/* line 326, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ellipsis-h:before {
+  content: "";
+}
+
+/* line 327, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ellipsis-v:before {
+  content: "";
+}
+
+/* line 328, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rss-square:before {
+  content: "";
+}
+
+/* line 329, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-play-circle:before {
+  content: "";
+}
+
+/* line 330, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ticket:before {
+  content: "";
+}
+
+/* line 331, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-square:before {
+  content: "";
+}
+
+/* line 332, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-minus-square-o:before {
+  content: "";
+}
+
+/* line 333, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-level-up:before {
+  content: "";
+}
+
+/* line 334, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-level-down:before {
+  content: "";
+}
+
+/* line 335, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-check-square:before {
+  content: "";
+}
+
+/* line 336, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pencil-square:before {
+  content: "";
+}
+
+/* line 337, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-external-link-square:before {
+  content: "";
+}
+
+/* line 338, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-square:before {
+  content: "";
+}
+
+/* line 339, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-compass:before {
+  content: "";
+}
+
+/* line 340, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "";
+}
+
+/* line 342, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "";
+}
+
+/* line 344, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "";
+}
+
+/* line 346, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-euro:before,
+.fa-eur:before {
+  content: "";
+}
+
+/* line 348, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gbp:before {
+  content: "";
+}
+
+/* line 349, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dollar:before,
+.fa-usd:before {
+  content: "";
+}
+
+/* line 351, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-rupee:before,
+.fa-inr:before {
+  content: "";
+}
+
+/* line 353, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: "";
+}
+
+/* line 357, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "";
+}
+
+/* line 360, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-won:before,
+.fa-krw:before {
+  content: "";
+}
+
+/* line 362, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "";
+}
+
+/* line 364, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file:before {
+  content: "";
+}
+
+/* line 365, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-text:before {
+  content: "";
+}
+
+/* line 366, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-alpha-asc:before {
+  content: "";
+}
+
+/* line 367, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-alpha-desc:before {
+  content: "";
+}
+
+/* line 368, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-amount-asc:before {
+  content: "";
+}
+
+/* line 369, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-amount-desc:before {
+  content: "";
+}
+
+/* line 370, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-numeric-asc:before {
+  content: "";
+}
+
+/* line 371, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sort-numeric-desc:before {
+  content: "";
+}
+
+/* line 372, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-up:before {
+  content: "";
+}
+
+/* line 373, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thumbs-down:before {
+  content: "";
+}
+
+/* line 374, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube-square:before {
+  content: "";
+}
+
+/* line 375, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube:before {
+  content: "";
+}
+
+/* line 376, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-xing:before {
+  content: "";
+}
+
+/* line 377, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-xing-square:before {
+  content: "";
+}
+
+/* line 378, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-youtube-play:before {
+  content: "";
+}
+
+/* line 379, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dropbox:before {
+  content: "";
+}
+
+/* line 380, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stack-overflow:before {
+  content: "";
+}
+
+/* line 381, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-instagram:before {
+  content: "";
+}
+
+/* line 382, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-flickr:before {
+  content: "";
+}
+
+/* line 383, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-adn:before {
+  content: "";
+}
+
+/* line 384, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitbucket:before {
+  content: "";
+}
+
+/* line 385, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bitbucket-square:before {
+  content: "";
+}
+
+/* line 386, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tumblr:before {
+  content: "";
+}
+
+/* line 387, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tumblr-square:before {
+  content: "";
+}
+
+/* line 388, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-down:before {
+  content: "";
+}
+
+/* line 389, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-up:before {
+  content: "";
+}
+
+/* line 390, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-left:before {
+  content: "";
+}
+
+/* line 391, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-long-arrow-right:before {
+  content: "";
+}
+
+/* line 392, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-apple:before {
+  content: "";
+}
+
+/* line 393, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-windows:before {
+  content: "";
+}
+
+/* line 394, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-android:before {
+  content: "";
+}
+
+/* line 395, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linux:before {
+  content: "";
+}
+
+/* line 396, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dribbble:before {
+  content: "";
+}
+
+/* line 397, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-skype:before {
+  content: "";
+}
+
+/* line 398, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-foursquare:before {
+  content: "";
+}
+
+/* line 399, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trello:before {
+  content: "";
+}
+
+/* line 400, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-female:before {
+  content: "";
+}
+
+/* line 401, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-male:before {
+  content: "";
+}
+
+/* line 402, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gittip:before,
+.fa-gratipay:before {
+  content: "";
+}
+
+/* line 404, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sun-o:before {
+  content: "";
+}
+
+/* line 405, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-moon-o:before {
+  content: "";
+}
+
+/* line 406, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-archive:before {
+  content: "";
+}
+
+/* line 407, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bug:before {
+  content: "";
+}
+
+/* line 408, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vk:before {
+  content: "";
+}
+
+/* line 409, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-weibo:before {
+  content: "";
+}
+
+/* line 410, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-renren:before {
+  content: "";
+}
+
+/* line 411, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pagelines:before {
+  content: "";
+}
+
+/* line 412, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stack-exchange:before {
+  content: "";
+}
+
+/* line 413, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-right:before {
+  content: "";
+}
+
+/* line 414, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-arrow-circle-o-left:before {
+  content: "";
+}
+
+/* line 415, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "";
+}
+
+/* line 417, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dot-circle-o:before {
+  content: "";
+}
+
+/* line 418, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wheelchair:before {
+  content: "";
+}
+
+/* line 419, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vimeo-square:before {
+  content: "";
+}
+
+/* line 420, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "";
+}
+
+/* line 422, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plus-square-o:before {
+  content: "";
+}
+
+/* line 423, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-space-shuttle:before {
+  content: "";
+}
+
+/* line 424, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-slack:before {
+  content: "";
+}
+
+/* line 425, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-square:before {
+  content: "";
+}
+
+/* line 426, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wordpress:before {
+  content: "";
+}
+
+/* line 427, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-openid:before {
+  content: "";
+}
+
+/* line 428, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: "";
+}
+
+/* line 431, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: "";
+}
+
+/* line 433, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yahoo:before {
+  content: "";
+}
+
+/* line 434, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google:before {
+  content: "";
+}
+
+/* line 435, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit:before {
+  content: "";
+}
+
+/* line 436, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit-square:before {
+  content: "";
+}
+
+/* line 437, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stumbleupon-circle:before {
+  content: "";
+}
+
+/* line 438, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stumbleupon:before {
+  content: "";
+}
+
+/* line 439, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-delicious:before {
+  content: "";
+}
+
+/* line 440, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-digg:before {
+  content: "";
+}
+
+/* line 441, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper-pp:before {
+  content: "";
+}
+
+/* line 442, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper-alt:before {
+  content: "";
+}
+
+/* line 443, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-drupal:before {
+  content: "";
+}
+
+/* line 444, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-joomla:before {
+  content: "";
+}
+
+/* line 445, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-language:before {
+  content: "";
+}
+
+/* line 446, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fax:before {
+  content: "";
+}
+
+/* line 447, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-building:before {
+  content: "";
+}
+
+/* line 448, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-child:before {
+  content: "";
+}
+
+/* line 449, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paw:before {
+  content: "";
+}
+
+/* line 450, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spoon:before {
+  content: "";
+}
+
+/* line 451, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cube:before {
+  content: "";
+}
+
+/* line 452, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cubes:before {
+  content: "";
+}
+
+/* line 453, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-behance:before {
+  content: "";
+}
+
+/* line 454, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-behance-square:before {
+  content: "";
+}
+
+/* line 455, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-steam:before {
+  content: "";
+}
+
+/* line 456, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-steam-square:before {
+  content: "";
+}
+
+/* line 457, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-recycle:before {
+  content: "";
+}
+
+/* line 458, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-automobile:before,
+.fa-car:before {
+  content: "";
+}
+
+/* line 460, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cab:before,
+.fa-taxi:before {
+  content: "";
+}
+
+/* line 462, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tree:before {
+  content: "";
+}
+
+/* line 463, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-spotify:before {
+  content: "";
+}
+
+/* line 464, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-deviantart:before {
+  content: "";
+}
+
+/* line 465, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-soundcloud:before {
+  content: "";
+}
+
+/* line 466, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-database:before {
+  content: "";
+}
+
+/* line 467, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-pdf-o:before {
+  content: "";
+}
+
+/* line 468, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-word-o:before {
+  content: "";
+}
+
+/* line 469, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-excel-o:before {
+  content: "";
+}
+
+/* line 470, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-powerpoint-o:before {
+  content: "";
+}
+
+/* line 471, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: "";
+}
+
+/* line 474, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: "";
+}
+
+/* line 476, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: "";
+}
+
+/* line 478, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: "";
+}
+
+/* line 480, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-file-code-o:before {
+  content: "";
+}
+
+/* line 481, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vine:before {
+  content: "";
+}
+
+/* line 482, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-codepen:before {
+  content: "";
+}
+
+/* line 483, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-jsfiddle:before {
+  content: "";
+}
+
+/* line 484, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: "";
+}
+
+/* line 489, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-o-notch:before {
+  content: "";
+}
+
+/* line 490, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ra:before,
+.fa-resistance:before,
+.fa-rebel:before {
+  content: "";
+}
+
+/* line 493, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ge:before,
+.fa-empire:before {
+  content: "";
+}
+
+/* line 495, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-git-square:before {
+  content: "";
+}
+
+/* line 496, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-git:before {
+  content: "";
+}
+
+/* line 497, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-y-combinator-square:before,
+.fa-yc-square:before,
+.fa-hacker-news:before {
+  content: "";
+}
+
+/* line 500, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tencent-weibo:before {
+  content: "";
+}
+
+/* line 501, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-qq:before {
+  content: "";
+}
+
+/* line 502, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wechat:before,
+.fa-weixin:before {
+  content: "";
+}
+
+/* line 504, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-send:before,
+.fa-paper-plane:before {
+  content: "";
+}
+
+/* line 506, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: "";
+}
+
+/* line 508, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-history:before {
+  content: "";
+}
+
+/* line 509, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-circle-thin:before {
+  content: "";
+}
+
+/* line 510, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-header:before {
+  content: "";
+}
+
+/* line 511, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paragraph:before {
+  content: "";
+}
+
+/* line 512, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sliders:before {
+  content: "";
+}
+
+/* line 513, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-alt:before {
+  content: "";
+}
+
+/* line 514, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-share-alt-square:before {
+  content: "";
+}
+
+/* line 515, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bomb:before {
+  content: "";
+}
+
+/* line 516, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: "";
+}
+
+/* line 518, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tty:before {
+  content: "";
+}
+
+/* line 519, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-binoculars:before {
+  content: "";
+}
+
+/* line 520, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-plug:before {
+  content: "";
+}
+
+/* line 521, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-slideshare:before {
+  content: "";
+}
+
+/* line 522, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-twitch:before {
+  content: "";
+}
+
+/* line 523, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yelp:before {
+  content: "";
+}
+
+/* line 524, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-newspaper-o:before {
+  content: "";
+}
+
+/* line 525, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wifi:before {
+  content: "";
+}
+
+/* line 526, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calculator:before {
+  content: "";
+}
+
+/* line 527, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paypal:before {
+  content: "";
+}
+
+/* line 528, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-wallet:before {
+  content: "";
+}
+
+/* line 529, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-visa:before {
+  content: "";
+}
+
+/* line 530, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-mastercard:before {
+  content: "";
+}
+
+/* line 531, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-discover:before {
+  content: "";
+}
+
+/* line 532, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-amex:before {
+  content: "";
+}
+
+/* line 533, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-paypal:before {
+  content: "";
+}
+
+/* line 534, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-stripe:before {
+  content: "";
+}
+
+/* line 535, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-slash:before {
+  content: "";
+}
+
+/* line 536, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bell-slash-o:before {
+  content: "";
+}
+
+/* line 537, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trash:before {
+  content: "";
+}
+
+/* line 538, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-copyright:before {
+  content: "";
+}
+
+/* line 539, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-at:before {
+  content: "";
+}
+
+/* line 540, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eyedropper:before {
+  content: "";
+}
+
+/* line 541, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-paint-brush:before {
+  content: "";
+}
+
+/* line 542, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-birthday-cake:before {
+  content: "";
+}
+
+/* line 543, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-area-chart:before {
+  content: "";
+}
+
+/* line 544, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pie-chart:before {
+  content: "";
+}
+
+/* line 545, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-line-chart:before {
+  content: "";
+}
+
+/* line 546, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lastfm:before {
+  content: "";
+}
+
+/* line 547, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-lastfm-square:before {
+  content: "";
+}
+
+/* line 548, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-off:before {
+  content: "";
+}
+
+/* line 549, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-toggle-on:before {
+  content: "";
+}
+
+/* line 550, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bicycle:before {
+  content: "";
+}
+
+/* line 551, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bus:before {
+  content: "";
+}
+
+/* line 552, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ioxhost:before {
+  content: "";
+}
+
+/* line 553, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-angellist:before {
+  content: "";
+}
+
+/* line 554, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc:before {
+  content: "";
+}
+
+/* line 555, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: "";
+}
+
+/* line 558, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-meanpath:before {
+  content: "";
+}
+
+/* line 559, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-buysellads:before {
+  content: "";
+}
+
+/* line 560, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-connectdevelop:before {
+  content: "";
+}
+
+/* line 561, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-dashcube:before {
+  content: "";
+}
+
+/* line 562, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-forumbee:before {
+  content: "";
+}
+
+/* line 563, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-leanpub:before {
+  content: "";
+}
+
+/* line 564, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sellsy:before {
+  content: "";
+}
+
+/* line 565, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shirtsinbulk:before {
+  content: "";
+}
+
+/* line 566, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-simplybuilt:before {
+  content: "";
+}
+
+/* line 567, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-skyatlas:before {
+  content: "";
+}
+
+/* line 568, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cart-plus:before {
+  content: "";
+}
+
+/* line 569, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cart-arrow-down:before {
+  content: "";
+}
+
+/* line 570, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-diamond:before {
+  content: "";
+}
+
+/* line 571, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ship:before {
+  content: "";
+}
+
+/* line 572, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-secret:before {
+  content: "";
+}
+
+/* line 573, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-motorcycle:before {
+  content: "";
+}
+
+/* line 574, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-street-view:before {
+  content: "";
+}
+
+/* line 575, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-heartbeat:before {
+  content: "";
+}
+
+/* line 576, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-venus:before {
+  content: "";
+}
+
+/* line 577, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars:before {
+  content: "";
+}
+
+/* line 578, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mercury:before {
+  content: "";
+}
+
+/* line 579, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-intersex:before,
+.fa-transgender:before {
+  content: "";
+}
+
+/* line 581, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-transgender-alt:before {
+  content: "";
+}
+
+/* line 582, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-venus-double:before {
+  content: "";
+}
+
+/* line 583, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-double:before {
+  content: "";
+}
+
+/* line 584, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-venus-mars:before {
+  content: "";
+}
+
+/* line 585, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-stroke:before {
+  content: "";
+}
+
+/* line 586, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-stroke-v:before {
+  content: "";
+}
+
+/* line 587, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mars-stroke-h:before {
+  content: "";
+}
+
+/* line 588, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-neuter:before {
+  content: "";
+}
+
+/* line 589, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-genderless:before {
+  content: "";
+}
+
+/* line 590, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-facebook-official:before {
+  content: "";
+}
+
+/* line 591, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pinterest-p:before {
+  content: "";
+}
+
+/* line 592, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-whatsapp:before {
+  content: "";
+}
+
+/* line 593, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-server:before {
+  content: "";
+}
+
+/* line 594, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-plus:before {
+  content: "";
+}
+
+/* line 595, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-times:before {
+  content: "";
+}
+
+/* line 596, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hotel:before,
+.fa-bed:before {
+  content: "";
+}
+
+/* line 598, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-viacoin:before {
+  content: "";
+}
+
+/* line 599, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-train:before {
+  content: "";
+}
+
+/* line 600, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-subway:before {
+  content: "";
+}
+
+/* line 601, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-medium:before {
+  content: "";
+}
+
+/* line 602, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yc:before,
+.fa-y-combinator:before {
+  content: "";
+}
+
+/* line 604, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-optin-monster:before {
+  content: "";
+}
+
+/* line 605, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-opencart:before {
+  content: "";
+}
+
+/* line 606, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-expeditedssl:before {
+  content: "";
+}
+
+/* line 607, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-4:before,
+.fa-battery:before,
+.fa-battery-full:before {
+  content: "";
+}
+
+/* line 610, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-3:before,
+.fa-battery-three-quarters:before {
+  content: "";
+}
+
+/* line 612, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-2:before,
+.fa-battery-half:before {
+  content: "";
+}
+
+/* line 614, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-1:before,
+.fa-battery-quarter:before {
+  content: "";
+}
+
+/* line 616, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-battery-0:before,
+.fa-battery-empty:before {
+  content: "";
+}
+
+/* line 618, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mouse-pointer:before {
+  content: "";
+}
+
+/* line 619, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-i-cursor:before {
+  content: "";
+}
+
+/* line 620, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-object-group:before {
+  content: "";
+}
+
+/* line 621, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-object-ungroup:before {
+  content: "";
+}
+
+/* line 622, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sticky-note:before {
+  content: "";
+}
+
+/* line 623, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-sticky-note-o:before {
+  content: "";
+}
+
+/* line 624, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-jcb:before {
+  content: "";
+}
+
+/* line 625, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-cc-diners-club:before {
+  content: "";
+}
+
+/* line 626, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-clone:before {
+  content: "";
+}
+
+/* line 627, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-balance-scale:before {
+  content: "";
+}
+
+/* line 628, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass-o:before {
+  content: "";
+}
+
+/* line 629, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass-1:before,
+.fa-hourglass-start:before {
+  content: "";
+}
+
+/* line 631, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass-2:before,
+.fa-hourglass-half:before {
+  content: "";
+}
+
+/* line 633, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass-3:before,
+.fa-hourglass-end:before {
+  content: "";
+}
+
+/* line 635, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hourglass:before {
+  content: "";
+}
+
+/* line 636, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-grab-o:before,
+.fa-hand-rock-o:before {
+  content: "";
+}
+
+/* line 638, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-stop-o:before,
+.fa-hand-paper-o:before {
+  content: "";
+}
+
+/* line 640, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-scissors-o:before {
+  content: "";
+}
+
+/* line 641, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-lizard-o:before {
+  content: "";
+}
+
+/* line 642, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-spock-o:before {
+  content: "";
+}
+
+/* line 643, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-pointer-o:before {
+  content: "";
+}
+
+/* line 644, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hand-peace-o:before {
+  content: "";
+}
+
+/* line 645, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-trademark:before {
+  content: "";
+}
+
+/* line 646, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-registered:before {
+  content: "";
+}
+
+/* line 647, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-creative-commons:before {
+  content: "";
+}
+
+/* line 648, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gg:before {
+  content: "";
+}
+
+/* line 649, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gg-circle:before {
+  content: "";
+}
+
+/* line 650, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tripadvisor:before {
+  content: "";
+}
+
+/* line 651, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-odnoklassniki:before {
+  content: "";
+}
+
+/* line 652, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-odnoklassniki-square:before {
+  content: "";
+}
+
+/* line 653, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-get-pocket:before {
+  content: "";
+}
+
+/* line 654, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wikipedia-w:before {
+  content: "";
+}
+
+/* line 655, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-safari:before {
+  content: "";
+}
+
+/* line 656, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-chrome:before {
+  content: "";
+}
+
+/* line 657, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-firefox:before {
+  content: "";
+}
+
+/* line 658, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-opera:before {
+  content: "";
+}
+
+/* line 659, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-internet-explorer:before {
+  content: "";
+}
+
+/* line 660, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-tv:before,
+.fa-television:before {
+  content: "";
+}
+
+/* line 662, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-contao:before {
+  content: "";
+}
+
+/* line 663, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-500px:before {
+  content: "";
+}
+
+/* line 664, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-amazon:before {
+  content: "";
+}
+
+/* line 665, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-plus-o:before {
+  content: "";
+}
+
+/* line 666, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-minus-o:before {
+  content: "";
+}
+
+/* line 667, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-times-o:before {
+  content: "";
+}
+
+/* line 668, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-calendar-check-o:before {
+  content: "";
+}
+
+/* line 669, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-industry:before {
+  content: "";
+}
+
+/* line 670, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-pin:before {
+  content: "";
+}
+
+/* line 671, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-signs:before {
+  content: "";
+}
+
+/* line 672, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map-o:before {
+  content: "";
+}
+
+/* line 673, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-map:before {
+  content: "";
+}
+
+/* line 674, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-commenting:before {
+  content: "";
+}
+
+/* line 675, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-commenting-o:before {
+  content: "";
+}
+
+/* line 676, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-houzz:before {
+  content: "";
+}
+
+/* line 677, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vimeo:before {
+  content: "";
+}
+
+/* line 678, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-black-tie:before {
+  content: "";
+}
+
+/* line 679, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fonticons:before {
+  content: "";
+}
+
+/* line 680, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-reddit-alien:before {
+  content: "";
+}
+
+/* line 681, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-edge:before {
+  content: "";
+}
+
+/* line 682, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-credit-card-alt:before {
+  content: "";
+}
+
+/* line 683, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-codiepie:before {
+  content: "";
+}
+
+/* line 684, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-modx:before {
+  content: "";
+}
+
+/* line 685, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fort-awesome:before {
+  content: "";
+}
+
+/* line 686, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-usb:before {
+  content: "";
+}
+
+/* line 687, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-product-hunt:before {
+  content: "";
+}
+
+/* line 688, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-mixcloud:before {
+  content: "";
+}
+
+/* line 689, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-scribd:before {
+  content: "";
+}
+
+/* line 690, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pause-circle:before {
+  content: "";
+}
+
+/* line 691, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pause-circle-o:before {
+  content: "";
+}
+
+/* line 692, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stop-circle:before {
+  content: "";
+}
+
+/* line 693, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-stop-circle-o:before {
+  content: "";
+}
+
+/* line 694, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shopping-bag:before {
+  content: "";
+}
+
+/* line 695, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shopping-basket:before {
+  content: "";
+}
+
+/* line 696, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-hashtag:before {
+  content: "";
+}
+
+/* line 697, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bluetooth:before {
+  content: "";
+}
+
+/* line 698, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bluetooth-b:before {
+  content: "";
+}
+
+/* line 699, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-percent:before {
+  content: "";
+}
+
+/* line 700, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-gitlab:before {
+  content: "";
+}
+
+/* line 701, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wpbeginner:before {
+  content: "";
+}
+
+/* line 702, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wpforms:before {
+  content: "";
+}
+
+/* line 703, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envira:before {
+  content: "";
+}
+
+/* line 704, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-universal-access:before {
+  content: "";
+}
+
+/* line 705, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wheelchair-alt:before {
+  content: "";
+}
+
+/* line 706, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-question-circle-o:before {
+  content: "";
+}
+
+/* line 707, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-blind:before {
+  content: "";
+}
+
+/* line 708, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-audio-description:before {
+  content: "";
+}
+
+/* line 709, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-volume-control-phone:before {
+  content: "";
+}
+
+/* line 710, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-braille:before {
+  content: "";
+}
+
+/* line 711, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-assistive-listening-systems:before {
+  content: "";
+}
+
+/* line 712, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-asl-interpreting:before,
+.fa-american-sign-language-interpreting:before {
+  content: "";
+}
+
+/* line 714, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-deafness:before,
+.fa-hard-of-hearing:before,
+.fa-deaf:before {
+  content: "";
+}
+
+/* line 717, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-glide:before {
+  content: "";
+}
+
+/* line 718, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-glide-g:before {
+  content: "";
+}
+
+/* line 719, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-signing:before,
+.fa-sign-language:before {
+  content: "";
+}
+
+/* line 721, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-low-vision:before {
+  content: "";
+}
+
+/* line 722, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-viadeo:before {
+  content: "";
+}
+
+/* line 723, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-viadeo-square:before {
+  content: "";
+}
+
+/* line 724, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-snapchat:before {
+  content: "";
+}
+
+/* line 725, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-snapchat-ghost:before {
+  content: "";
+}
+
+/* line 726, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-snapchat-square:before {
+  content: "";
+}
+
+/* line 727, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-pied-piper:before {
+  content: "";
+}
+
+/* line 728, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-first-order:before {
+  content: "";
+}
+
+/* line 729, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-yoast:before {
+  content: "";
+}
+
+/* line 730, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-themeisle:before {
+  content: "";
+}
+
+/* line 731, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-google-plus-circle:before,
+.fa-google-plus-official:before {
+  content: "";
+}
+
+/* line 733, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-fa:before,
+.fa-font-awesome:before {
+  content: "";
+}
+
+/* line 735, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-handshake-o:before {
+  content: "";
+}
+
+/* line 736, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-open:before {
+  content: "";
+}
+
+/* line 737, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-envelope-open-o:before {
+  content: "";
+}
+
+/* line 738, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-linode:before {
+  content: "";
+}
+
+/* line 739, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-address-book:before {
+  content: "";
+}
+
+/* line 740, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-address-book-o:before {
+  content: "";
+}
+
+/* line 741, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vcard:before,
+.fa-address-card:before {
+  content: "";
+}
+
+/* line 743, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: "";
+}
+
+/* line 745, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-circle:before {
+  content: "";
+}
+
+/* line 746, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-circle-o:before {
+  content: "";
+}
+
+/* line 747, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-user-o:before {
+  content: "";
+}
+
+/* line 748, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-id-badge:before {
+  content: "";
+}
+
+/* line 749, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: "";
+}
+
+/* line 751, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: "";
+}
+
+/* line 753, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-quora:before {
+  content: "";
+}
+
+/* line 754, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-free-code-camp:before {
+  content: "";
+}
+
+/* line 755, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-telegram:before {
+  content: "";
+}
+
+/* line 756, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: "";
+}
+
+/* line 759, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: "";
+}
+
+/* line 761, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: "";
+}
+
+/* line 763, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: "";
+}
+
+/* line 765, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: "";
+}
+
+/* line 767, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-shower:before {
+  content: "";
+}
+
+/* line 768, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: "";
+}
+
+/* line 771, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-podcast:before {
+  content: "";
+}
+
+/* line 772, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-window-maximize:before {
+  content: "";
+}
+
+/* line 773, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-window-minimize:before {
+  content: "";
+}
+
+/* line 774, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-window-restore:before {
+  content: "";
+}
+
+/* line 775, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: "";
+}
+
+/* line 777, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: "";
+}
+
+/* line 779, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-bandcamp:before {
+  content: "";
+}
+
+/* line 780, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-grav:before {
+  content: "";
+}
+
+/* line 781, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-etsy:before {
+  content: "";
+}
+
+/* line 782, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-imdb:before {
+  content: "";
+}
+
+/* line 783, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-ravelry:before {
+  content: "";
+}
+
+/* line 784, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-eercast:before {
+  content: "";
+}
+
+/* line 785, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-microchip:before {
+  content: "";
+}
+
+/* line 786, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-snowflake-o:before {
+  content: "";
+}
+
+/* line 787, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-superpowers:before {
+  content: "";
+}
+
+/* line 788, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-wpexplorer:before {
+  content: "";
+}
+
+/* line 789, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_icons.scss */
+.fa-meetup:before {
+  content: "";
+}
+
+/* line 4, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_screen-reader.scss */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* line 51, /Users/raymonddelpino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/font-awesome-sass-4.7.0/assets/stylesheets/font-awesome/_mixins.scss */
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+}
