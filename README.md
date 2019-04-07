@@ -1,4 +1,4 @@
-[live site](http://www.netfixing.com/)
+[live site](https://netfix-ray.herokuapp.com/#/)
 
 ## Main Features
 
